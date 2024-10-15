@@ -10,6 +10,9 @@ namespace PROG7312ST10202241
 {
     public partial class LocalEventsAndAccouncementsForm : Form
     {
+        /// <summary>
+        ///Data structures to manage events and user interactions
+        /// </summary>
         private SortedDictionary<DateTime, Queue<Event>> eventsByDate;
         private HashSet<string> uniqueCategories;
         private Stack<string> userSearchHistory;
@@ -17,7 +20,9 @@ namespace PROG7312ST10202241
         private PriorityQueue<Event, DateTime> eventPriorityQueue;
         private ResourceManager resourceManager;
 
-
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LocalEventsAndAccouncementsForm"/> class.
+        /// </summary>
         public LocalEventsAndAccouncementsForm()
         {
             InitializeComponent();
@@ -28,15 +33,24 @@ namespace PROG7312ST10202241
             DisplayEvents(); // Display events on form load
         }
 
-        // Apply localization to the form
+        /// <summary>
+        /// Applies localization to form controls.
+        /// </summary>
         private void ApplyLocalization()
         {
             this.Text = resourceManager.GetString("LocalEventsAndAnnouncementsTitle");
             backToMainMenuBtn.Text = resourceManager.GetString("BackToMainMenuBtn");
             searchBtn.Text = resourceManager.GetString("SearchBtn");
+           // clearBtn.Text = resourceManager.GetString("ClearBtn");
+            nameOfEventLbl.Text = resourceManager.GetString("NameOfEventLbl");
+            categoryLbl.Text = resourceManager.GetString("CategoryLbl");
+            dateLbl.Text = resourceManager.GetString("DateLbl");
+            
         }
 
-        // Initialize data structures
+        /// <summary>
+        /// Initializes data structures for managing events and user interactions.
+        /// </summary>
         private void InitializeDataStructures()
         {
             eventsByDate = new SortedDictionary<DateTime, Queue<Event>>();
@@ -46,7 +60,9 @@ namespace PROG7312ST10202241
             eventPriorityQueue = new PriorityQueue<Event, DateTime>();
         }
 
-        // Load sample data
+        /// <summary>
+        /// Loads sample event data into the application.
+        /// </summary>
         private void LoadSampleData()
         {
             // Sample events with compact categories in Cape Town
@@ -155,7 +171,10 @@ namespace PROG7312ST10202241
 
         }
 
-        // Method to add events to the data structures
+        /// <summary>
+        /// Adds an event to the data structures for management and display.
+        /// </summary>
+        /// <param name="eventItem">The event to be added.</param>
         private void AddEvent(Event eventItem)
         {
             // Add to SortedDictionary (by date)
@@ -172,7 +191,9 @@ namespace PROG7312ST10202241
             uniqueCategories.Add(eventItem.Category);
         }
 
-        // Display events in a ListBox (assume listBoxEvents is a ListBox control on your form)
+        /// <summary>
+        /// Displays events on the form.
+        /// </summary>
         private void DisplayEvents()
         {
             listBoxEvents.Items.Clear(); // Clear previous items
@@ -186,9 +207,10 @@ namespace PROG7312ST10202241
             }
             UpdateCategoryComboBox(); // Update category dropdown
         }
-        
 
-        // Update the category ComboBox (assume comboBoxCategories is a ComboBox control on your form)
+        /// <summary>
+        /// Update the category ComboBox (assume comboBoxCategories is a ComboBox control on your form)
+        /// </summary>
         private void UpdateCategoryComboBox()
         {
                 comboBoxCategories.Items.Clear(); // Clear existing items
@@ -198,8 +220,9 @@ namespace PROG7312ST10202241
         }
 
 
-        // Event handler for search buttons
-       
+        /// <summary>
+        /// Handles the search button click event.
+        /// </summary>
         private void searchBtn_Click(object sender, EventArgs args)
         {
             ClearSearchResults();
@@ -210,7 +233,9 @@ namespace PROG7312ST10202241
             // Record user search (only name is provided here)
             RecordUserSearch(searchTerm, null, DateTime.MinValue);
         }
-
+        /// <summary>
+        /// Displays the Search results
+        /// </summary>
         private void DisplaySearchResults(List<Event> eventsToDisplay)
         {
             listBoxRecommendations.Items.Clear(); // Clear previous recommendations
@@ -223,12 +248,17 @@ namespace PROG7312ST10202241
             }
         }
 
-
+        /// <summary>
+        /// Clears the Search results
+        /// </summary>
         private void ClearSearchResults()
         {
             listBoxRecommendations.Items.Clear(); // Clear recommendations
             comboBoxCategories.SelectedItem = null; // Clear category selection
         }
+        /// <summary>
+        /// Handles the search all button click event.
+        /// </summary>
         private void btnSearchAll_Click(object sender, EventArgs e)
         {
             ClearSearchResults();
@@ -245,7 +275,9 @@ namespace PROG7312ST10202241
             RecordUserSearch(searchTerm, selectedCategory, selectedDate);
         }
 
-        
+        /// <summary>
+        /// Handles the list to get all events by their relevant criteria
+        /// </summary>
         private List<Event> GetEventsByAllCriteria(string name, string category, DateTime date)
         {
             return eventsByDate.Values
@@ -257,7 +289,9 @@ namespace PROG7312ST10202241
                 )
                 .ToList();
         }
-
+        /// <summary>
+        /// Handles updating of the frequency of search recommendations
+        /// </summary>
         private void UpdateFrequentSearchRecommendations()
         {
             listBoxFrequentSearchRecommendations.Items.Clear(); // Clear previous recommendations
@@ -270,8 +304,9 @@ namespace PROG7312ST10202241
                 listBoxFrequentSearchRecommendations.Items.Add($"{search.Key} (Searched {search.Value} times)");
             }
         }
-
-        // Record user search for recommendations (use a stack to store the search history)
+        /// <summary>
+        /// Record user search for recommendations (use a stack to store the search history)
+        /// </summary>
         private void RecordUserSearch(string name, string category, DateTime date)
         {
             string searchKey = "";
@@ -315,8 +350,11 @@ namespace PROG7312ST10202241
 
 
 
+        /// <summary>
+        /// Show event recommendations based on the user's search history
+        /// </summary>
+        /// <param name="selectedCategory"></param>
 
-        // Show event recommendations based on the user's search history
         private void ShowRecommendations(string selectedCategory)
         {
             listBoxRecommendations.Items.Clear(); // Clear previous recommendations
@@ -342,21 +380,29 @@ namespace PROG7312ST10202241
                 listBoxRecommendations.Items.Add($"Based on search: {searchQuery}");
             }
         }
-
-        // Close application on form close
+        /// <summary>
+        /// Close application on form close
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void LocalEventsAndAccouncementsForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
-
-        // Navigate back to main menu
+        /// <summary>
+        /// handles navigaione back to main menu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void backToMainMenuBtn_Click(object sender, EventArgs e)
         {
             Form1 mainForm = new Form1();
             mainForm.Show();
             this.Hide();
         }
-        
+        /// <summary>
+        /// Handles the search by date button click event.
+        /// </summary>
         private void btnSearchByDate_Click(object sender, EventArgs e)
         {
             ClearSearchResults();
@@ -414,7 +460,9 @@ namespace PROG7312ST10202241
                 .Where(e => e.Name.IndexOf(name, StringComparison.OrdinalIgnoreCase) >= 0).ToList();
         }
 
-        
+        /// <summary>
+        /// Handles the search by category button click event.
+        /// </summary>
         private void btnSearchByCategory_Click(object sender, EventArgs e)
         {
             
@@ -427,7 +475,9 @@ namespace PROG7312ST10202241
            
         }
 
-
+        /// <summary>
+        /// Handles the clear button click event.
+        /// </summary>
         private void clearBtn_Click(object sender, EventArgs e)
         {
             ClearSearchResults();

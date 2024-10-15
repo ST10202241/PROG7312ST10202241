@@ -37,9 +37,9 @@
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.btnSearchByDate = new System.Windows.Forms.Button();
             this.btnSearchByCategory = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.nameOfEventLbl = new System.Windows.Forms.Label();
+            this.categoryLbl = new System.Windows.Forms.Label();
+            this.dateLbl = new System.Windows.Forms.Label();
             this.btnSearchWithAll = new System.Windows.Forms.Button();
             this.clearBtn = new System.Windows.Forms.Button();
             this.listBoxFrequentSearchRecommendations = new System.Windows.Forms.ListBox();
@@ -140,35 +140,35 @@
             this.btnSearchByCategory.UseVisualStyleBackColor = true;
             this.btnSearchByCategory.Click += new System.EventHandler(this.btnSearchByCategory_Click);
             // 
-            // label1
+            // nameOfEventLbl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 49);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Name of Event:";
+            this.nameOfEventLbl.AutoSize = true;
+            this.nameOfEventLbl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nameOfEventLbl.Location = new System.Drawing.Point(3, 0);
+            this.nameOfEventLbl.Name = "nameOfEventLbl";
+            this.nameOfEventLbl.Size = new System.Drawing.Size(57, 49);
+            this.nameOfEventLbl.TabIndex = 10;
+            this.nameOfEventLbl.Text = "Name of Event:";
             // 
-            // label2
+            // categoryLbl
             // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(3, 49);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 49);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Category:";
+            this.categoryLbl.AutoSize = true;
+            this.categoryLbl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.categoryLbl.Location = new System.Drawing.Point(3, 49);
+            this.categoryLbl.Name = "categoryLbl";
+            this.categoryLbl.Size = new System.Drawing.Size(57, 49);
+            this.categoryLbl.TabIndex = 11;
+            this.categoryLbl.Text = "Category:";
             // 
-            // label3
+            // dateLbl
             // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(3, 98);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 49);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Date:";
+            this.dateLbl.AutoSize = true;
+            this.dateLbl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dateLbl.Location = new System.Drawing.Point(3, 98);
+            this.dateLbl.Name = "dateLbl";
+            this.dateLbl.Size = new System.Drawing.Size(57, 49);
+            this.dateLbl.TabIndex = 12;
+            this.dateLbl.Text = "Date:";
             // 
             // btnSearchWithAll
             // 
@@ -225,11 +225,11 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label2, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.nameOfEventLbl, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.categoryLbl, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.searchTextBox, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.clearBtn, 2, 3);
-            this.tableLayoutPanel2.Controls.Add(this.label3, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.dateLbl, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.searchBtn, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnSearchByDate, 2, 2);
             this.tableLayoutPanel2.Controls.Add(this.comboBoxCategories, 1, 1);
@@ -291,9 +291,9 @@
         private System.Windows.Forms.TextBox searchTextBox;
         private System.Windows.Forms.Button btnSearchByDate;
         private System.Windows.Forms.Button btnSearchByCategory;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label nameOfEventLbl;
+        private System.Windows.Forms.Label categoryLbl;
+        private System.Windows.Forms.Label dateLbl;
         private System.Windows.Forms.Button btnSearchWithAll;
         private System.Windows.Forms.Button clearBtn;
         private System.Windows.Forms.ListBox listBoxFrequentSearchRecommendations;

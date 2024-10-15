@@ -48,9 +48,9 @@
             this.LocalEventsAndAnnouncementsPBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LocalEventsAndAnnouncementsPBox.Image = global::PROG7312ST10202241.Properties.Resources.AnnouncementImage;
             this.LocalEventsAndAnnouncementsPBox.InitialImage = global::PROG7312ST10202241.Properties.Resources.AnnouncementImage;
-            this.LocalEventsAndAnnouncementsPBox.Location = new System.Drawing.Point(269, 152);
+            this.LocalEventsAndAnnouncementsPBox.Location = new System.Drawing.Point(269, 153);
             this.LocalEventsAndAnnouncementsPBox.Name = "LocalEventsAndAnnouncementsPBox";
-            this.LocalEventsAndAnnouncementsPBox.Size = new System.Drawing.Size(260, 143);
+            this.LocalEventsAndAnnouncementsPBox.Size = new System.Drawing.Size(260, 144);
             this.LocalEventsAndAnnouncementsPBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.LocalEventsAndAnnouncementsPBox.TabIndex = 0;
             this.LocalEventsAndAnnouncementsPBox.TabStop = false;
@@ -60,9 +60,9 @@
             // 
             this.ReportIssuesPBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ReportIssuesPBox.Image = global::PROG7312ST10202241.Properties.Resources.ReportImages;
-            this.ReportIssuesPBox.Location = new System.Drawing.Point(3, 152);
+            this.ReportIssuesPBox.Location = new System.Drawing.Point(3, 153);
             this.ReportIssuesPBox.Name = "ReportIssuesPBox";
-            this.ReportIssuesPBox.Size = new System.Drawing.Size(260, 143);
+            this.ReportIssuesPBox.Size = new System.Drawing.Size(260, 144);
             this.ReportIssuesPBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ReportIssuesPBox.TabIndex = 1;
             this.ReportIssuesPBox.TabStop = false;
@@ -72,9 +72,9 @@
             // 
             this.ServiceRequestStatusPBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ServiceRequestStatusPBox.Image = global::PROG7312ST10202241.Properties.Resources.ServiceRequestImage;
-            this.ServiceRequestStatusPBox.Location = new System.Drawing.Point(535, 152);
+            this.ServiceRequestStatusPBox.Location = new System.Drawing.Point(535, 153);
             this.ServiceRequestStatusPBox.Name = "ServiceRequestStatusPBox";
-            this.ServiceRequestStatusPBox.Size = new System.Drawing.Size(262, 143);
+            this.ServiceRequestStatusPBox.Size = new System.Drawing.Size(262, 144);
             this.ServiceRequestStatusPBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ServiceRequestStatusPBox.TabIndex = 2;
             this.ServiceRequestStatusPBox.TabStop = false;
@@ -84,7 +84,7 @@
             // 
             this.ReportIssuesLbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ReportIssuesLbl.AutoSize = true;
-            this.ReportIssuesLbl.Location = new System.Drawing.Point(97, 298);
+            this.ReportIssuesLbl.Location = new System.Drawing.Point(97, 300);
             this.ReportIssuesLbl.Name = "ReportIssuesLbl";
             this.ReportIssuesLbl.Size = new System.Drawing.Size(72, 13);
             this.ReportIssuesLbl.TabIndex = 3;
@@ -95,7 +95,7 @@
             // 
             this.LocalEventsAndAnnouncementsLbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LocalEventsAndAnnouncementsLbl.AutoSize = true;
-            this.LocalEventsAndAnnouncementsLbl.Location = new System.Drawing.Point(313, 298);
+            this.LocalEventsAndAnnouncementsLbl.Location = new System.Drawing.Point(313, 300);
             this.LocalEventsAndAnnouncementsLbl.Name = "LocalEventsAndAnnouncementsLbl";
             this.LocalEventsAndAnnouncementsLbl.Size = new System.Drawing.Size(171, 13);
             this.LocalEventsAndAnnouncementsLbl.TabIndex = 4;
@@ -106,7 +106,7 @@
             // 
             this.ServiceRequestStatusLbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ServiceRequestStatusLbl.AutoSize = true;
-            this.ServiceRequestStatusLbl.Location = new System.Drawing.Point(606, 298);
+            this.ServiceRequestStatusLbl.Location = new System.Drawing.Point(606, 300);
             this.ServiceRequestStatusLbl.Name = "ServiceRequestStatusLbl";
             this.ServiceRequestStatusLbl.Size = new System.Drawing.Size(119, 13);
             this.ServiceRequestStatusLbl.TabIndex = 5;
