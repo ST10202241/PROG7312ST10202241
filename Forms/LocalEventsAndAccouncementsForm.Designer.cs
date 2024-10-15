@@ -41,6 +41,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnSearchWithAll = new System.Windows.Forms.Button();
+            this.clearBtn = new System.Windows.Forms.Button();
+            this.listBoxFrequentSearchRecommendations = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // backToMainMenuBtn
@@ -92,7 +94,7 @@
             // listBoxRecommendations
             // 
             this.listBoxRecommendations.FormattingEnabled = true;
-            this.listBoxRecommendations.Location = new System.Drawing.Point(36, 188);
+            this.listBoxRecommendations.Location = new System.Drawing.Point(15, 188);
             this.listBoxRecommendations.Name = "listBoxRecommendations";
             this.listBoxRecommendations.Size = new System.Drawing.Size(195, 173);
             this.listBoxRecommendations.TabIndex = 6;
@@ -159,12 +161,33 @@
             this.btnSearchWithAll.TabIndex = 13;
             this.btnSearchWithAll.Text = "Search With All";
             this.btnSearchWithAll.UseVisualStyleBackColor = true;
+            this.btnSearchWithAll.Click += new System.EventHandler(this.btnSearchAll_Click);
+            // 
+            // clearBtn
+            // 
+            this.clearBtn.Location = new System.Drawing.Point(275, 159);
+            this.clearBtn.Name = "clearBtn";
+            this.clearBtn.Size = new System.Drawing.Size(75, 23);
+            this.clearBtn.TabIndex = 14;
+            this.clearBtn.Text = "Clear";
+            this.clearBtn.UseVisualStyleBackColor = true;
+            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
+            // 
+            // listBoxFrequentSearchRecommendations
+            // 
+            this.listBoxFrequentSearchRecommendations.FormattingEnabled = true;
+            this.listBoxFrequentSearchRecommendations.Location = new System.Drawing.Point(230, 188);
+            this.listBoxFrequentSearchRecommendations.Name = "listBoxFrequentSearchRecommendations";
+            this.listBoxFrequentSearchRecommendations.Size = new System.Drawing.Size(145, 173);
+            this.listBoxFrequentSearchRecommendations.TabIndex = 15;
             // 
             // LocalEventsAndAccouncementsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.listBoxFrequentSearchRecommendations);
+            this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.btnSearchWithAll);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -200,5 +223,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnSearchWithAll;
+        private System.Windows.Forms.Button clearBtn;
+        private System.Windows.Forms.ListBox listBoxFrequentSearchRecommendations;
     }
 }
