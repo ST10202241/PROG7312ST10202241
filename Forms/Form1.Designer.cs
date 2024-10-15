@@ -35,19 +35,22 @@
             this.LocalEventsAndAnnouncementsLbl = new System.Windows.Forms.Label();
             this.ServiceRequestStatusLbl = new System.Windows.Forms.Label();
             this.languageCBox = new System.Windows.Forms.ComboBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.LocalEventsAndAnnouncementsPBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReportIssuesPBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ServiceRequestStatusPBox)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // LocalEventsAndAnnouncementsPBox
             // 
             this.LocalEventsAndAnnouncementsPBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.LocalEventsAndAnnouncementsPBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LocalEventsAndAnnouncementsPBox.Image = global::PROG7312ST10202241.Properties.Resources.AnnouncementImage;
             this.LocalEventsAndAnnouncementsPBox.InitialImage = global::PROG7312ST10202241.Properties.Resources.AnnouncementImage;
-            this.LocalEventsAndAnnouncementsPBox.Location = new System.Drawing.Point(319, 140);
+            this.LocalEventsAndAnnouncementsPBox.Location = new System.Drawing.Point(269, 152);
             this.LocalEventsAndAnnouncementsPBox.Name = "LocalEventsAndAnnouncementsPBox";
-            this.LocalEventsAndAnnouncementsPBox.Size = new System.Drawing.Size(150, 150);
+            this.LocalEventsAndAnnouncementsPBox.Size = new System.Drawing.Size(260, 143);
             this.LocalEventsAndAnnouncementsPBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.LocalEventsAndAnnouncementsPBox.TabIndex = 0;
             this.LocalEventsAndAnnouncementsPBox.TabStop = false;
@@ -55,10 +58,11 @@
             // 
             // ReportIssuesPBox
             // 
+            this.ReportIssuesPBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ReportIssuesPBox.Image = global::PROG7312ST10202241.Properties.Resources.ReportImages;
-            this.ReportIssuesPBox.Location = new System.Drawing.Point(95, 140);
+            this.ReportIssuesPBox.Location = new System.Drawing.Point(3, 152);
             this.ReportIssuesPBox.Name = "ReportIssuesPBox";
-            this.ReportIssuesPBox.Size = new System.Drawing.Size(150, 150);
+            this.ReportIssuesPBox.Size = new System.Drawing.Size(260, 143);
             this.ReportIssuesPBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ReportIssuesPBox.TabIndex = 1;
             this.ReportIssuesPBox.TabStop = false;
@@ -66,10 +70,11 @@
             // 
             // ServiceRequestStatusPBox
             // 
+            this.ServiceRequestStatusPBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ServiceRequestStatusPBox.Image = global::PROG7312ST10202241.Properties.Resources.ServiceRequestImage;
-            this.ServiceRequestStatusPBox.Location = new System.Drawing.Point(555, 140);
+            this.ServiceRequestStatusPBox.Location = new System.Drawing.Point(535, 152);
             this.ServiceRequestStatusPBox.Name = "ServiceRequestStatusPBox";
-            this.ServiceRequestStatusPBox.Size = new System.Drawing.Size(150, 150);
+            this.ServiceRequestStatusPBox.Size = new System.Drawing.Size(262, 143);
             this.ServiceRequestStatusPBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ServiceRequestStatusPBox.TabIndex = 2;
             this.ServiceRequestStatusPBox.TabStop = false;
@@ -77,8 +82,9 @@
             // 
             // ReportIssuesLbl
             // 
+            this.ReportIssuesLbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ReportIssuesLbl.AutoSize = true;
-            this.ReportIssuesLbl.Location = new System.Drawing.Point(141, 331);
+            this.ReportIssuesLbl.Location = new System.Drawing.Point(97, 298);
             this.ReportIssuesLbl.Name = "ReportIssuesLbl";
             this.ReportIssuesLbl.Size = new System.Drawing.Size(72, 13);
             this.ReportIssuesLbl.TabIndex = 3;
@@ -87,8 +93,9 @@
             // 
             // LocalEventsAndAnnouncementsLbl
             // 
+            this.LocalEventsAndAnnouncementsLbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LocalEventsAndAnnouncementsLbl.AutoSize = true;
-            this.LocalEventsAndAnnouncementsLbl.Location = new System.Drawing.Point(316, 330);
+            this.LocalEventsAndAnnouncementsLbl.Location = new System.Drawing.Point(313, 298);
             this.LocalEventsAndAnnouncementsLbl.Name = "LocalEventsAndAnnouncementsLbl";
             this.LocalEventsAndAnnouncementsLbl.Size = new System.Drawing.Size(171, 13);
             this.LocalEventsAndAnnouncementsLbl.TabIndex = 4;
@@ -97,8 +104,9 @@
             // 
             // ServiceRequestStatusLbl
             // 
+            this.ServiceRequestStatusLbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ServiceRequestStatusLbl.AutoSize = true;
-            this.ServiceRequestStatusLbl.Location = new System.Drawing.Point(552, 330);
+            this.ServiceRequestStatusLbl.Location = new System.Drawing.Point(606, 298);
             this.ServiceRequestStatusLbl.Name = "ServiceRequestStatusLbl";
             this.ServiceRequestStatusLbl.Size = new System.Drawing.Size(119, 13);
             this.ServiceRequestStatusLbl.TabIndex = 5;
@@ -107,12 +115,37 @@
             // 
             // languageCBox
             // 
+            this.languageCBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.languageCBox.FormattingEnabled = true;
-            this.languageCBox.Location = new System.Drawing.Point(129, 28);
+            this.languageCBox.Location = new System.Drawing.Point(269, 3);
             this.languageCBox.Name = "languageCBox";
-            this.languageCBox.Size = new System.Drawing.Size(121, 21);
+            this.languageCBox.Size = new System.Drawing.Size(260, 21);
             this.languageCBox.TabIndex = 6;
             this.languageCBox.SelectedIndexChanged += new System.EventHandler(this.languageCBox_SelectedIndexChanged);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel1.Controls.Add(this.ServiceRequestStatusPBox, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.LocalEventsAndAnnouncementsPBox, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.ServiceRequestStatusLbl, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.ReportIssuesPBox, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.LocalEventsAndAnnouncementsLbl, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.ReportIssuesLbl, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.languageCBox, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
+            this.tableLayoutPanel1.TabIndex = 7;
             // 
             // Form1
             // 
@@ -120,21 +153,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OliveDrab;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.languageCBox);
-            this.Controls.Add(this.ServiceRequestStatusLbl);
-            this.Controls.Add(this.LocalEventsAndAnnouncementsLbl);
-            this.Controls.Add(this.ReportIssuesLbl);
-            this.Controls.Add(this.ServiceRequestStatusPBox);
-            this.Controls.Add(this.ReportIssuesPBox);
-            this.Controls.Add(this.LocalEventsAndAnnouncementsPBox);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed_1);
             ((System.ComponentModel.ISupportInitialize)(this.LocalEventsAndAnnouncementsPBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReportIssuesPBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ServiceRequestStatusPBox)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -147,5 +175,6 @@
         private System.Windows.Forms.Label LocalEventsAndAnnouncementsLbl;
         private System.Windows.Forms.Label ServiceRequestStatusLbl;
         private System.Windows.Forms.ComboBox languageCBox;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
