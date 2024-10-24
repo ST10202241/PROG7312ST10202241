@@ -38,8 +38,10 @@
             this.DescriptionRTxt = new System.Windows.Forms.RichTextBox();
             this.CategoryLBox = new System.Windows.Forms.ListBox();
             this.backlbl = new System.Windows.Forms.Label();
-            this.ViewReportsFormBtn = new System.Windows.Forms.Button();
             this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.ViewReportsFormBtn = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // closeBtn
@@ -57,9 +59,10 @@
             // 
             // AttachMediaBtn
             // 
-            this.AttachMediaBtn.Location = new System.Drawing.Point(334, 250);
+            this.AttachMediaBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.AttachMediaBtn.Location = new System.Drawing.Point(259, 227);
             this.AttachMediaBtn.Name = "AttachMediaBtn";
-            this.AttachMediaBtn.Size = new System.Drawing.Size(110, 23);
+            this.AttachMediaBtn.Size = new System.Drawing.Size(169, 23);
             this.AttachMediaBtn.TabIndex = 2;
             this.AttachMediaBtn.Text = "Attach Media";
             this.AttachMediaBtn.UseVisualStyleBackColor = true;
@@ -67,9 +70,10 @@
             // 
             // SubmitBtn
             // 
-            this.SubmitBtn.Location = new System.Drawing.Point(352, 381);
+            this.SubmitBtn.Dock = System.Windows.Forms.DockStyle.Left;
+            this.SubmitBtn.Location = new System.Drawing.Point(259, 283);
             this.SubmitBtn.Name = "SubmitBtn";
-            this.SubmitBtn.Size = new System.Drawing.Size(75, 23);
+            this.SubmitBtn.Size = new System.Drawing.Size(75, 50);
             this.SubmitBtn.TabIndex = 3;
             this.SubmitBtn.Text = "Submit";
             this.SubmitBtn.UseVisualStyleBackColor = true;
@@ -78,53 +82,59 @@
             // locationLbl
             // 
             this.locationLbl.AutoSize = true;
-            this.locationLbl.Location = new System.Drawing.Point(281, 95);
+            this.locationLbl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.locationLbl.Location = new System.Drawing.Point(84, 56);
             this.locationLbl.Name = "locationLbl";
-            this.locationLbl.Size = new System.Drawing.Size(47, 13);
+            this.locationLbl.Size = new System.Drawing.Size(169, 56);
             this.locationLbl.TabIndex = 4;
             this.locationLbl.Text = "location:";
             // 
             // CategoryLbl
             // 
             this.CategoryLbl.AutoSize = true;
-            this.CategoryLbl.Location = new System.Drawing.Point(281, 120);
+            this.CategoryLbl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CategoryLbl.Location = new System.Drawing.Point(84, 112);
             this.CategoryLbl.Name = "CategoryLbl";
-            this.CategoryLbl.Size = new System.Drawing.Size(52, 13);
+            this.CategoryLbl.Size = new System.Drawing.Size(169, 56);
             this.CategoryLbl.TabIndex = 5;
             this.CategoryLbl.Text = "Category:";
             // 
             // descriptionLbl
             // 
             this.descriptionLbl.AutoSize = true;
-            this.descriptionLbl.Location = new System.Drawing.Point(281, 195);
+            this.descriptionLbl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.descriptionLbl.Location = new System.Drawing.Point(84, 168);
             this.descriptionLbl.Name = "descriptionLbl";
-            this.descriptionLbl.Size = new System.Drawing.Size(60, 13);
+            this.descriptionLbl.Size = new System.Drawing.Size(169, 56);
             this.descriptionLbl.TabIndex = 6;
             this.descriptionLbl.Text = "Description";
             // 
             // locationTxt
             // 
-            this.locationTxt.Location = new System.Drawing.Point(396, 87);
+            this.locationTxt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.locationTxt.Location = new System.Drawing.Point(259, 59);
             this.locationTxt.Name = "locationTxt";
-            this.locationTxt.Size = new System.Drawing.Size(100, 20);
+            this.locationTxt.Size = new System.Drawing.Size(169, 20);
             this.locationTxt.TabIndex = 7;
             this.locationTxt.TextChanged += new System.EventHandler(this.locationTxt_TextChanged_1);
             // 
             // DescriptionRTxt
             // 
-            this.DescriptionRTxt.Location = new System.Drawing.Point(396, 195);
+            this.DescriptionRTxt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DescriptionRTxt.Location = new System.Drawing.Point(259, 171);
             this.DescriptionRTxt.Name = "DescriptionRTxt";
-            this.DescriptionRTxt.Size = new System.Drawing.Size(237, 49);
+            this.DescriptionRTxt.Size = new System.Drawing.Size(169, 50);
             this.DescriptionRTxt.TabIndex = 8;
             this.DescriptionRTxt.Text = "";
             this.DescriptionRTxt.TextChanged += new System.EventHandler(this.DescriptionRTxt_TextChanged_1);
             // 
             // CategoryLBox
             // 
+            this.CategoryLBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CategoryLBox.FormattingEnabled = true;
-            this.CategoryLBox.Location = new System.Drawing.Point(396, 114);
+            this.CategoryLBox.Location = new System.Drawing.Point(259, 115);
             this.CategoryLBox.Name = "CategoryLBox";
-            this.CategoryLBox.Size = new System.Drawing.Size(100, 69);
+            this.CategoryLBox.Size = new System.Drawing.Size(169, 50);
             this.CategoryLBox.TabIndex = 9;
             this.CategoryLBox.SelectedIndexChanged += new System.EventHandler(this.CategoryLBox_SelectedIndexChanged_1);
             // 
@@ -132,22 +142,12 @@
             // 
             this.backlbl.AutoSize = true;
             this.backlbl.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backlbl.Location = new System.Drawing.Point(12, 26);
+            this.backlbl.Location = new System.Drawing.Point(3, 0);
             this.backlbl.Name = "backlbl";
             this.backlbl.Size = new System.Drawing.Size(18, 19);
             this.backlbl.TabIndex = 10;
             this.backlbl.Text = "<";
             this.backlbl.Click += new System.EventHandler(this.backlbl_Click);
-            // 
-            // ViewReportsFormBtn
-            // 
-            this.ViewReportsFormBtn.Location = new System.Drawing.Point(176, 389);
-            this.ViewReportsFormBtn.Name = "ViewReportsFormBtn";
-            this.ViewReportsFormBtn.Size = new System.Drawing.Size(100, 23);
-            this.ViewReportsFormBtn.TabIndex = 11;
-            this.ViewReportsFormBtn.Text = "View Reports";
-            this.ViewReportsFormBtn.UseVisualStyleBackColor = true;
-            this.ViewReportsFormBtn.Click += new System.EventHandler(this.ViewReportsFormBtn_Click);
             // 
             // progressBar
             // 
@@ -157,30 +157,64 @@
             this.progressBar.Size = new System.Drawing.Size(800, 23);
             this.progressBar.TabIndex = 12;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.19473F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.99313F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.99313F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.81902F));
+            this.tableLayoutPanel1.Controls.Add(this.backlbl, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.locationLbl, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.CategoryLbl, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.SubmitBtn, 2, 5);
+            this.tableLayoutPanel1.Controls.Add(this.DescriptionRTxt, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.AttachMediaBtn, 2, 4);
+            this.tableLayoutPanel1.Controls.Add(this.CategoryLBox, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.descriptionLbl, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.locationTxt, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.ViewReportsFormBtn, 1, 6);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 23);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 7;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 395);
+            this.tableLayoutPanel1.TabIndex = 13;
+            // 
+            // ViewReportsFormBtn
+            // 
+            this.ViewReportsFormBtn.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ViewReportsFormBtn.Location = new System.Drawing.Point(84, 339);
+            this.ViewReportsFormBtn.Name = "ViewReportsFormBtn";
+            this.ViewReportsFormBtn.Size = new System.Drawing.Size(100, 53);
+            this.ViewReportsFormBtn.TabIndex = 11;
+            this.ViewReportsFormBtn.Text = "View Reports";
+            this.ViewReportsFormBtn.UseVisualStyleBackColor = true;
+            this.ViewReportsFormBtn.Click += new System.EventHandler(this.ViewReportsFormBtn_Click);
+            // 
             // ReportIssuesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OliveDrab;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.progressBar);
-            this.Controls.Add(this.ViewReportsFormBtn);
-            this.Controls.Add(this.backlbl);
-            this.Controls.Add(this.CategoryLBox);
-            this.Controls.Add(this.DescriptionRTxt);
-            this.Controls.Add(this.locationTxt);
-            this.Controls.Add(this.descriptionLbl);
-            this.Controls.Add(this.CategoryLbl);
-            this.Controls.Add(this.locationLbl);
-            this.Controls.Add(this.SubmitBtn);
-            this.Controls.Add(this.AttachMediaBtn);
             this.Controls.Add(this.closeBtn);
             this.Name = "ReportIssuesForm";
             this.Text = "Report Issues";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ReportIssuesForm_FormClosed);
             this.Load += new System.EventHandler(this.ReportIssuesForm_Load);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -195,7 +229,8 @@
         private System.Windows.Forms.RichTextBox DescriptionRTxt;
         private System.Windows.Forms.ListBox CategoryLBox;
         private System.Windows.Forms.Label backlbl;
-        private System.Windows.Forms.Button ViewReportsFormBtn;
         private System.Windows.Forms.ProgressBar progressBar;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button ViewReportsFormBtn;
     }
 }
