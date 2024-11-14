@@ -117,6 +117,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Strings.resx</DependentUpon>
     </Compile>
+    <Compile Include="ServiceRequest.cs" />
+    <Compile Include="ServiceRequestBST.cs" />
     <EmbeddedResource Include="Forms\Form1.af.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

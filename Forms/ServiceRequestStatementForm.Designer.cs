@@ -30,6 +30,12 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblStatus = new System.Windows.Forms.Label();
+            this.txtRequestId = new System.Windows.Forms.TextBox();
+            this.txtNewRequestId = new System.Windows.Forms.TextBox();
+            this.txtNewStatus = new System.Windows.Forms.TextBox();
+            this.txtNewDescription = new System.Windows.Forms.TextBox();
+            this.txtNewPriority = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,11 +62,61 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Location = new System.Drawing.Point(251, 169);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(40, 13);
+            this.lblStatus.TabIndex = 3;
+            this.lblStatus.Text = "Status:";
+            // 
+            // txtRequestId
+            // 
+            this.txtRequestId.Location = new System.Drawing.Point(432, 153);
+            this.txtRequestId.Name = "txtRequestId";
+            this.txtRequestId.Size = new System.Drawing.Size(100, 20);
+            this.txtRequestId.TabIndex = 4;
+            // 
+            // txtNewRequestId
+            // 
+            this.txtNewRequestId.Location = new System.Drawing.Point(345, 239);
+            this.txtNewRequestId.Name = "txtNewRequestId";
+            this.txtNewRequestId.Size = new System.Drawing.Size(100, 20);
+            this.txtNewRequestId.TabIndex = 5;
+            // 
+            // txtNewStatus
+            // 
+            this.txtNewStatus.Location = new System.Drawing.Point(328, 295);
+            this.txtNewStatus.Name = "txtNewStatus";
+            this.txtNewStatus.Size = new System.Drawing.Size(100, 20);
+            this.txtNewStatus.TabIndex = 6;
+            // 
+            // txtNewDescription
+            // 
+            this.txtNewDescription.Location = new System.Drawing.Point(560, 323);
+            this.txtNewDescription.Name = "txtNewDescription";
+            this.txtNewDescription.Size = new System.Drawing.Size(100, 20);
+            this.txtNewDescription.TabIndex = 7;
+            // 
+            // txtNewPriority
+            // 
+            this.txtNewPriority.Location = new System.Drawing.Point(399, 365);
+            this.txtNewPriority.Name = "txtNewPriority";
+            this.txtNewPriority.Size = new System.Drawing.Size(100, 20);
+            this.txtNewPriority.TabIndex = 8;
+            // 
             // ServiceRequestStatementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtNewPriority);
+            this.Controls.Add(this.txtNewDescription);
+            this.Controls.Add(this.txtNewStatus);
+            this.Controls.Add(this.txtNewRequestId);
+            this.Controls.Add(this.txtRequestId);
+            this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -69,11 +125,18 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ServiceRequestStatementForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.TextBox txtRequestId;
+        private System.Windows.Forms.TextBox txtNewRequestId;
+        private System.Windows.Forms.TextBox txtNewStatus;
+        private System.Windows.Forms.TextBox txtNewDescription;
+        private System.Windows.Forms.TextBox txtNewPriority;
     }
 }

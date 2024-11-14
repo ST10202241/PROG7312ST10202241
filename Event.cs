@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PROG7312ST10202241.Models
 {
@@ -15,6 +11,9 @@ namespace PROG7312ST10202241.Models
 
         public Event(string name, string category, DateTime date, string location)
         {
+            if (date < DateTime.Now)
+                throw new ArgumentException("Event date cannot be in the past.");
+
             Name = name;
             Category = category;
             Date = date;
@@ -27,4 +26,3 @@ namespace PROG7312ST10202241.Models
         }
     }
 }
-
