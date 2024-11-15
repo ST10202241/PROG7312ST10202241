@@ -9,6 +9,7 @@ namespace PROG7312ST10202241
 {
     public partial class ServiceRequestStatementForm : Form
     {
+        private ServiceRequestGraph requestGraph;
         private ServiceRequestBST requestTree = new ServiceRequestBST();
         private PriorityQueue<ServiceRequest, int> priorityQueue = new PriorityQueue<ServiceRequest, int>();
         private ResourceManager resourceManager;
@@ -48,7 +49,7 @@ namespace PROG7312ST10202241
                 Form1 mainForm = new Form1();
                 mainForm.Show();
                 this.Hide();
-                this.Close();
+                //this.Close();
             }
             catch (Exception ex)
             {
@@ -153,6 +154,12 @@ namespace PROG7312ST10202241
             txtNewStatus.Clear();
             txtNewDescription.Clear();
             txtNewPriority.Clear();
+        }
+
+        private void btnOpenGraphForm_Click(object sender, EventArgs e)
+        {
+            var graphForm = new ServiceRequestGraphForm(requestGraph); // Pass the graph instance
+            graphForm.Show();
         }
     }
 }
