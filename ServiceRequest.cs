@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PROG7312ST10202241
+﻿namespace PROG7312ST10202241
 {
     public class ServiceRequest
     {
@@ -12,5 +6,10 @@ namespace PROG7312ST10202241
         public string Status { get; set; }
         public string Description { get; set; }
         public int Priority { get; set; }
+
+        public override string ToString()
+        {
+            return $"RequestID: {RequestId}, Status: {Status}, Description: {Description}, Priority: {Priority}";
+        }
     }
 }

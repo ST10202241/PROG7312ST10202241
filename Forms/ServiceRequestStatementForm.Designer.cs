@@ -143,6 +143,7 @@
             this.btnSearch.TabIndex = 10;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // AddNewServiceRequestLbl
             // 
@@ -164,6 +165,7 @@
             this.btnAddRequest.TabIndex = 12;
             this.btnAddRequest.Text = "Add Request";
             this.btnAddRequest.UseVisualStyleBackColor = true;
+            this.btnAddRequest.Click += new System.EventHandler(this.btnAddRequest_Click);
             // 
             // lblNewRequestId
             // 
