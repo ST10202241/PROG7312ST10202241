@@ -10,6 +10,7 @@ public class IssueReport
     public string Description { get; set; }
     public string RequestID { get; set; } // Unique identifier
     public List<string> AttachedFiles { get; set; } // Store file paths
+    public DateTime ReportDate { get; set; }
 
     public IssueReport(string location, string category, string description, List<string> attachedFiles)
     {
@@ -23,9 +24,11 @@ public class IssueReport
         Location = location;
         Category = category;
         Description = description;
-        RequestID = Guid.NewGuid().ToString(); // Generate a unique ID
+        RequestID = Guid.NewGuid().ToString();
         AttachedFiles = attachedFiles ?? new List<string>();
+        ReportDate = DateTime.Now; // Automatically set to the current date and time
     }
+
 
     public override string ToString()
     {

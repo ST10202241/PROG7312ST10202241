@@ -43,11 +43,12 @@ namespace PROG7312ST10202241.Forms
         {
             // Set up DataGridView columns
             dataGridView1.Columns.Clear(); // Clear existing columns if any
-            dataGridView1.ColumnCount = 4;
+            dataGridView1.ColumnCount = 5;
             dataGridView1.Columns[0].Name = "Request ID";
             dataGridView1.Columns[1].Name = "Location";
             dataGridView1.Columns[2].Name = "Category";
             dataGridView1.Columns[3].Name = "Description";
+            dataGridView1.Columns[4].Name = "Submission Date";
 
             // Add a button column to view files
             DataGridViewButtonColumn viewFilesButton = new DataGridViewButtonColumn
@@ -61,7 +62,7 @@ namespace PROG7312ST10202241.Forms
             // Populate rows with issue report data
             foreach (var report in issueReports)
             {
-                dataGridView1.Rows.Add(report.RequestID, report.Location, report.Category, report.Description);
+                dataGridView1.Rows.Add(report.RequestID, report.Location, report.Category, report.Description, report.ReportDate.ToString("yyyy-MM-dd HH:mm"));
             }
 
             // Optionally, auto-resize the columns for better display
