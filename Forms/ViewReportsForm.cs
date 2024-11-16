@@ -42,49 +42,56 @@ namespace PROG7312ST10202241.Forms
         private void PopulateDataGrid(List<IssueReport> issueReports)
         {
             // Set up DataGridView columns
+            dataGridView1.Columns.Clear(); // Clear existing columns if any
             dataGridView1.ColumnCount = 4;
-            dataGridView1.Columns[0].Name = "Location";
-            dataGridView1.Columns[1].Name = "Category";
-            dataGridView1.Columns[2].Name = "Description";
-            dataGridView1.Columns[3].Name = "Media";
+            dataGridView1.Columns[0].Name = "Request ID";
+            dataGridView1.Columns[1].Name = "Location";
+            dataGridView1.Columns[2].Name = "Category";
+            dataGridView1.Columns[3].Name = "Description";
 
-            // Loop through the list and add rows to the DataGridView
+            // Add a button column to view files
+            DataGridViewButtonColumn viewFilesButton = new DataGridViewButtonColumn
+            {
+                Text = "View Files",
+                UseColumnTextForButtonValue = true,
+                Name = "ViewFiles"
+            };
+            dataGridView1.Columns.Add(viewFilesButton);
+
+            // Populate rows with issue report data
             foreach (var report in issueReports)
             {
-                string fileName = string.IsNullOrEmpty(report.MediaAttachmentPath) ? "No Attachment" : Path.GetFileName(report.MediaAttachmentPath);
-                dataGridView1.Rows.Add(report.Location, report.Category, report.Description, fileName);
+                dataGridView1.Rows.Add(report.RequestID, report.Location, report.Category, report.Description);
             }
 
             // Optionally, auto-resize the columns for better display
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            // Enable user interaction for opening files
-            dataGridView1.CellClick += DataGridView1_CellClick;  // Add event handler for cell click
+
+            // Attach event for button clicks
+            dataGridView1.CellClick += dataGridView1_CellContentClick;
         }
 
-        // Event handler for DataGridView cell click
-        private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // Check if the Media column was clicked (index 3)
-            if (e.ColumnIndex == 3 && e.RowIndex >= 0)
-            {
-                // Get the associated IssueReport from the list
-                var selectedReport = issueReports[e.RowIndex];
-                if (!string.IsNullOrEmpty(selectedReport.MediaAttachmentPath))
-                {
-                    try
-                    {
-                        System.Diagnostics.Process.Start(selectedReport.MediaAttachmentPath);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Could not open the file: " + ex.Message);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("No media attached for this report.");
-                }
-            }
-        }
+         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+         {
+             // Check if the "View Files" button column was clicked
+             if (e.ColumnIndex == dataGridView1.Columns["ViewFiles"].Index && e.RowIndex >= 0)
+             {
+                 // Get the selected issue report's Request ID
+                 string requestID = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                 var selectedReport = issueReports.FirstOrDefault(report => report.RequestID == requestID);
+
+                 if (selectedReport != null && selectedReport.AttachedFiles.Any())
+                 {
+                     // Open the ViewFilesForm to display the attached files
+                     ViewFilesForm viewFilesForm = new ViewFilesForm(selectedReport.AttachedFiles);
+                     viewFilesForm.ShowDialog();
+                 }
+                 else
+                 {
+                     MessageBox.Show("No files are attached to this report.");
+                 }
+             }
     }
+
+}
 }

@@ -41,7 +41,12 @@
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.ViewReportsFormBtn = new System.Windows.Forms.Button();
+            this.attachedFilesListBox = new System.Windows.Forms.ListBox();
+            this.RemoveFileBtn = new System.Windows.Forms.Button();
+            this.previewPictureBox = new System.Windows.Forms.PictureBox();
+            this.previewPanel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.previewPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // closeBtn
@@ -174,6 +179,10 @@
             this.tableLayoutPanel1.Controls.Add(this.descriptionLbl, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.locationTxt, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.ViewReportsFormBtn, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.attachedFilesListBox, 3, 3);
+            this.tableLayoutPanel1.Controls.Add(this.RemoveFileBtn, 3, 4);
+            this.tableLayoutPanel1.Controls.Add(this.previewPictureBox, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.previewPanel, 3, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 23);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -199,6 +208,47 @@
             this.ViewReportsFormBtn.UseVisualStyleBackColor = true;
             this.ViewReportsFormBtn.Click += new System.EventHandler(this.ViewReportsFormBtn_Click);
             // 
+            // attachedFilesListBox
+            // 
+            this.attachedFilesListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.attachedFilesListBox.FormattingEnabled = true;
+            this.attachedFilesListBox.Location = new System.Drawing.Point(434, 171);
+            this.attachedFilesListBox.Name = "attachedFilesListBox";
+            this.attachedFilesListBox.Size = new System.Drawing.Size(363, 50);
+            this.attachedFilesListBox.TabIndex = 12;
+            this.attachedFilesListBox.SelectedIndexChanged += new System.EventHandler(this.attachedFilesListBox_SelectedIndexChanged);
+            // 
+            // RemoveFileBtn
+            // 
+            this.RemoveFileBtn.Dock = System.Windows.Forms.DockStyle.Right;
+            this.RemoveFileBtn.Location = new System.Drawing.Point(609, 227);
+            this.RemoveFileBtn.Name = "RemoveFileBtn";
+            this.RemoveFileBtn.Size = new System.Drawing.Size(188, 50);
+            this.RemoveFileBtn.TabIndex = 13;
+            this.RemoveFileBtn.Text = "Remove Files";
+            this.RemoveFileBtn.UseVisualStyleBackColor = true;
+            this.RemoveFileBtn.Click += new System.EventHandler(this.RemoveFileBtn_Click);
+            // 
+            // previewPictureBox
+            // 
+            this.previewPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.previewPictureBox.Location = new System.Drawing.Point(434, 115);
+            this.previewPictureBox.Name = "previewPictureBox";
+            this.previewPictureBox.Size = new System.Drawing.Size(363, 50);
+            this.previewPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.previewPictureBox.TabIndex = 14;
+            this.previewPictureBox.TabStop = false;
+            // 
+            // previewPanel
+            // 
+            this.previewPanel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.previewPanel.AutoSize = true;
+            this.previewPanel.Location = new System.Drawing.Point(579, 99);
+            this.previewPanel.Name = "previewPanel";
+            this.previewPanel.Size = new System.Drawing.Size(72, 13);
+            this.previewPanel.TabIndex = 15;
+            this.previewPanel.Text = "Peview Panel";
+            // 
             // ReportIssuesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -214,6 +264,7 @@
             this.Load += new System.EventHandler(this.ReportIssuesForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.previewPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -232,5 +283,9 @@
         private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button ViewReportsFormBtn;
+        private System.Windows.Forms.ListBox attachedFilesListBox;
+        private System.Windows.Forms.Button RemoveFileBtn;
+        private System.Windows.Forms.PictureBox previewPictureBox;
+        private System.Windows.Forms.Label previewPanel;
     }
 }

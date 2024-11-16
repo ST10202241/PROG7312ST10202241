@@ -12,6 +12,7 @@ namespace PROG7312ST10202241
         {
             InitializeComponent();
             requestGraph = graph;
+
         }
 
         private void btnDisplayGraph_Click(object sender, EventArgs e)

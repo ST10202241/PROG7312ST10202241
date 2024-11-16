@@ -9,10 +9,12 @@ namespace PROG7312ST10202241
 {
     public partial class ServiceRequestStatementForm : Form
     {
+        
         private ServiceRequestGraph requestGraph;
         private ServiceRequestBST requestTree = new ServiceRequestBST();
         private PriorityQueue<ServiceRequest, int> priorityQueue = new PriorityQueue<ServiceRequest, int>();
         private ResourceManager resourceManager;
+
 
         public ServiceRequestStatementForm()
         {

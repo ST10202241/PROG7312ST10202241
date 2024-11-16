@@ -105,7 +105,8 @@ namespace PROG7312ST10202241
             CategoryLBox.Items.Add(resourceManager.GetString("CategoryRoads"));
             CategoryLBox.Items.Add(resourceManager.GetString("CategoryUtilities"));
         }
-        
+
+        private List<string> attachedMediaPaths = new List<string>();
         private void AttachMediaBtn_Click_1(object sender, EventArgs e)
         {
             string AttachImageOrDocumentMessage = resourceManager.GetString("AttachImageOrDocument");
@@ -116,18 +117,27 @@ namespace PROG7312ST10202241
             openFileDialog.Title = AttachImageOrDocumentMessage;
             //openFileDialog.Filter = "Image Files (*.jpg, *.jpeg, *.png)|*.jpg;*.jpeg;*.png|All files (*.*)|*.*";
             openFileDialog.Filter = "All Files (*.*)|*.*";
+            openFileDialog.Multiselect = true;
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                attachedMediaPath = openFileDialog.FileName; // Store the full file path
-                System.Windows.Forms.MessageBox.Show("Attachment: " + Path.GetFileName(attachedMediaPath)); // Display the file name
+                foreach (var filePath in openFileDialog.FileNames)
+                {
+                    if (!attachedMediaPaths.Contains(filePath)) // Avoid duplicate attachments
+                    {
+                        attachedMediaPaths.Add(filePath);
+                        attachedFilesListBox.Items.Add(Path.GetFileName(filePath)); // Display only the file name in the ListBox
+                    }
+                }
+
+                System.Windows.Forms.MessageBox.Show("Attachments Added: " + string.Join(", ", openFileDialog.FileNames));
             }
             else
             {
-                attachedMediaPath = string.Empty; // Clear if no file is selected
-                string Nofileselectedmessage = resourceManager.GetString("Nofileselected");
-                System.Windows.Forms.MessageBox.Show(Nofileselectedmessage);
+                string noFileSelectedMessage = resourceManager.GetString("Nofileselected");
+                System.Windows.Forms.MessageBox.Show(noFileSelectedMessage);
             }
+
             if (!mediaAttached)
             {
                 mediaAttached = true;
@@ -166,7 +176,7 @@ namespace PROG7312ST10202241
             }
 
             // Create a new issue report and add it to the list
-            IssueReport newIssue = new IssueReport(location, category, description, attachedMediaPath);
+            IssueReport newIssue = new IssueReport(location, category, description, new List<string>(attachedMediaPaths));
             reportedIssues.Add(newIssue);
 
             // Show success message
@@ -192,6 +202,7 @@ namespace PROG7312ST10202241
             CategoryLBox.ClearSelected();
             DescriptionRTxt.Clear();
             attachedMediaPath = string.Empty;
+            attachedFilesListBox.ClearSelected();
         }
 
         private void backlbl_Click(object sender, EventArgs e)
@@ -238,5 +249,89 @@ namespace PROG7312ST10202241
                 UpdateProgress();
             }
         }
+
+        private void RemoveFileBtn_Click(object sender, EventArgs e)
+        {
+            if (attachedFilesListBox.SelectedItem != null)
+            {
+                string selectedFile = attachedFilesListBox.SelectedItem.ToString();
+
+                // Find and remove the full file path from the list
+                string filePathToRemove = attachedMediaPaths.FirstOrDefault(path => Path.GetFileName(path) == selectedFile);
+                if (filePathToRemove != null)
+                {
+                    attachedMediaPaths.Remove(filePathToRemove);
+                    attachedFilesListBox.Items.Remove(selectedFile); // Remove from the ListBox as well
+                }
+
+                System.Windows.Forms.MessageBox.Show($"Removed: {selectedFile}");
+            }
+            else
+            {
+                System.Windows.Forms.MessageBox.Show("No file selected for removal.");
+            }
+
+            // Update progress if no files are attached
+            if (attachedMediaPaths.Count == 0)
+            {
+                mediaAttached = false;
+                currentStep -= 1;
+                UpdateProgress();
+            }
+        }
+
+        private void attachedFilesListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (attachedFilesListBox.SelectedItem != null)
+            {
+                string selectedFile = attachedFilesListBox.SelectedItem.ToString();
+                string filePath = attachedMediaPaths.FirstOrDefault(path => Path.GetFileName(path) == selectedFile);
+
+                if (!string.IsNullOrEmpty(filePath))
+                {
+                    // Check the file type based on extension
+                    string extension = Path.GetExtension(filePath).ToLower();
+
+                    if (extension == ".jpg" || extension == ".jpeg" || extension == ".png" || extension == ".bmp" || extension == ".gif")
+                    {
+                        // Display the image in the PictureBox
+                        previewPictureBox.Image = Image.FromFile(filePath);
+                        previewPictureBox.Visible = true;
+                        previewPanel.Visible = false; // Hide other previews
+                    }
+                    else if (extension == ".pdf")
+                    {
+                        // Handle PDF Preview (use a third-party library like Adobe Reader or PDF.js)
+                        previewPictureBox.Visible = false;
+                        previewPanel.Visible = true;
+                        previewPanel.Controls.Clear();
+
+                        Label pdfLabel = new Label
+                        {
+                            Text = "PDF preview not available in this demo.",
+                            AutoSize = true,
+                            TextAlign = ContentAlignment.MiddleCenter
+                        };
+                        previewPanel.Controls.Add(pdfLabel);
+                    }
+                    else
+                    {
+                        // Handle other file types (e.g., videos or unsupported formats)
+                        previewPictureBox.Visible = false;
+                        previewPanel.Visible = true;
+                        previewPanel.Controls.Clear();
+
+                        Label unsupportedLabel = new Label
+                        {
+                            Text = "Preview not available for this file type.",
+                            AutoSize = true,
+                            TextAlign = ContentAlignment.MiddleCenter
+                        };
+                        previewPanel.Controls.Add(unsupportedLabel);
+                    }
+                }
+            }
+        }
+
     }
 }
