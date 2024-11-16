@@ -48,6 +48,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridView1);
+            this.Font = new System.Drawing.Font("Bahnschrift", 9F);
             this.Name = "ViewReportsForm";
             this.Text = "View Reports";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

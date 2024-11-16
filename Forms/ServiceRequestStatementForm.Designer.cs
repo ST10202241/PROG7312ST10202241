@@ -67,9 +67,10 @@
             this.button1.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(0, 418);
+            this.button1.Location = new System.Drawing.Point(0, 451);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(800, 32);
+            this.button1.Size = new System.Drawing.Size(934, 34);
             this.button1.TabIndex = 1;
             this.button1.Text = "Back To Main Menu";
             this.button1.UseVisualStyleBackColor = false;
@@ -79,68 +80,76 @@
             // 
             this.lblStatus.AutoSize = true;
             this.lblStatus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblStatus.Location = new System.Drawing.Point(3, 274);
+            this.lblStatus.Location = new System.Drawing.Point(4, 296);
+            this.lblStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(388, 68);
+            this.lblStatus.Size = new System.Drawing.Size(451, 74);
             this.lblStatus.TabIndex = 3;
             this.lblStatus.Text = "lblStatus";
             // 
             // txtRequestId
             // 
             this.txtRequestId.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtRequestId.Location = new System.Drawing.Point(132, 3);
+            this.txtRequestId.Location = new System.Drawing.Point(154, 3);
+            this.txtRequestId.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtRequestId.Name = "txtRequestId";
-            this.txtRequestId.Size = new System.Drawing.Size(123, 20);
+            this.txtRequestId.Size = new System.Drawing.Size(142, 22);
             this.txtRequestId.TabIndex = 4;
             // 
             // txtNewRequestId
             // 
             this.txtNewRequestId.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtNewRequestId.Location = new System.Drawing.Point(197, 3);
+            this.txtNewRequestId.Location = new System.Drawing.Point(229, 3);
+            this.txtNewRequestId.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNewRequestId.Name = "txtNewRequestId";
-            this.txtNewRequestId.Size = new System.Drawing.Size(188, 20);
+            this.txtNewRequestId.Size = new System.Drawing.Size(218, 22);
             this.txtNewRequestId.TabIndex = 5;
             // 
             // txtNewStatus
             // 
             this.txtNewStatus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtNewStatus.Location = new System.Drawing.Point(197, 83);
+            this.txtNewStatus.Location = new System.Drawing.Point(229, 90);
+            this.txtNewStatus.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNewStatus.Name = "txtNewStatus";
-            this.txtNewStatus.Size = new System.Drawing.Size(188, 20);
+            this.txtNewStatus.Size = new System.Drawing.Size(218, 22);
             this.txtNewStatus.TabIndex = 6;
             // 
             // txtNewDescription
             // 
             this.txtNewDescription.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtNewDescription.Location = new System.Drawing.Point(197, 163);
+            this.txtNewDescription.Location = new System.Drawing.Point(229, 177);
+            this.txtNewDescription.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNewDescription.Name = "txtNewDescription";
-            this.txtNewDescription.Size = new System.Drawing.Size(188, 20);
+            this.txtNewDescription.Size = new System.Drawing.Size(218, 22);
             this.txtNewDescription.TabIndex = 7;
             // 
             // txtNewPriority
             // 
             this.txtNewPriority.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtNewPriority.Location = new System.Drawing.Point(197, 243);
+            this.txtNewPriority.Location = new System.Drawing.Point(229, 264);
+            this.txtNewPriority.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNewPriority.Name = "txtNewPriority";
-            this.txtNewPriority.Size = new System.Drawing.Size(188, 20);
+            this.txtNewPriority.Size = new System.Drawing.Size(218, 22);
             this.txtNewPriority.TabIndex = 8;
             // 
             // requestID
             // 
             this.requestID.AutoSize = true;
             this.requestID.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.requestID.Location = new System.Drawing.Point(3, 0);
+            this.requestID.Location = new System.Drawing.Point(4, 0);
+            this.requestID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.requestID.Name = "requestID";
-            this.requestID.Size = new System.Drawing.Size(123, 131);
+            this.requestID.Size = new System.Drawing.Size(142, 142);
             this.requestID.TabIndex = 9;
             this.requestID.Text = "Request ID:";
             // 
             // btnSearch
             // 
             this.btnSearch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSearch.Location = new System.Drawing.Point(261, 3);
+            this.btnSearch.Location = new System.Drawing.Point(304, 3);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(124, 125);
+            this.btnSearch.Size = new System.Drawing.Size(143, 136);
             this.btnSearch.TabIndex = 10;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -151,18 +160,20 @@
             this.AddNewServiceRequestLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.AddNewServiceRequestLbl.AutoSize = true;
             this.AddNewServiceRequestLbl.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddNewServiceRequestLbl.Location = new System.Drawing.Point(113, 0);
+            this.AddNewServiceRequestLbl.Location = new System.Drawing.Point(146, 0);
+            this.AddNewServiceRequestLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.AddNewServiceRequestLbl.Name = "AddNewServiceRequestLbl";
-            this.AddNewServiceRequestLbl.Size = new System.Drawing.Size(167, 41);
+            this.AddNewServiceRequestLbl.Size = new System.Drawing.Size(167, 44);
             this.AddNewServiceRequestLbl.TabIndex = 11;
             this.AddNewServiceRequestLbl.Text = "Add New Service Request";
             // 
             // btnAddRequest
             // 
             this.btnAddRequest.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAddRequest.Location = new System.Drawing.Point(3, 373);
+            this.btnAddRequest.Location = new System.Drawing.Point(4, 403);
+            this.btnAddRequest.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAddRequest.Name = "btnAddRequest";
-            this.btnAddRequest.Size = new System.Drawing.Size(388, 36);
+            this.btnAddRequest.Size = new System.Drawing.Size(451, 39);
             this.btnAddRequest.TabIndex = 12;
             this.btnAddRequest.Text = "Add Request";
             this.btnAddRequest.UseVisualStyleBackColor = true;
@@ -172,9 +183,10 @@
             // 
             this.lblNewRequestId.AutoSize = true;
             this.lblNewRequestId.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblNewRequestId.Location = new System.Drawing.Point(3, 0);
+            this.lblNewRequestId.Location = new System.Drawing.Point(4, 0);
+            this.lblNewRequestId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNewRequestId.Name = "lblNewRequestId";
-            this.lblNewRequestId.Size = new System.Drawing.Size(188, 80);
+            this.lblNewRequestId.Size = new System.Drawing.Size(217, 87);
             this.lblNewRequestId.TabIndex = 13;
             this.lblNewRequestId.Text = "New Request ID:";
             // 
@@ -182,9 +194,10 @@
             // 
             this.lblNewStatus.AutoSize = true;
             this.lblNewStatus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblNewStatus.Location = new System.Drawing.Point(3, 80);
+            this.lblNewStatus.Location = new System.Drawing.Point(4, 87);
+            this.lblNewStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNewStatus.Name = "lblNewStatus";
-            this.lblNewStatus.Size = new System.Drawing.Size(188, 80);
+            this.lblNewStatus.Size = new System.Drawing.Size(217, 87);
             this.lblNewStatus.TabIndex = 14;
             this.lblNewStatus.Text = "New Status:";
             // 
@@ -192,9 +205,10 @@
             // 
             this.lblNewDescription.AutoSize = true;
             this.lblNewDescription.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblNewDescription.Location = new System.Drawing.Point(3, 160);
+            this.lblNewDescription.Location = new System.Drawing.Point(4, 174);
+            this.lblNewDescription.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNewDescription.Name = "lblNewDescription";
-            this.lblNewDescription.Size = new System.Drawing.Size(188, 80);
+            this.lblNewDescription.Size = new System.Drawing.Size(217, 87);
             this.lblNewDescription.TabIndex = 15;
             this.lblNewDescription.Text = "New Description:";
             // 
@@ -202,9 +216,10 @@
             // 
             this.lblNewPriority.AutoSize = true;
             this.lblNewPriority.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblNewPriority.Location = new System.Drawing.Point(3, 240);
+            this.lblNewPriority.Location = new System.Drawing.Point(4, 261);
+            this.lblNewPriority.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNewPriority.Name = "lblNewPriority";
-            this.lblNewPriority.Size = new System.Drawing.Size(188, 83);
+            this.lblNewPriority.Size = new System.Drawing.Size(217, 89);
             this.lblNewPriority.TabIndex = 16;
             this.lblNewPriority.Text = "New Priority:";
             // 
@@ -212,9 +227,10 @@
             // 
             this.lblRequestID.AutoSize = true;
             this.lblRequestID.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblRequestID.Location = new System.Drawing.Point(100, 0);
+            this.lblRequestID.Location = new System.Drawing.Point(116, 0);
+            this.lblRequestID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRequestID.Name = "lblRequestID";
-            this.lblRequestID.Size = new System.Drawing.Size(91, 131);
+            this.lblRequestID.Size = new System.Drawing.Size(104, 142);
             this.lblRequestID.TabIndex = 17;
             this.lblRequestID.Text = "Request ID:";
             // 
@@ -222,9 +238,10 @@
             // 
             this.labelStatus.AutoSize = true;
             this.labelStatus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelStatus.Location = new System.Drawing.Point(197, 0);
+            this.labelStatus.Location = new System.Drawing.Point(228, 0);
+            this.labelStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelStatus.Name = "labelStatus";
-            this.labelStatus.Size = new System.Drawing.Size(91, 131);
+            this.labelStatus.Size = new System.Drawing.Size(104, 142);
             this.labelStatus.TabIndex = 18;
             this.labelStatus.Text = "Current Status:";
             // 
@@ -232,9 +249,10 @@
             // 
             this.lblPriority.AutoSize = true;
             this.lblPriority.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblPriority.Location = new System.Drawing.Point(294, 0);
+            this.lblPriority.Location = new System.Drawing.Point(340, 0);
+            this.lblPriority.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPriority.Name = "lblPriority";
-            this.lblPriority.Size = new System.Drawing.Size(91, 131);
+            this.lblPriority.Size = new System.Drawing.Size(107, 142);
             this.lblPriority.TabIndex = 19;
             this.lblPriority.Text = "Priority:";
             // 
@@ -242,9 +260,10 @@
             // 
             this.statusLbl.AutoSize = true;
             this.statusLbl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.statusLbl.Location = new System.Drawing.Point(3, 0);
+            this.statusLbl.Location = new System.Drawing.Point(4, 0);
+            this.statusLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.statusLbl.Name = "statusLbl";
-            this.statusLbl.Size = new System.Drawing.Size(91, 131);
+            this.statusLbl.Size = new System.Drawing.Size(104, 142);
             this.statusLbl.TabIndex = 20;
             this.statusLbl.Text = "Status:";
             // 
@@ -258,11 +277,12 @@
             this.tableLayoutPanel1.Controls.Add(this.txtRequestId, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnSearch, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(4, 3);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(388, 131);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(451, 142);
             this.tableLayoutPanel1.TabIndex = 21;
             // 
             // tableLayoutPanel2
@@ -277,11 +297,12 @@
             this.tableLayoutPanel2.Controls.Add(this.lblPriority, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.labelStatus, 2, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 140);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 151);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(388, 131);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(451, 142);
             this.tableLayoutPanel2.TabIndex = 22;
             // 
             // tableLayoutPanel3
@@ -298,14 +319,15 @@
             this.tableLayoutPanel3.Controls.Add(this.lblNewDescription, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.lblNewStatus, 0, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 44);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 47);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 4;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(388, 323);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(451, 350);
             this.tableLayoutPanel3.TabIndex = 23;
             // 
             // tableLayoutPanel4
@@ -316,13 +338,14 @@
             this.tableLayoutPanel4.Controls.Add(this.AddNewServiceRequestLbl, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnAddRequest, 0, 2);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(403, 3);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(471, 3);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 3;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(394, 412);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(459, 445);
             this.tableLayoutPanel4.TabIndex = 24;
             // 
             // tableLayoutPanel5
@@ -334,22 +357,24 @@
             this.tableLayoutPanel5.Controls.Add(this.lblStatus, 0, 2);
             this.tableLayoutPanel5.Controls.Add(this.btnOpenGraphForm, 0, 3);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(4, 3);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 4;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(394, 412);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(459, 445);
             this.tableLayoutPanel5.TabIndex = 25;
             // 
             // btnOpenGraphForm
             // 
             this.btnOpenGraphForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnOpenGraphForm.Location = new System.Drawing.Point(3, 345);
+            this.btnOpenGraphForm.Location = new System.Drawing.Point(4, 373);
+            this.btnOpenGraphForm.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnOpenGraphForm.Name = "btnOpenGraphForm";
-            this.btnOpenGraphForm.Size = new System.Drawing.Size(388, 64);
+            this.btnOpenGraphForm.Size = new System.Drawing.Size(451, 69);
             this.btnOpenGraphForm.TabIndex = 23;
             this.btnOpenGraphForm.Text = "Open Graph Form";
             this.btnOpenGraphForm.UseVisualStyleBackColor = true;
@@ -364,20 +389,23 @@
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel4, 1, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(800, 418);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(934, 451);
             this.tableLayoutPanel6.TabIndex = 26;
             // 
             // ServiceRequestStatementForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(934, 485);
             this.Controls.Add(this.tableLayoutPanel6);
             this.Controls.Add(this.button1);
+            this.Font = new System.Drawing.Font("Bahnschrift", 9F);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "ServiceRequestStatementForm";
             this.Text = "Service Request Statement";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ServiceRequestStatementForm_FormClosed);

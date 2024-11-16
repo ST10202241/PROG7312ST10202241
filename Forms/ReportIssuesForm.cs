@@ -46,7 +46,7 @@ namespace PROG7312ST10202241
             CategoryLbl.Text = resourceManager.GetString("CategoryLbl");
             descriptionLbl.Text = resourceManager.GetString("descriptionLbl");
             ViewReportsFormBtn.Text = resourceManager.GetString("ViewReportsFormBtn");
-            closeBtn.Text = resourceManager.GetString("closeBtn");
+            closeBtn.Text = resourceManager.GetString("BackToMainMenuBtn");
             // Other controls
         }
 
@@ -152,6 +152,7 @@ namespace PROG7312ST10202241
             string location = locationTxt.Text;
             string category = CategoryLBox.SelectedItem?.ToString(); // Ensure a selection was made
             string description = DescriptionRTxt.Text;
+            string attachmedia = attachedFilesListBox.SelectedItem?.ToString();
 
             // Validate inputs
             if (string.IsNullOrEmpty(location))
@@ -175,6 +176,11 @@ namespace PROG7312ST10202241
                 return;
             }
 
+            if (string.IsNullOrEmpty(attachmedia))
+            {
+                System.Windows.Forms.MessageBox.Show("please attach media");
+                return;
+            }
             // Create a new issue report and add it to the list
             IssueReport newIssue = new IssueReport(location, category, description, new List<string>(attachedMediaPaths));
             reportedIssues.Add(newIssue);
