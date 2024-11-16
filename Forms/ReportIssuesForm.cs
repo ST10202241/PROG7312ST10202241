@@ -12,7 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Forms;
-using Microsoft.Toolkit.Wpf.UI.Controls;
+
 
 namespace PROG7312ST10202241
 {
@@ -35,6 +35,8 @@ namespace PROG7312ST10202241
             InitializeComponent();
             resourceManager = new ResourceManager("PROG7312ST10202241.Properties.Strings", typeof(Form1).Assembly);
             ApplyLocalization();
+            locationSuggestionsListBox.SelectedIndexChanged += locationSuggestionsBox_SelectedIndexChanged;
+            locationTxt.TextChanged += locationTxt_TextChanged;
         }
 
         private void ApplyLocalization()
@@ -76,6 +78,26 @@ namespace PROG7312ST10202241
             CategoryLBox.Items.Add(resourceManager.GetString("CategoryRoads"));
             CategoryLBox.Items.Add(resourceManager.GetString("CategoryUtilities"));
             UpdateProgress();
+            ComboBox locationSuggestionsBox = new ComboBox
+            {
+                DropDownStyle = ComboBoxStyle.DropDownList,
+                Visible = false,
+                Width = locationTxt.Width,
+                Left = locationTxt.Left,
+                Top = locationTxt.Bottom + 5 // Position it under the TextBox
+            };
+            this.Controls.Add(locationSuggestionsBox);
+
+            ListBox locationSuggestionsListBox = new ListBox
+            {
+                Visible = false,
+                Width = locationTxt.Width,
+                Height = 100, // Adjust height as needed
+                Left = locationTxt.Left,
+                Top = locationTxt.Bottom + 5 // Position it right below the TextBox
+            };
+            this.Controls.Add(locationSuggestionsListBox);
+
         }
         private void UpdateProgress()
         {
@@ -233,15 +255,35 @@ namespace PROG7312ST10202241
             viewReportsForm.Show();
         }
 
-        private void locationTxt_TextChanged_1(object sender, EventArgs e)
+        private async void locationTxt_TextChanged(object sender, EventArgs e)
         {
-            if (!locationEntered)
+            string query = locationTxt.Text;
+            if (query.Length < 3) // Avoid API calls for very short inputs
             {
-                locationEntered = true;
-                currentStep += 1;
-                UpdateProgress();
+                locationSuggestionsListBox.Visible = false;
+                return;
+            }
+
+            var suggestions = await LocationSuggestionHelper.GetLocationSuggestionsAsync(query);
+
+            if (suggestions.Count > 0)
+            {
+                locationSuggestionsListBox.Items.Clear();
+                foreach (var suggestion in suggestions)
+                {
+                    locationSuggestionsListBox.Items.Add(suggestion.DisplayName);
+                }
+
+                locationSuggestionsListBox.Visible = true;
+                locationSuggestionsListBox.BringToFront();
+            }
+            else
+            {
+                locationSuggestionsListBox.Visible = false;
             }
         }
+
+
 
         private void CategoryLBox_SelectedIndexChanged_1(object sender, EventArgs e)
         {
@@ -343,6 +385,14 @@ namespace PROG7312ST10202241
                         previewPanel.Controls.Add(unsupportedLabel);
                     }
                 }
+            }
+        }
+        private void locationSuggestionsBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (locationSuggestionsListBox.SelectedItem != null)
+            {
+                locationTxt.Text = locationSuggestionsListBox.SelectedItem.ToString();
+                locationSuggestionsListBox.Visible = false; // Hide after selection
             }
         }
 
