@@ -40,11 +40,11 @@ namespace PROG7312ST10202241
         {
             this.Text = resourceManager.GetString("LocalEventsAndAnnouncementsTitle");
             backToMainMenuBtn.Text = resourceManager.GetString("BackToMainMenuBtn");
-            searchBtn.Text = resourceManager.GetString("SearchBtn");
+            //searchBtn.Text = resourceManager.GetString("SearchBtn");
            // clearBtn.Text = resourceManager.GetString("ClearBtn");
-            nameOfEventLbl.Text = resourceManager.GetString("NameOfEventLbl");
+           // nameOfEventLbl.Text = resourceManager.GetString("NameOfEventLbl");
             categoryLbl.Text = resourceManager.GetString("CategoryLbl");
-            dateLbl.Text = resourceManager.GetString("DateLbl");
+           // dateLbl.Text = resourceManager.GetString("DateLbl");
             
         }
 
