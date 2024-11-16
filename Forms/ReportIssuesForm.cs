@@ -152,7 +152,6 @@ namespace PROG7312ST10202241
             string location = locationTxt.Text;
             string category = CategoryLBox.SelectedItem?.ToString(); // Ensure a selection was made
             string description = DescriptionRTxt.Text;
-            string attachmedia = attachedFilesListBox.SelectedItem?.ToString();
 
             // Validate inputs
             if (string.IsNullOrEmpty(location))
@@ -164,36 +163,39 @@ namespace PROG7312ST10202241
             if (string.IsNullOrEmpty(category))
             {
                 string PleaseEnterACategoryMessage = resourceManager.GetString("PleaseEnterACategory");
-
                 System.Windows.Forms.MessageBox.Show(PleaseEnterACategoryMessage);
                 return;
             }
             if (string.IsNullOrEmpty(description))
             {
                 string PleaseEnterADescriptionMessage = resourceManager.GetString("PleaseEnterADescription");
-
                 System.Windows.Forms.MessageBox.Show(PleaseEnterADescriptionMessage);
                 return;
             }
 
-            if (string.IsNullOrEmpty(attachmedia))
+            // Check if there are any items in the attachedFilesListBox
+            if (attachedFilesListBox.Items.Count == 0) // No files attached
             {
-                System.Windows.Forms.MessageBox.Show("please attach media");
+                //string pleaseAttachMediaMessage = resourceManager.GetString("pleaseAttachMedia");
+                System.Windows.Forms.MessageBox.Show("Please Attach Media");
                 return;
             }
+
             // Create a new issue report and add it to the list
             IssueReport newIssue = new IssueReport(location, category, description, new List<string>(attachedMediaPaths));
             reportedIssues.Add(newIssue);
 
+
             // Show success message
-            string IssueReportedSuccessfullyMessage = resourceManager.GetString("IssueReportedSuccessfully");
+            string issueReportedSuccessfullyMessage = resourceManager.GetString("IssueReportedSuccessfully");
+            System.Windows.Forms.MessageBox.Show(issueReportedSuccessfullyMessage);
 
-            System.Windows.Forms.MessageBox.Show(IssueReportedSuccessfullyMessage);
-
-            // Optionally, clear the form after submission
+            // Clear the form and reset progress
             ClearForm();
             ResetProgress();
+            UpdateProgress(); // Ensure progress bar reflects the reset
         }
+
         private void ResetProgress()
         {
             // Reset the ProgressBar
@@ -208,8 +210,13 @@ namespace PROG7312ST10202241
             CategoryLBox.ClearSelected();
             DescriptionRTxt.Clear();
             attachedMediaPath = string.Empty;
-            attachedFilesListBox.ClearSelected();
+            attachedFilesListBox.Items.Clear(); // Clear the ListBox
+            previewPictureBox.Image = null; // Clear the PictureBox
+            previewPictureBox.Visible = false; // Hide the PictureBox
+            previewPanel.Visible = false; // Hide the preview panel
+            attachedMediaPaths.Clear(); // Clear the list of attached file paths
         }
+
 
         private void backlbl_Click(object sender, EventArgs e)
         {

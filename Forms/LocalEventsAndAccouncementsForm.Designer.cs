@@ -30,7 +30,6 @@
         {
             this.backToMainMenuBtn = new System.Windows.Forms.Button();
             this.searchBtn = new System.Windows.Forms.Button();
-            this.listBoxEvents = new System.Windows.Forms.ListBox();
             this.comboBoxCategories = new System.Windows.Forms.ComboBox();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.listBoxRecommendations = new System.Windows.Forms.ListBox();
@@ -47,10 +46,15 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.listBoxEvents = new System.Windows.Forms.ListBox();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // backToMainMenuBtn
@@ -73,40 +77,29 @@
             this.searchBtn.Location = new System.Drawing.Point(4, 3);
             this.searchBtn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(80, 48);
+            this.searchBtn.Size = new System.Drawing.Size(84, 46);
             this.searchBtn.TabIndex = 2;
             this.searchBtn.Text = "Search By Name";
             this.searchBtn.UseVisualStyleBackColor = true;
             this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
-            // listBoxEvents
-            // 
-            this.listBoxEvents.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBoxEvents.FormattingEnabled = true;
-            this.listBoxEvents.ItemHeight = 14;
-            this.listBoxEvents.Location = new System.Drawing.Point(470, 3);
-            this.listBoxEvents.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.listBoxEvents.Name = "listBoxEvents";
-            this.listBoxEvents.Size = new System.Drawing.Size(459, 443);
-            this.listBoxEvents.TabIndex = 3;
-            // 
             // comboBoxCategories
             // 
             this.comboBoxCategories.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBoxCategories.FormattingEnabled = true;
-            this.comboBoxCategories.Location = new System.Drawing.Point(105, 56);
+            this.comboBoxCategories.Location = new System.Drawing.Point(102, 55);
             this.comboBoxCategories.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.comboBoxCategories.Name = "comboBoxCategories";
-            this.comboBoxCategories.Size = new System.Drawing.Size(249, 22);
+            this.comboBoxCategories.Size = new System.Drawing.Size(240, 22);
             this.comboBoxCategories.TabIndex = 4;
             // 
             // dateTimePicker
             // 
             this.dateTimePicker.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dateTimePicker.Location = new System.Drawing.Point(105, 109);
+            this.dateTimePicker.Location = new System.Drawing.Point(102, 107);
             this.dateTimePicker.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(249, 22);
+            this.dateTimePicker.Size = new System.Drawing.Size(240, 22);
             this.dateTimePicker.TabIndex = 5;
             // 
             // listBoxRecommendations
@@ -114,28 +107,28 @@
             this.listBoxRecommendations.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxRecommendations.FormattingEnabled = true;
             this.listBoxRecommendations.ItemHeight = 14;
-            this.listBoxRecommendations.Location = new System.Drawing.Point(4, 224);
+            this.listBoxRecommendations.Location = new System.Drawing.Point(230, 3);
             this.listBoxRecommendations.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.listBoxRecommendations.Name = "listBoxRecommendations";
-            this.listBoxRecommendations.Size = new System.Drawing.Size(358, 216);
+            this.listBoxRecommendations.Size = new System.Drawing.Size(218, 210);
             this.listBoxRecommendations.TabIndex = 6;
             // 
             // searchTextBox
             // 
             this.searchTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.searchTextBox.Location = new System.Drawing.Point(105, 3);
+            this.searchTextBox.Location = new System.Drawing.Point(102, 3);
             this.searchTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(249, 22);
+            this.searchTextBox.Size = new System.Drawing.Size(240, 22);
             this.searchTextBox.TabIndex = 7;
             // 
             // btnSearchByDate
             // 
             this.btnSearchByDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSearchByDate.Location = new System.Drawing.Point(4, 111);
+            this.btnSearchByDate.Location = new System.Drawing.Point(4, 107);
             this.btnSearchByDate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSearchByDate.Name = "btnSearchByDate";
-            this.btnSearchByDate.Size = new System.Drawing.Size(80, 48);
+            this.btnSearchByDate.Size = new System.Drawing.Size(84, 46);
             this.btnSearchByDate.TabIndex = 8;
             this.btnSearchByDate.Text = "Search by Date";
             this.btnSearchByDate.UseVisualStyleBackColor = true;
@@ -144,10 +137,10 @@
             // btnSearchByCategory
             // 
             this.btnSearchByCategory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSearchByCategory.Location = new System.Drawing.Point(4, 57);
+            this.btnSearchByCategory.Location = new System.Drawing.Point(4, 55);
             this.btnSearchByCategory.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSearchByCategory.Name = "btnSearchByCategory";
-            this.btnSearchByCategory.Size = new System.Drawing.Size(80, 48);
+            this.btnSearchByCategory.Size = new System.Drawing.Size(84, 46);
             this.btnSearchByCategory.TabIndex = 9;
             this.btnSearchByCategory.Text = "Search By Category";
             this.btnSearchByCategory.UseVisualStyleBackColor = true;
@@ -160,7 +153,7 @@
             this.nameOfEventLbl.Location = new System.Drawing.Point(4, 0);
             this.nameOfEventLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nameOfEventLbl.Name = "nameOfEventLbl";
-            this.nameOfEventLbl.Size = new System.Drawing.Size(93, 53);
+            this.nameOfEventLbl.Size = new System.Drawing.Size(90, 52);
             this.nameOfEventLbl.TabIndex = 10;
             this.nameOfEventLbl.Text = "Name of Event:";
             // 
@@ -168,10 +161,10 @@
             // 
             this.categoryLbl.AutoSize = true;
             this.categoryLbl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.categoryLbl.Location = new System.Drawing.Point(4, 53);
+            this.categoryLbl.Location = new System.Drawing.Point(4, 52);
             this.categoryLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.categoryLbl.Name = "categoryLbl";
-            this.categoryLbl.Size = new System.Drawing.Size(93, 53);
+            this.categoryLbl.Size = new System.Drawing.Size(90, 52);
             this.categoryLbl.TabIndex = 11;
             this.categoryLbl.Text = "Category:";
             // 
@@ -179,20 +172,20 @@
             // 
             this.dateLbl.AutoSize = true;
             this.dateLbl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dateLbl.Location = new System.Drawing.Point(4, 106);
+            this.dateLbl.Location = new System.Drawing.Point(4, 104);
             this.dateLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dateLbl.Name = "dateLbl";
-            this.dateLbl.Size = new System.Drawing.Size(93, 53);
+            this.dateLbl.Size = new System.Drawing.Size(90, 52);
             this.dateLbl.TabIndex = 12;
             this.dateLbl.Text = "Date:";
             // 
             // btnSearchWithAll
             // 
             this.btnSearchWithAll.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSearchWithAll.Location = new System.Drawing.Point(105, 162);
+            this.btnSearchWithAll.Location = new System.Drawing.Point(102, 159);
             this.btnSearchWithAll.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSearchWithAll.Name = "btnSearchWithAll";
-            this.btnSearchWithAll.Size = new System.Drawing.Size(249, 50);
+            this.btnSearchWithAll.Size = new System.Drawing.Size(240, 47);
             this.btnSearchWithAll.TabIndex = 13;
             this.btnSearchWithAll.Text = "Search With All Criteria";
             this.btnSearchWithAll.UseVisualStyleBackColor = true;
@@ -201,10 +194,10 @@
             // clearBtn
             // 
             this.clearBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.clearBtn.Location = new System.Drawing.Point(4, 165);
+            this.clearBtn.Location = new System.Drawing.Point(4, 159);
             this.clearBtn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.clearBtn.Name = "clearBtn";
-            this.clearBtn.Size = new System.Drawing.Size(80, 49);
+            this.clearBtn.Size = new System.Drawing.Size(84, 49);
             this.clearBtn.TabIndex = 14;
             this.clearBtn.Text = "Clear";
             this.clearBtn.UseVisualStyleBackColor = true;
@@ -215,37 +208,33 @@
             this.listBoxFrequentSearchRecommendations.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxFrequentSearchRecommendations.FormattingEnabled = true;
             this.listBoxFrequentSearchRecommendations.ItemHeight = 14;
-            this.listBoxFrequentSearchRecommendations.Location = new System.Drawing.Point(370, 224);
+            this.listBoxFrequentSearchRecommendations.Location = new System.Drawing.Point(4, 3);
             this.listBoxFrequentSearchRecommendations.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.listBoxFrequentSearchRecommendations.Name = "listBoxFrequentSearchRecommendations";
-            this.listBoxFrequentSearchRecommendations.Size = new System.Drawing.Size(84, 216);
+            this.listBoxFrequentSearchRecommendations.Size = new System.Drawing.Size(218, 210);
             this.listBoxFrequentSearchRecommendations.TabIndex = 15;
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 78.79464F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.20536F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.listBoxRecommendations, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.listBoxFrequentSearchRecommendations, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(4, 3);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(458, 443);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(450, 215);
             this.tableLayoutPanel1.TabIndex = 16;
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.47896F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.52103F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 18F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.52104F));
             this.tableLayoutPanel2.Controls.Add(this.nameOfEventLbl, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.categoryLbl, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.searchTextBox, 1, 0);
@@ -262,24 +251,23 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(358, 215);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(346, 209);
             this.tableLayoutPanel2.TabIndex = 16;
             // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel1, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.listBoxEvents, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel5, 0, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 3);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 449F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(933, 449);
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(458, 443);
             this.tableLayoutPanel3.TabIndex = 17;
             // 
             // tableLayoutPanel4
@@ -291,7 +279,7 @@
             this.tableLayoutPanel4.Controls.Add(this.btnSearchByDate, 0, 2);
             this.tableLayoutPanel4.Controls.Add(this.clearBtn, 0, 3);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(368, 2);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(356, 2);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 4;
@@ -299,15 +287,56 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(88, 217);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(92, 211);
             this.tableLayoutPanel4.TabIndex = 17;
+            // 
+            // listBoxEvents
+            // 
+            this.listBoxEvents.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBoxEvents.FormattingEnabled = true;
+            this.listBoxEvents.ItemHeight = 14;
+            this.listBoxEvents.Location = new System.Drawing.Point(470, 3);
+            this.listBoxEvents.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.listBoxEvents.Name = "listBoxEvents";
+            this.listBoxEvents.Size = new System.Drawing.Size(459, 443);
+            this.listBoxEvents.TabIndex = 3;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Controls.Add(this.listBoxFrequentSearchRecommendations, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.listBoxRecommendations, 1, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 224);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(452, 216);
+            this.tableLayoutPanel5.TabIndex = 17;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 2;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel3, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.listBoxEvents, 1, 0);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(933, 449);
+            this.tableLayoutPanel6.TabIndex = 18;
             // 
             // LocalEventsAndAccouncementsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(933, 485);
-            this.Controls.Add(this.tableLayoutPanel3);
+            this.Controls.Add(this.tableLayoutPanel6);
             this.Controls.Add(this.backToMainMenuBtn);
             this.Font = new System.Drawing.Font("Bahnschrift", 9F);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -319,6 +348,8 @@
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -326,7 +357,6 @@
         #endregion
         private System.Windows.Forms.Button backToMainMenuBtn;
         private System.Windows.Forms.Button searchBtn;
-        private System.Windows.Forms.ListBox listBoxEvents;
         private System.Windows.Forms.ComboBox comboBoxCategories;
         private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.ListBox listBoxRecommendations;
@@ -343,5 +373,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.ListBox listBoxEvents;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
     }
 }
