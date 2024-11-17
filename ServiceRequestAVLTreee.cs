@@ -128,5 +128,4 @@ namespace PROG7312ST10202241
             InOrderTraversalRecursive(node.Right, result);
         }
     }
-
 }

@@ -111,8 +111,9 @@ namespace PROG7312ST10202241
                 r.Description,
                 r.Status,
                 r.SubmittedDate
-            }).ToList();
+            }).ToList(); // Ensures that all required fields are displayed.
         }
+
 
         // Search for a service request by ID
         private void btnSearch_Click(object sender, EventArgs e)

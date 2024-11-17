@@ -75,7 +75,7 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.76654F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.23346F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 304F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 305F));
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.dataGridViewRequests, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 2, 0);
@@ -171,7 +171,7 @@
             this.dataGridViewRequests.Location = new System.Drawing.Point(189, 3);
             this.dataGridViewRequests.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridViewRequests.Name = "dataGridViewRequests";
-            this.dataGridViewRequests.Size = new System.Drawing.Size(430, 427);
+            this.dataGridViewRequests.Size = new System.Drawing.Size(429, 427);
             this.dataGridViewRequests.TabIndex = 1;
             // 
             // tableLayoutPanel4
@@ -187,13 +187,13 @@
             this.tableLayoutPanel4.Controls.Add(this.txtRootNode, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.btnSetRoot, 1, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(626, 3);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(625, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 3;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 228F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(299, 427);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(300, 427);
             this.tableLayoutPanel4.TabIndex = 9;
             // 
             // lstMSTDisplay
@@ -203,7 +203,7 @@
             this.lstMSTDisplay.ItemHeight = 14;
             this.lstMSTDisplay.Location = new System.Drawing.Point(3, 3);
             this.lstMSTDisplay.Name = "lstMSTDisplay";
-            this.lstMSTDisplay.Size = new System.Drawing.Size(162, 93);
+            this.lstMSTDisplay.Size = new System.Drawing.Size(163, 93);
             this.lstMSTDisplay.TabIndex = 2;
             // 
             // lstTraversalDisplay
@@ -211,7 +211,7 @@
             this.lstTraversalDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lstTraversalDisplay.FormattingEnabled = true;
             this.lstTraversalDisplay.ItemHeight = 14;
-            this.lstTraversalDisplay.Location = new System.Drawing.Point(171, 3);
+            this.lstTraversalDisplay.Location = new System.Drawing.Point(172, 3);
             this.lstTraversalDisplay.Name = "lstTraversalDisplay";
             this.lstTraversalDisplay.Size = new System.Drawing.Size(125, 93);
             this.lstTraversalDisplay.TabIndex = 3;
@@ -228,7 +228,7 @@
             // 
             // btnGraphTraversal
             // 
-            this.btnGraphTraversal.Location = new System.Drawing.Point(171, 201);
+            this.btnGraphTraversal.Location = new System.Drawing.Point(172, 201);
             this.btnGraphTraversal.Name = "btnGraphTraversal";
             this.btnGraphTraversal.Size = new System.Drawing.Size(124, 23);
             this.btnGraphTraversal.TabIndex = 1;
@@ -245,7 +245,7 @@
             // 
             // btnSetRoot
             // 
-            this.btnSetRoot.Location = new System.Drawing.Point(171, 102);
+            this.btnSetRoot.Location = new System.Drawing.Point(172, 102);
             this.btnSetRoot.Name = "btnSetRoot";
             this.btnSetRoot.Size = new System.Drawing.Size(108, 23);
             this.btnSetRoot.TabIndex = 5;
