@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportIssuesForm));
             this.closeBtn = new System.Windows.Forms.Button();
             this.AttachMediaBtn = new System.Windows.Forms.Button();
             this.SubmitBtn = new System.Windows.Forms.Button();
@@ -353,6 +354,7 @@
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.closeBtn);
             this.Font = new System.Drawing.Font("Bahnschrift", 9F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "ReportIssuesForm";
             this.Text = "Report Issues";

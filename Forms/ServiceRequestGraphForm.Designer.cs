@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ServiceRequestGraphForm));
             this.dataGridViewRequests = new System.Windows.Forms.DataGridView();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearchId = new System.Windows.Forms.TextBox();
@@ -185,6 +186,7 @@
             this.ClientSize = new System.Drawing.Size(934, 485);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Font = new System.Drawing.Font("Bahnschrift", 9F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "ServiceRequestGraphForm";
             this.Text = "ServiceRequestGraphForm";

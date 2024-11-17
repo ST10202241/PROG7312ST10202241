@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ServiceRequestStatementForm));
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -75,7 +76,7 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.76654F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.23346F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 305F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 306F));
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.dataGridViewRequests, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 2, 0);
@@ -171,7 +172,7 @@
             this.dataGridViewRequests.Location = new System.Drawing.Point(189, 3);
             this.dataGridViewRequests.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridViewRequests.Name = "dataGridViewRequests";
-            this.dataGridViewRequests.Size = new System.Drawing.Size(429, 427);
+            this.dataGridViewRequests.Size = new System.Drawing.Size(428, 427);
             this.dataGridViewRequests.TabIndex = 1;
             // 
             // tableLayoutPanel4
@@ -187,13 +188,13 @@
             this.tableLayoutPanel4.Controls.Add(this.txtRootNode, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.btnSetRoot, 1, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(625, 3);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(624, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 3;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 228F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(300, 427);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(301, 427);
             this.tableLayoutPanel4.TabIndex = 9;
             // 
             // lstMSTDisplay
@@ -213,7 +214,7 @@
             this.lstTraversalDisplay.ItemHeight = 14;
             this.lstTraversalDisplay.Location = new System.Drawing.Point(172, 3);
             this.lstTraversalDisplay.Name = "lstTraversalDisplay";
-            this.lstTraversalDisplay.Size = new System.Drawing.Size(125, 93);
+            this.lstTraversalDisplay.Size = new System.Drawing.Size(126, 93);
             this.lstTraversalDisplay.TabIndex = 3;
             // 
             // btnShowMST
@@ -277,6 +278,7 @@
             this.Controls.Add(this.tableLayoutPanel3);
             this.Font = new System.Drawing.Font("Bahnschrift", 9F);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "ServiceRequestStatementForm";
             this.Text = "Service Request Statement";
