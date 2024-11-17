@@ -121,6 +121,9 @@
   <data name="eventsimage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\eventsimage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="govlogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\govlogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ReportImages" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ReportImages.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -133,16 +136,19 @@
   <data name="capetown" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\capetown.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ServiceRequestImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ServiceRequestImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="AnnouncementImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AnnouncementImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="capetownimage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\capetownimage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ServiceRequestImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ServiceRequestImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="servicerequestimg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\servicerequestimg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="saflag" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\saflag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -123,9 +123,29 @@ namespace PROG7312ST10202241.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap govlogo {
+            get {
+                object obj = ResourceManager.GetObject("govlogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ReportImages {
             get {
                 object obj = ResourceManager.GetObject("ReportImages", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap saflag {
+            get {
+                object obj = ResourceManager.GetObject("saflag", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

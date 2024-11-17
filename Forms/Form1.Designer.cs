@@ -37,10 +37,14 @@
             this.LocalEventsAndAnnouncementsLbl = new System.Windows.Forms.Label();
             this.ReportIssuesLbl = new System.Windows.Forms.Label();
             this.languageCBox = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ServiceRequestStatusPBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LocalEventsAndAnnouncementsPBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReportIssuesPBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -60,6 +64,8 @@
             this.tableLayoutPanel1.Controls.Add(this.LocalEventsAndAnnouncementsLbl, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.ReportIssuesLbl, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.languageCBox, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -159,6 +165,28 @@
             this.languageCBox.TabIndex = 6;
             this.languageCBox.SelectedIndexChanged += new System.EventHandler(this.languageCBox_SelectedIndexChanged);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = global::PROG7312ST10202241.Properties.Resources.govlogo;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(160, 178);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox2.Image = global::PROG7312ST10202241.Properties.Resources.saflag;
+            this.pictureBox2.Location = new System.Drawing.Point(786, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(145, 178);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -180,6 +208,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ServiceRequestStatusPBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LocalEventsAndAnnouncementsPBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReportIssuesPBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -194,5 +224,7 @@
         private System.Windows.Forms.Label ServiceRequestStatusLbl;
         private System.Windows.Forms.ComboBox languageCBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
