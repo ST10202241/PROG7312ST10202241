@@ -1,167 +1,237 @@
 ﻿using PROG7312ST10202241.Forms;
 using System;
 using System.Collections.Generic;
-using System.Globalization;
-using System.Resources;
+using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace PROG7312ST10202241
 {
+    // Form to manage and display service requests
     public partial class ServiceRequestStatementForm : Form
     {
-        
-        private ServiceRequestGraph requestGraph;
-        private ServiceRequestBST requestTree = new ServiceRequestBST();
-        private PriorityQueue<ServiceRequest, int> priorityQueue = new PriorityQueue<ServiceRequest, int>();
-        private ResourceManager resourceManager;
+        private ServiceRequestBST serviceRequestTree;
+        private Dictionary<int, List<int>> graph = new Dictionary<int, List<int>>();
+        private void InitializeGraph()
+        {
+            graph[1] = new List<int> { 2, 3 };
+            graph[2] = new List<int> { 4, 5 };
+            graph[3] = new List<int> { 6 };
+            graph[4] = new List<int>();
+            graph[5] = new List<int>();
+            graph[6] = new List<int>();
+        }
+        private void AddNode(int node)
+        {
+            if (!graph.ContainsKey(node))
+            {
+                graph[node] = new List<int>();
+            }
+        }
+        private void AddEdge(int fromNode, int toNode)
+        {
+            AddNode(fromNode);
+            AddNode(toNode);
+
+            graph[fromNode].Add(toNode);
+        }
 
 
-        public ServiceRequestStatementForm()
+        private void ServiceRequestStatementForm_Load(object sender, EventArgs e)
+        {
+            InitializeGraph();
+        }
+
+        private int graphRootNode = 1; // Example root node
+        private List<int> PerformDFS(int startNode, Dictionary<int, List<int>> graph)
+        {
+            var visited = new HashSet<int>();
+            var result = new List<int>();
+            var stack = new Stack<int>();
+
+            stack.Push(startNode);
+
+            while (stack.Count > 0)
+            {
+                int node = stack.Pop();
+
+                if (!visited.Contains(node))
+                {
+                    visited.Add(node);
+                    result.Add(node);
+
+                    // Push neighbors to stack
+                    if (graph.ContainsKey(node))
+                    {
+                        foreach (var neighbor in graph[node])
+                        {
+                            stack.Push(neighbor);
+                        }
+                    }
+                }
+            }
+
+            return result;
+        }
+
+        public ServiceRequestStatementForm(ServiceRequestBST tree)
         {
             InitializeComponent();
-            resourceManager = new ResourceManager("PROG7312ST10202241.Properties.Strings", typeof(Form1).Assembly);
-            ApplyLocalization();
+
+            serviceRequestTree = tree;
+
+            foreach (var issue in ReportDataStorage.ReportedIssues)
+            {
+                // No need for TryParse as RequestID is already an int
+                var serviceRequest = new ServiceRequest(
+                    issue.RequestID,
+                    issue.Location,
+                    issue.Category,
+                    issue.Description,
+                    "Pending", // Default status
+                    issue.ReportDate
+                );
+                serviceRequestTree.Insert(serviceRequest);
+            }
+
+            LoadServiceRequests(); // Populate DataGridView
         }
 
-        private void ApplyLocalization()
+
+
+        // Load and display service requests in a DataGridView
+        private void LoadServiceRequests()
         {
-            this.Text = resourceManager.GetString("ServiceRequestStatementTitle");
-            button1.Text = resourceManager.GetString("BackToMainMenuBtn");
+            var requests = serviceRequestTree.InOrderTraversal();
+            dataGridViewRequests.DataSource = requests.Select(r => new
+            {
+                r.RequestId,
+                r.Location,
+                r.Category,
+                r.Description,
+                r.Status,
+                r.SubmittedDate
+            }).ToList();
         }
 
-        public void ChangeLanguage(string cultureName)
+        // Search for a service request by ID
+        private void btnSearch_Click(object sender, EventArgs e)
         {
-            try
+            if (int.TryParse(txtSearchId.Text, out int id))
             {
-                CultureInfo culture = new CultureInfo(cultureName);
-                CultureInfo.DefaultThreadCurrentCulture = culture;
-                CultureInfo.DefaultThreadCurrentUICulture = culture;
-                ApplyLocalization();
+                var request = serviceRequestTree.Search(id);
+                if (request != null)
+                {
+                    MessageBox.Show($"Request ID: {request.RequestId}\nLocation: {request.Location}\nCategory: {request.Category}\nStatus: {request.Status}",
+                        "Service Request Found");
+                }
+                else
+                {
+                    MessageBox.Show($"Service Request with ID {id} not found.", "Error");
+                }
             }
-            catch (CultureNotFoundException ex)
+            else
             {
-                MessageBox.Show($"Error changing language: {ex.Message}");
+                MessageBox.Show("Please enter a valid numeric ID.", "Input Error");
             }
         }
 
-        private void backToMainMenuBtn_Click(object sender, EventArgs e)
+
+        // Update the status of a service request
+        private void btnUpdateStatus_Click(object sender, EventArgs e)
         {
-            try
+            if (int.TryParse(txtSearchId.Text, out int id))
             {
-                Form1 mainForm = new Form1();
-                mainForm.Show();
-                this.Hide();
-                //this.Close();
+                var request = serviceRequestTree.Search(id);
+                if (request != null)
+                {
+                    request.Status = txtNewStatus.Text; // Update the status
+                    LoadServiceRequests(); // Refresh the DataGridView to reflect the change
+                    MessageBox.Show($"Status for Request ID {id} updated to '{txtNewStatus.Text}'.", "Success");
+                }
+                else
+                {
+                    MessageBox.Show($"Service Request with ID {id} not found.", "Error");
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show($"An error occurred while navigating back: {ex.Message}");
+                MessageBox.Show("Please enter a valid numeric ID.", "Input Error");
             }
         }
+
 
         private void ServiceRequestStatementForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void closeBtn_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (int.TryParse(txtRequestId.Text, out int requestId))
-                {
-                    var request = requestTree.Search(requestId);
-                    if (request != null)
-                    {
-                      //  lblStatus.Text = $"Request ID: {request.RequestId}, Status: {request.Status}, Priority: {request.Priority}";
-                    }
-                    else
-                    {
-                        MessageBox.Show("Service request not found.");
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Please enter a valid Request ID (numeric).");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred during search: {ex.Message}");
-            }
+            ServiceRequestBST tree = new ServiceRequestBST();
+            ServiceRequestGraphForm formy = new ServiceRequestGraphForm(tree);
+            Form1 Form = new Form1();
+            Form.Show();
+            this.Hide();
+            formy.Close();
         }
-        
-        private void btnAddRequest_Click(object sender, EventArgs e)
-        {/*
-            try
-            {
-                if (ValidateNewRequestInputs(out int newRequestId, out int newPriority))
-                {
-                    var newRequest = new ServiceRequest
-                    {
-                        RequestId = newRequestId,
-                        Status = txtNewStatus.Text.Trim(),
-                        Description = txtNewDescription.Text.Trim(),
-                        //Priority = newPriority
-                    };
-
-                    requestTree.Insert(newRequest);
-                    //priorityQueue.Enqueue(newRequest, newRequest.Priority);
-
-                    MessageBox.Show("Service request added successfully!");
-                    ClearNewRequestInputs();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred while adding the request: {ex.Message}");
-            }*/
-        }
-
-        private bool ValidateNewRequestInputs(out int requestId, out int priority)
+        private void btnShowMST_Click(object sender, EventArgs e)
         {
-            requestId = 0;
-            priority = 0;
+            MST mstCalculator = new MST();
 
-            if (!int.TryParse(txtNewRequestId.Text.Trim(), out requestId))
+            // Example edges - replace with real data as needed
+            mstCalculator.AddEdge(1, 2, 3);
+            mstCalculator.AddEdge(1, 3, 1);
+            mstCalculator.AddEdge(2, 4, 5);
+            mstCalculator.AddEdge(3, 4, 4);
+
+            var mstEdges = mstCalculator.GetMinimumSpanningTree();
+            lstMSTDisplay.Items.Clear();
+            foreach (var edge in mstEdges)
             {
-                MessageBox.Show("Please enter a valid numeric Request ID.");
-                return false;
+                lstMSTDisplay.Items.Add($"From {edge.From} to {edge.To}, Weight: {edge.Weight}");
             }
-
-            if (string.IsNullOrWhiteSpace(txtNewStatus.Text))
-            {
-                MessageBox.Show("Status cannot be empty.");
-                return false;
-            }
-
-            if (string.IsNullOrWhiteSpace(txtNewDescription.Text))
-            {
-                MessageBox.Show("Description cannot be empty.");
-                return false;
-            }
-
-            if (!int.TryParse(txtNewPriority.Text.Trim(), out priority) || priority < 1 || priority > 5)
-            {
-                MessageBox.Show("Please enter a valid priority (1 to 5).");
-                return false;
-            }
-
-            return true;
         }
 
-        private void ClearNewRequestInputs()
+
+        private void btnGraphTraversal_Click(object sender, EventArgs e)
         {
-            txtNewRequestId.Clear();
-            txtNewStatus.Clear();
-            txtNewDescription.Clear();
-            txtNewPriority.Clear();
+            if (graph.Count == 0)
+            {
+                MessageBox.Show("The graph is empty. Please add nodes and edges first.", "Error");
+                return;
+            }
+
+            // Ensure graphRootNode exists
+            if (!graph.ContainsKey(graphRootNode))
+            {
+                MessageBox.Show($"Root node {graphRootNode} does not exist in the graph.", "Error");
+                return;
+            }
+
+            var traversalResult = PerformDFS(graphRootNode, graph);
+
+            lstTraversalDisplay.Items.Clear();
+            foreach (var node in traversalResult)
+            {
+                lstTraversalDisplay.Items.Add($"Visited Node: {node}");
+            }
+
+            MessageBox.Show("Depth-First Search traversal completed!", "Success");
         }
 
-        private void btnOpenGraphForm_Click(object sender, EventArgs e)
+        private void btnSetRoot_Click(object sender, EventArgs e)
         {
-           // var graphForm = new ServiceRequestGraphForm(requestGraph); // Pass the graph instance
-           // graphForm.Show();
+            if (int.TryParse(txtRootNode.Text, out int rootNode) && graph.ContainsKey(rootNode))
+            {
+                graphRootNode = rootNode;
+                MessageBox.Show($"Root node set to {rootNode}");
+            }
+            else
+            {
+                MessageBox.Show("Invalid root node or node does not exist in the graph.", "Error");
+            }
         }
+
     }
 }

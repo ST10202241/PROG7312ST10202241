@@ -35,9 +35,21 @@ namespace PROG7312ST10202241
             InitializeComponent();
             resourceManager = new ResourceManager("PROG7312ST10202241.Properties.Strings", typeof(Form1).Assembly);
             ApplyLocalization();
-            locationSuggestionsListBox.SelectedIndexChanged += locationSuggestionsBox_SelectedIndexChanged;
-            locationTxt.TextChanged += locationTxt_TextChanged;
+            InitializeCustomControls();
+            locationSuggestionsListBox.Visible = false;
         }
+        private void InitializeCustomControls()
+        {
+            locationSuggestionsListBox = new ListBox
+            {
+                Visible = false,
+                Width = locationTxt.Width,
+                Height = 100, // Adjust height as needed
+                Left = locationTxt.Left, 
+                Top = locationTxt.Bottom + 5 // Position it right below the TextBox
+                }; this.Controls.Add(locationSuggestionsListBox); 
+            locationSuggestionsListBox.SelectedIndexChanged += locationSuggestionsBox_SelectedIndexChanged; 
+            locationTxt.TextChanged += locationTxt_TextChanged; }
 
         private void ApplyLocalization()
         {
@@ -228,6 +240,7 @@ namespace PROG7312ST10202241
             previewPictureBox.Visible = false; // Hide the PictureBox
             previewPanel.Visible = false; // Hide the preview panel
             attachedMediaPaths.Clear(); // Clear the list of attached file paths
+            locationSuggestionsListBox.Visible  = false;
         }
 
 
@@ -248,35 +261,30 @@ namespace PROG7312ST10202241
 
         private async void locationTxt_TextChanged(object sender, EventArgs e)
         {
-            string query = locationTxt.Text;
-            if (query.Length < 3) // Avoid API calls for very short inputs
+            string query = locationTxt.Text; if (query.Length < 3) // Avoid API calls for very short inputs
             {
-                locationSuggestionsListBox.Visible = false;
-                return;
-            }
-
+                locationSuggestionsListBox.Visible = false; return;
+            } 
             var suggestions = await LocationSuggestionHelper.GetLocationSuggestionsAsync(query);
-
-            if (suggestions.Count > 0)
-            {
-                locationSuggestionsListBox.Items.Clear();
+            if (suggestions.Count > 0) 
+            { 
+                locationSuggestionsListBox.Items.Clear(); 
                 foreach (var suggestion in suggestions)
-                {
-                    locationSuggestionsListBox.Items.Add(suggestion.DisplayName);
+                { 
+                    locationSuggestionsListBox.Items.Add(suggestion.DisplayName); 
                 }
-
                 locationSuggestionsListBox.Visible = true;
                 locationSuggestionsListBox.BringToFront();
-            }
+            } 
             else
-            {
+            { 
                 locationSuggestionsListBox.Visible = false;
-            }
+            } 
         }
 
 
 
-        private void CategoryLBox_SelectedIndexChanged_1(object sender, EventArgs e)
+                private void CategoryLBox_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             if (!categorySelected)
             {
@@ -385,6 +393,16 @@ namespace PROG7312ST10202241
                 locationTxt.Text = locationSuggestionsListBox.SelectedItem.ToString();
                 locationSuggestionsListBox.Visible = false; // Hide after selection
             }
+        }
+
+        private void locationTxt_Click(object sender, EventArgs e)
+        {
+            locationTxt.Clear();
+        }
+
+        private void DescriptionRTxt_Click(object sender, EventArgs e)
+        {
+            DescriptionRTxt.Clear();
         }
     }
 }
