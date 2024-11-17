@@ -139,5 +139,15 @@ namespace PROG7312ST10202241.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap servicerequestimg {
+            get {
+                object obj = ResourceManager.GetObject("servicerequestimg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

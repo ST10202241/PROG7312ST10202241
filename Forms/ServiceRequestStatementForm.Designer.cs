@@ -38,14 +38,14 @@
             this.lblSearchID = new System.Windows.Forms.Label();
             this.txtSearchId = new System.Windows.Forms.TextBox();
             this.dataGridViewRequests = new System.Windows.Forms.DataGridView();
-            this.closeBtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnShowMST = new System.Windows.Forms.Button();
-            this.btnGraphTraversal = new System.Windows.Forms.Button();
             this.lstMSTDisplay = new System.Windows.Forms.ListBox();
             this.lstTraversalDisplay = new System.Windows.Forms.ListBox();
+            this.btnShowMST = new System.Windows.Forms.Button();
+            this.btnGraphTraversal = new System.Windows.Forms.Button();
             this.txtRootNode = new System.Windows.Forms.TextBox();
             this.btnSetRoot = new System.Windows.Forms.Button();
+            this.closeBtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -55,6 +55,7 @@
             // 
             // tableLayoutPanel3
             // 
+            this.tableLayoutPanel3.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel2, 0, 0);
@@ -70,10 +71,11 @@
             // 
             // tableLayoutPanel2
             // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.76654F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.23346F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 303F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 304F));
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.dataGridViewRequests, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 2, 0);
@@ -87,6 +89,7 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.58974F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.41026F));
@@ -104,7 +107,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 213F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(180, 427);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(179, 427);
             this.tableLayoutPanel1.TabIndex = 8;
             // 
             // btnUpdateStatus
@@ -165,28 +168,15 @@
             // 
             this.dataGridViewRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewRequests.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewRequests.Location = new System.Drawing.Point(190, 3);
+            this.dataGridViewRequests.Location = new System.Drawing.Point(189, 3);
             this.dataGridViewRequests.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridViewRequests.Name = "dataGridViewRequests";
             this.dataGridViewRequests.Size = new System.Drawing.Size(430, 427);
             this.dataGridViewRequests.TabIndex = 1;
             // 
-            // closeBtn
-            // 
-            this.closeBtn.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.closeBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.closeBtn.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
-            this.closeBtn.Location = new System.Drawing.Point(4, 442);
-            this.closeBtn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.closeBtn.Name = "closeBtn";
-            this.closeBtn.Size = new System.Drawing.Size(926, 40);
-            this.closeBtn.TabIndex = 10;
-            this.closeBtn.Text = "Back To Main Menu";
-            this.closeBtn.UseVisualStyleBackColor = false;
-            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
-            // 
             // tableLayoutPanel4
             // 
+            this.tableLayoutPanel4.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel4.ColumnCount = 2;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.37584F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.62416F));
@@ -197,14 +187,34 @@
             this.tableLayoutPanel4.Controls.Add(this.txtRootNode, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.btnSetRoot, 1, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(627, 3);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(626, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 3;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 228F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(298, 427);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(299, 427);
             this.tableLayoutPanel4.TabIndex = 9;
+            // 
+            // lstMSTDisplay
+            // 
+            this.lstMSTDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstMSTDisplay.FormattingEnabled = true;
+            this.lstMSTDisplay.ItemHeight = 14;
+            this.lstMSTDisplay.Location = new System.Drawing.Point(3, 3);
+            this.lstMSTDisplay.Name = "lstMSTDisplay";
+            this.lstMSTDisplay.Size = new System.Drawing.Size(162, 93);
+            this.lstMSTDisplay.TabIndex = 2;
+            // 
+            // lstTraversalDisplay
+            // 
+            this.lstTraversalDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstTraversalDisplay.FormattingEnabled = true;
+            this.lstTraversalDisplay.ItemHeight = 14;
+            this.lstTraversalDisplay.Location = new System.Drawing.Point(171, 3);
+            this.lstTraversalDisplay.Name = "lstTraversalDisplay";
+            this.lstTraversalDisplay.Size = new System.Drawing.Size(125, 93);
+            this.lstTraversalDisplay.TabIndex = 3;
             // 
             // btnShowMST
             // 
@@ -226,26 +236,6 @@
             this.btnGraphTraversal.UseVisualStyleBackColor = true;
             this.btnGraphTraversal.Click += new System.EventHandler(this.btnGraphTraversal_Click);
             // 
-            // lstMSTDisplay
-            // 
-            this.lstMSTDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lstMSTDisplay.FormattingEnabled = true;
-            this.lstMSTDisplay.ItemHeight = 14;
-            this.lstMSTDisplay.Location = new System.Drawing.Point(3, 3);
-            this.lstMSTDisplay.Name = "lstMSTDisplay";
-            this.lstMSTDisplay.Size = new System.Drawing.Size(162, 93);
-            this.lstMSTDisplay.TabIndex = 2;
-            // 
-            // lstTraversalDisplay
-            // 
-            this.lstTraversalDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lstTraversalDisplay.FormattingEnabled = true;
-            this.lstTraversalDisplay.ItemHeight = 14;
-            this.lstTraversalDisplay.Location = new System.Drawing.Point(171, 3);
-            this.lstTraversalDisplay.Name = "lstTraversalDisplay";
-            this.lstTraversalDisplay.Size = new System.Drawing.Size(124, 93);
-            this.lstTraversalDisplay.TabIndex = 3;
-            // 
             // txtRootNode
             // 
             this.txtRootNode.Location = new System.Drawing.Point(3, 102);
@@ -263,10 +253,26 @@
             this.btnSetRoot.UseVisualStyleBackColor = true;
             this.btnSetRoot.Click += new System.EventHandler(this.btnSetRoot_Click);
             // 
+            // closeBtn
+            // 
+            this.closeBtn.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.closeBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.closeBtn.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
+            this.closeBtn.Location = new System.Drawing.Point(4, 442);
+            this.closeBtn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.closeBtn.Name = "closeBtn";
+            this.closeBtn.Size = new System.Drawing.Size(926, 40);
+            this.closeBtn.TabIndex = 10;
+            this.closeBtn.Text = "Back To Main Menu";
+            this.closeBtn.UseVisualStyleBackColor = false;
+            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
+            // 
             // ServiceRequestStatementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::PROG7312ST10202241.Properties.Resources.servicerequestimg;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(934, 485);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Font = new System.Drawing.Font("Bahnschrift", 9F);
