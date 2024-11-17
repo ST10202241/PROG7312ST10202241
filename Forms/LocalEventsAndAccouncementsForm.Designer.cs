@@ -44,15 +44,15 @@
             this.listBoxFrequentSearchRecommendations = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.listBoxEvents = new System.Windows.Forms.ListBox();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.listBoxEvents = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.SuspendLayout();
@@ -232,6 +232,7 @@
             // 
             // tableLayoutPanel2
             // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.47896F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.52104F));
@@ -254,8 +255,29 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(346, 209);
             this.tableLayoutPanel2.TabIndex = 16;
             // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Controls.Add(this.searchBtn, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btnSearchByCategory, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.btnSearchByDate, 0, 2);
+            this.tableLayoutPanel4.Controls.Add(this.clearBtn, 0, 3);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(356, 2);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 4;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(92, 211);
+            this.tableLayoutPanel4.TabIndex = 17;
+            // 
             // tableLayoutPanel3
             // 
+            this.tableLayoutPanel3.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel1, 0, 0);
@@ -269,37 +291,6 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(458, 443);
             this.tableLayoutPanel3.TabIndex = 17;
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 1;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Controls.Add(this.searchBtn, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.btnSearchByCategory, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(this.btnSearchByDate, 0, 2);
-            this.tableLayoutPanel4.Controls.Add(this.clearBtn, 0, 3);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(356, 2);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 4;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(92, 211);
-            this.tableLayoutPanel4.TabIndex = 17;
-            // 
-            // listBoxEvents
-            // 
-            this.listBoxEvents.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBoxEvents.FormattingEnabled = true;
-            this.listBoxEvents.ItemHeight = 14;
-            this.listBoxEvents.Location = new System.Drawing.Point(470, 3);
-            this.listBoxEvents.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.listBoxEvents.Name = "listBoxEvents";
-            this.listBoxEvents.Size = new System.Drawing.Size(459, 443);
-            this.listBoxEvents.TabIndex = 3;
             // 
             // tableLayoutPanel5
             // 
@@ -316,8 +307,20 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(452, 216);
             this.tableLayoutPanel5.TabIndex = 17;
             // 
+            // listBoxEvents
+            // 
+            this.listBoxEvents.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBoxEvents.FormattingEnabled = true;
+            this.listBoxEvents.ItemHeight = 14;
+            this.listBoxEvents.Location = new System.Drawing.Point(470, 3);
+            this.listBoxEvents.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.listBoxEvents.Name = "listBoxEvents";
+            this.listBoxEvents.Size = new System.Drawing.Size(459, 443);
+            this.listBoxEvents.TabIndex = 3;
+            // 
             // tableLayoutPanel6
             // 
+            this.tableLayoutPanel6.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel6.ColumnCount = 2;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -335,6 +338,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::PROG7312ST10202241.Properties.Resources.eventsimage;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(933, 485);
             this.Controls.Add(this.tableLayoutPanel6);
             this.Controls.Add(this.backToMainMenuBtn);
@@ -346,8 +351,8 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
             this.ResumeLayout(false);
