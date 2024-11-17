@@ -8,11 +8,11 @@ public class IssueReport
     public string Location { get; set; }
     public string Category { get; set; }
     public string Description { get; set; }
-    public string RequestID { get; set; } // Unique identifier
-    public List<string> AttachedFiles { get; set; } // Store file paths
+    public int RequestID { get; set; } // Changed from string to int
+    public List<string> AttachedFiles { get; set; }
     public DateTime ReportDate { get; set; }
 
-    public IssueReport(string location, string category, string description, List<string> attachedFiles)
+    public IssueReport(string location, string category, string description, List<string> attachedFiles, int requestId)
     {
         if (string.IsNullOrWhiteSpace(location))
             throw new ArgumentException("Location is required.");
@@ -24,11 +24,10 @@ public class IssueReport
         Location = location;
         Category = category;
         Description = description;
-        RequestID = Guid.NewGuid().ToString();
+        RequestID = requestId; // No conversion necessary
         AttachedFiles = attachedFiles ?? new List<string>();
-        ReportDate = DateTime.Now; // Automatically set to the current date and time
+        ReportDate = DateTime.Now;
     }
-
 
     public override string ToString()
     {

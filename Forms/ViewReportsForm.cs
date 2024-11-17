@@ -25,6 +25,7 @@ namespace PROG7312ST10202241.Forms
             resourceManager = new ResourceManager("PROG7312ST10202241.Properties.Strings", typeof(Form1).Assembly);
             ApplyLocalization();
             PopulateDataGrid(this.issueReports);
+            PopulateDataGrid(ReportDataStorage.ReportedIssues);
         }
 
         private void ApplyLocalization()
@@ -72,27 +73,30 @@ namespace PROG7312ST10202241.Forms
             dataGridView1.CellClick += dataGridView1_CellContentClick;
         }
 
-         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-         {
-             // Check if the "View Files" button column was clicked
-             if (e.ColumnIndex == dataGridView1.Columns["ViewFiles"].Index && e.RowIndex >= 0)
-             {
-                 // Get the selected issue report's Request ID
-                 string requestID = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-                 var selectedReport = issueReports.FirstOrDefault(report => report.RequestID == requestID);
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataGridView1.Columns["ViewFiles"].Index && e.RowIndex >= 0)
+            {
+                // Get RequestID from the selected row
+                if (int.TryParse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString(), out int requestId))
+                {
+                    var selectedReport = issueReports.FirstOrDefault(report => report.RequestID == requestId);
 
-                 if (selectedReport != null && selectedReport.AttachedFiles.Any())
-                 {
-                     // Open the ViewFilesForm to display the attached files
-                     ViewFilesForm viewFilesForm = new ViewFilesForm(selectedReport.AttachedFiles);
-                     viewFilesForm.ShowDialog();
-                 }
-                 else
-                 {
-                     MessageBox.Show("No files are attached to this report.");
-                 }
-             }
+                    if (selectedReport != null && selectedReport.AttachedFiles.Any())
+                    {
+                        ViewFilesForm viewFilesForm = new ViewFilesForm(selectedReport.AttachedFiles);
+                        viewFilesForm.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No files are attached to this report.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Request ID.");
+                }
+            }
+        }
     }
-
-}
 }

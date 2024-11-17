@@ -170,53 +170,44 @@ namespace PROG7312ST10202241
 
         private void SubmitBtn_Click(object sender, EventArgs e)
         {
-            // Collect the data from the form
             string location = locationTxt.Text;
-            string category = CategoryLBox.SelectedItem?.ToString(); // Ensure a selection was made
+            string category = CategoryLBox.SelectedItem?.ToString();
             string description = DescriptionRTxt.Text;
 
-            // Validate inputs
             if (string.IsNullOrEmpty(location))
             {
-                string PleaseEnterALocationMessage = resourceManager.GetString("PleaseEnterALocation");
-                System.Windows.Forms.MessageBox.Show(PleaseEnterALocationMessage);
+                System.Windows.MessageBox.Show("Please enter a location.");
                 return;
             }
             if (string.IsNullOrEmpty(category))
             {
-                string PleaseEnterACategoryMessage = resourceManager.GetString("PleaseEnterACategory");
-                System.Windows.Forms.MessageBox.Show(PleaseEnterACategoryMessage);
+                System.Windows.MessageBox.Show("Please enter a category.");
                 return;
             }
             if (string.IsNullOrEmpty(description))
             {
-                string PleaseEnterADescriptionMessage = resourceManager.GetString("PleaseEnterADescription");
-                System.Windows.Forms.MessageBox.Show(PleaseEnterADescriptionMessage);
+                System.Windows.MessageBox.Show("Please enter a description.");
                 return;
             }
-
-            // Check if there are any items in the attachedFilesListBox
-            if (attachedFilesListBox.Items.Count == 0) // No files attached
+            if (attachedFilesListBox.Items.Count == 0)
             {
-                //string pleaseAttachMediaMessage = resourceManager.GetString("pleaseAttachMedia");
-                System.Windows.Forms.MessageBox.Show("Please Attach Media");
+                System.Windows.MessageBox.Show("Please attach media.");
                 return;
             }
 
-            // Create a new issue report and add it to the list
-            IssueReport newIssue = new IssueReport(location, category, description, new List<string>(attachedMediaPaths));
-            reportedIssues.Add(newIssue);
+            // Generate a random unique RequestID
+            Random random = new Random();
+            int requestId = random.Next(1, 100000); // Larger range to reduce collisions
 
+            // Create and add the new issue
+            IssueReport newIssue = new IssueReport(location, category, description, new List<string>(attachedMediaPaths), requestId);
+            ReportDataStorage.ReportedIssues.Add(newIssue);
 
-            // Show success message
-            string issueReportedSuccessfullyMessage = resourceManager.GetString("IssueReportedSuccessfully");
-            System.Windows.Forms.MessageBox.Show(issueReportedSuccessfullyMessage);
-
-            // Clear the form and reset progress
+            System.Windows.MessageBox.Show("Issue reported successfully.");
             ClearForm();
             ResetProgress();
-            UpdateProgress(); // Ensure progress bar reflects the reset
         }
+
 
         private void ResetProgress()
         {
@@ -395,6 +386,9 @@ namespace PROG7312ST10202241
                 locationSuggestionsListBox.Visible = false; // Hide after selection
             }
         }
-
     }
+}
+public static class ReportDataStorage
+{
+    public static List<IssueReport> ReportedIssues = new List<IssueReport>();
 }

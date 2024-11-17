@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PROG7312ST10202241.Forms;
+using System;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -12,9 +14,27 @@ namespace PROG7312ST10202241
         public ServiceRequestGraphForm(ServiceRequestBST tree)
         {
             InitializeComponent();
-            this.serviceRequestTree = tree;
-            LoadServiceRequests();
+
+            serviceRequestTree = tree;
+
+            foreach (var issue in ReportDataStorage.ReportedIssues)
+            {
+                // No need for TryParse as RequestID is already an int
+                var serviceRequest = new ServiceRequest(
+                    issue.RequestID,
+                    issue.Location,
+                    issue.Category,
+                    issue.Description,
+                    "Pending", // Default status
+                    issue.ReportDate
+                );
+                serviceRequestTree.Insert(serviceRequest);
+            }
+
+            LoadServiceRequests(); // Populate DataGridView
         }
+
+
 
         // Load and display service requests in a DataGridView
         private void LoadServiceRequests()
@@ -44,14 +64,15 @@ namespace PROG7312ST10202241
                 }
                 else
                 {
-                    MessageBox.Show("Service Request not found.", "Error");
+                    MessageBox.Show($"Service Request with ID {id} not found.", "Error");
                 }
             }
             else
             {
-                MessageBox.Show("Please enter a valid ID.", "Input Error");
+                MessageBox.Show("Please enter a valid numeric ID.", "Input Error");
             }
         }
+
 
         // Update the status of a service request
         private void btnUpdateStatus_Click(object sender, EventArgs e)
@@ -61,24 +82,35 @@ namespace PROG7312ST10202241
                 var request = serviceRequestTree.Search(id);
                 if (request != null)
                 {
-                    request.Status = txtNewStatus.Text;
-                    LoadServiceRequests(); // Refresh the DataGridView
-                    MessageBox.Show("Status updated successfully.", "Success");
+                    request.Status = txtNewStatus.Text; // Update the status
+                    LoadServiceRequests(); // Refresh the DataGridView to reflect the change
+                    MessageBox.Show($"Status for Request ID {id} updated to '{txtNewStatus.Text}'.", "Success");
                 }
                 else
                 {
-                    MessageBox.Show("Service Request not found.", "Error");
+                    MessageBox.Show($"Service Request with ID {id} not found.", "Error");
                 }
             }
             else
             {
-                MessageBox.Show("Please enter a valid ID.", "Input Error");
+                MessageBox.Show("Please enter a valid numeric ID.", "Input Error");
             }
         }
+
 
         private void ServiceRequestGraphForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            ServiceRequestBST tree = new ServiceRequestBST();
+            ServiceRequestGraphForm formy = new ServiceRequestGraphForm(tree);
+            Form1 Form = new Form1();
+            Form.Show();
+            this.Hide();
+            formy.Close();
         }
     }
 }

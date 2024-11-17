@@ -34,27 +34,30 @@
             this.btnUpdateStatus = new System.Windows.Forms.Button();
             this.txtNewStatus = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblSearchID = new System.Windows.Forms.Label();
             this.lblNewStatus = new System.Windows.Forms.Label();
+            this.lblSearchID = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.closeBtn = new System.Windows.Forms.Button();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRequests)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridViewRequests
             // 
             this.dataGridViewRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewRequests.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewRequests.Location = new System.Drawing.Point(326, 3);
+            this.dataGridViewRequests.Location = new System.Drawing.Point(203, 3);
             this.dataGridViewRequests.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridViewRequests.Name = "dataGridViewRequests";
-            this.dataGridViewRequests.Size = new System.Drawing.Size(604, 479);
+            this.dataGridViewRequests.Size = new System.Drawing.Size(721, 427);
             this.dataGridViewRequests.TabIndex = 1;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(162, 201);
+            this.btnSearch.Location = new System.Drawing.Point(88, 175);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(92, 25);
@@ -65,7 +68,7 @@
             // 
             // txtSearchId
             // 
-            this.txtSearchId.Location = new System.Drawing.Point(162, 102);
+            this.txtSearchId.Location = new System.Drawing.Point(88, 89);
             this.txtSearchId.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtSearchId.Name = "txtSearchId";
             this.txtSearchId.Size = new System.Drawing.Size(92, 22);
@@ -73,9 +76,9 @@
             // 
             // btnUpdateStatus
             // 
-            this.btnUpdateStatus.Location = new System.Drawing.Point(3, 201);
+            this.btnUpdateStatus.Location = new System.Drawing.Point(3, 175);
             this.btnUpdateStatus.Name = "btnUpdateStatus";
-            this.btnUpdateStatus.Size = new System.Drawing.Size(94, 23);
+            this.btnUpdateStatus.Size = new System.Drawing.Size(78, 23);
             this.btnUpdateStatus.TabIndex = 6;
             this.btnUpdateStatus.Text = "refresh";
             this.btnUpdateStatus.UseVisualStyleBackColor = true;
@@ -83,7 +86,7 @@
             // 
             // txtNewStatus
             // 
-            this.txtNewStatus.Location = new System.Drawing.Point(161, 3);
+            this.txtNewStatus.Location = new System.Drawing.Point(87, 3);
             this.txtNewStatus.Name = "txtNewStatus";
             this.txtNewStatus.Size = new System.Drawing.Size(94, 22);
             this.txtNewStatus.TabIndex = 7;
@@ -91,8 +94,8 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.58974F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.41026F));
             this.tableLayoutPanel1.Controls.Add(this.btnUpdateStatus, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.btnSearch, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.lblNewStatus, 0, 0);
@@ -105,19 +108,10 @@
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 145F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 136F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(316, 479);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 213F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(193, 427);
             this.tableLayoutPanel1.TabIndex = 8;
-            // 
-            // lblSearchID
-            // 
-            this.lblSearchID.AutoSize = true;
-            this.lblSearchID.Location = new System.Drawing.Point(3, 99);
-            this.lblSearchID.Name = "lblSearchID";
-            this.lblSearchID.Size = new System.Drawing.Size(75, 14);
-            this.lblSearchID.TabIndex = 8;
-            this.lblSearchID.Text = "Search By ID";
             // 
             // lblNewStatus
             // 
@@ -128,27 +122,65 @@
             this.lblNewStatus.TabIndex = 9;
             this.lblNewStatus.Text = "New status";
             // 
+            // lblSearchID
+            // 
+            this.lblSearchID.AutoSize = true;
+            this.lblSearchID.Location = new System.Drawing.Point(3, 86);
+            this.lblSearchID.Name = "lblSearchID";
+            this.lblSearchID.Size = new System.Drawing.Size(75, 14);
+            this.lblSearchID.TabIndex = 8;
+            this.lblSearchID.Text = "Search By ID";
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.47538F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.52463F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.44397F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 78.55604F));
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.dataGridViewRequests, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(934, 485);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(928, 433);
             this.tableLayoutPanel2.TabIndex = 9;
+            // 
+            // closeBtn
+            // 
+            this.closeBtn.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.closeBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.closeBtn.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
+            this.closeBtn.Location = new System.Drawing.Point(4, 442);
+            this.closeBtn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.closeBtn.Name = "closeBtn";
+            this.closeBtn.Size = new System.Drawing.Size(926, 40);
+            this.closeBtn.TabIndex = 10;
+            this.closeBtn.Text = "Back To Main Menu";
+            this.closeBtn.UseVisualStyleBackColor = false;
+            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel2, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.closeBtn, 0, 1);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90.51546F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.484536F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(934, 485);
+            this.tableLayoutPanel3.TabIndex = 11;
             // 
             // ServiceRequestGraphForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 485);
-            this.Controls.Add(this.tableLayoutPanel2);
+            this.Controls.Add(this.tableLayoutPanel3);
             this.Font = new System.Drawing.Font("Bahnschrift", 9F);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "ServiceRequestGraphForm";
@@ -158,6 +190,7 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -172,5 +205,7 @@
         private System.Windows.Forms.Label lblSearchID;
         private System.Windows.Forms.Label lblNewStatus;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Button closeBtn;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
     }
 }

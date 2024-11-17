@@ -90,9 +90,9 @@ namespace PROG7312ST10202241
                 MessageBox.Show($"An error occurred during search: {ex.Message}");
             }
         }
-
+        
         private void btnAddRequest_Click(object sender, EventArgs e)
-        {
+        {/*
             try
             {
                 if (ValidateNewRequestInputs(out int newRequestId, out int newPriority))
@@ -115,7 +115,7 @@ namespace PROG7312ST10202241
             catch (Exception ex)
             {
                 MessageBox.Show($"An error occurred while adding the request: {ex.Message}");
-            }
+            }*/
         }
 
         private bool ValidateNewRequestInputs(out int requestId, out int priority)
