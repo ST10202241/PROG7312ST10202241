@@ -150,33 +150,36 @@
             // nameOfEventLbl
             // 
             this.nameOfEventLbl.AutoSize = true;
-            this.nameOfEventLbl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nameOfEventLbl.BackColor = System.Drawing.Color.White;
+            this.nameOfEventLbl.Dock = System.Windows.Forms.DockStyle.Top;
             this.nameOfEventLbl.Location = new System.Drawing.Point(4, 0);
             this.nameOfEventLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nameOfEventLbl.Name = "nameOfEventLbl";
-            this.nameOfEventLbl.Size = new System.Drawing.Size(90, 52);
+            this.nameOfEventLbl.Size = new System.Drawing.Size(90, 14);
             this.nameOfEventLbl.TabIndex = 10;
             this.nameOfEventLbl.Text = "Name of Event:";
             // 
             // categoryLbl
             // 
             this.categoryLbl.AutoSize = true;
-            this.categoryLbl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.categoryLbl.BackColor = System.Drawing.Color.White;
+            this.categoryLbl.Dock = System.Windows.Forms.DockStyle.Top;
             this.categoryLbl.Location = new System.Drawing.Point(4, 52);
             this.categoryLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.categoryLbl.Name = "categoryLbl";
-            this.categoryLbl.Size = new System.Drawing.Size(90, 52);
+            this.categoryLbl.Size = new System.Drawing.Size(90, 14);
             this.categoryLbl.TabIndex = 11;
             this.categoryLbl.Text = "Category:";
             // 
             // dateLbl
             // 
             this.dateLbl.AutoSize = true;
-            this.dateLbl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dateLbl.BackColor = System.Drawing.Color.White;
+            this.dateLbl.Dock = System.Windows.Forms.DockStyle.Top;
             this.dateLbl.Location = new System.Drawing.Point(4, 104);
             this.dateLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dateLbl.Name = "dateLbl";
-            this.dateLbl.Size = new System.Drawing.Size(90, 52);
+            this.dateLbl.Size = new System.Drawing.Size(90, 14);
             this.dateLbl.TabIndex = 12;
             this.dateLbl.Text = "Date:";
             // 

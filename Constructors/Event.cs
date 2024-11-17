@@ -6,13 +6,9 @@ namespace PROG7312ST10202241.Models
     {
         public string Name { get; set; }
         public string Category { get; set; }
-     
-       //public DateTime Date { get; set; }
-    
         public string Location { get; set; }
 
         private DateTime _date;
-
 
         public DateTime Date
         {

@@ -76,7 +76,7 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.76654F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.23346F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 306F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 307F));
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.dataGridViewRequests, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 2, 0);
@@ -92,8 +92,8 @@
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.58974F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.41026F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.50562F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.49438F));
             this.tableLayoutPanel1.Controls.Add(this.btnUpdateStatus, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.btnSearch, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.lblNewStatus, 0, 0);
@@ -108,7 +108,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 213F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(179, 427);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(178, 427);
             this.tableLayoutPanel1.TabIndex = 8;
             // 
             // btnUpdateStatus
@@ -123,10 +123,10 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(82, 175);
+            this.btnSearch.Location = new System.Drawing.Point(85, 175);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(92, 25);
+            this.btnSearch.Size = new System.Drawing.Size(89, 25);
             this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "search";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -135,6 +135,7 @@
             // lblNewStatus
             // 
             this.lblNewStatus.AutoSize = true;
+            this.lblNewStatus.BackColor = System.Drawing.Color.White;
             this.lblNewStatus.Location = new System.Drawing.Point(3, 0);
             this.lblNewStatus.Name = "lblNewStatus";
             this.lblNewStatus.Size = new System.Drawing.Size(66, 14);
@@ -143,33 +144,34 @@
             // 
             // txtNewStatus
             // 
-            this.txtNewStatus.Location = new System.Drawing.Point(81, 3);
+            this.txtNewStatus.Location = new System.Drawing.Point(84, 3);
             this.txtNewStatus.Name = "txtNewStatus";
-            this.txtNewStatus.Size = new System.Drawing.Size(94, 22);
+            this.txtNewStatus.Size = new System.Drawing.Size(91, 22);
             this.txtNewStatus.TabIndex = 7;
             // 
             // lblSearchID
             // 
             this.lblSearchID.AutoSize = true;
+            this.lblSearchID.BackColor = System.Drawing.Color.White;
             this.lblSearchID.Location = new System.Drawing.Point(3, 86);
             this.lblSearchID.Name = "lblSearchID";
-            this.lblSearchID.Size = new System.Drawing.Size(64, 28);
+            this.lblSearchID.Size = new System.Drawing.Size(75, 14);
             this.lblSearchID.TabIndex = 8;
             this.lblSearchID.Text = "Search By ID";
             // 
             // txtSearchId
             // 
-            this.txtSearchId.Location = new System.Drawing.Point(82, 89);
+            this.txtSearchId.Location = new System.Drawing.Point(85, 89);
             this.txtSearchId.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtSearchId.Name = "txtSearchId";
-            this.txtSearchId.Size = new System.Drawing.Size(92, 22);
+            this.txtSearchId.Size = new System.Drawing.Size(89, 22);
             this.txtSearchId.TabIndex = 5;
             // 
             // dataGridViewRequests
             // 
             this.dataGridViewRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewRequests.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewRequests.Location = new System.Drawing.Point(189, 3);
+            this.dataGridViewRequests.Location = new System.Drawing.Point(188, 3);
             this.dataGridViewRequests.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridViewRequests.Name = "dataGridViewRequests";
             this.dataGridViewRequests.Size = new System.Drawing.Size(428, 427);
@@ -188,13 +190,13 @@
             this.tableLayoutPanel4.Controls.Add(this.txtRootNode, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.btnSetRoot, 1, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(624, 3);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(623, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 3;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 228F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(301, 427);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(302, 427);
             this.tableLayoutPanel4.TabIndex = 9;
             // 
             // lstMSTDisplay
@@ -204,7 +206,7 @@
             this.lstMSTDisplay.ItemHeight = 14;
             this.lstMSTDisplay.Location = new System.Drawing.Point(3, 3);
             this.lstMSTDisplay.Name = "lstMSTDisplay";
-            this.lstMSTDisplay.Size = new System.Drawing.Size(163, 93);
+            this.lstMSTDisplay.Size = new System.Drawing.Size(164, 93);
             this.lstMSTDisplay.TabIndex = 2;
             // 
             // lstTraversalDisplay
@@ -212,7 +214,7 @@
             this.lstTraversalDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lstTraversalDisplay.FormattingEnabled = true;
             this.lstTraversalDisplay.ItemHeight = 14;
-            this.lstTraversalDisplay.Location = new System.Drawing.Point(172, 3);
+            this.lstTraversalDisplay.Location = new System.Drawing.Point(173, 3);
             this.lstTraversalDisplay.Name = "lstTraversalDisplay";
             this.lstTraversalDisplay.Size = new System.Drawing.Size(126, 93);
             this.lstTraversalDisplay.TabIndex = 3;
@@ -223,17 +225,17 @@
             this.btnShowMST.Name = "btnShowMST";
             this.btnShowMST.Size = new System.Drawing.Size(121, 23);
             this.btnShowMST.TabIndex = 0;
-            this.btnShowMST.Text = "btnShowMST";
+            this.btnShowMST.Text = "Show MST";
             this.btnShowMST.UseVisualStyleBackColor = true;
             this.btnShowMST.Click += new System.EventHandler(this.btnShowMST_Click);
             // 
             // btnGraphTraversal
             // 
-            this.btnGraphTraversal.Location = new System.Drawing.Point(172, 201);
+            this.btnGraphTraversal.Location = new System.Drawing.Point(173, 201);
             this.btnGraphTraversal.Name = "btnGraphTraversal";
             this.btnGraphTraversal.Size = new System.Drawing.Size(124, 23);
             this.btnGraphTraversal.TabIndex = 1;
-            this.btnGraphTraversal.Text = "btnGraphTraversal";
+            this.btnGraphTraversal.Text = "Graph Traversal";
             this.btnGraphTraversal.UseVisualStyleBackColor = true;
             this.btnGraphTraversal.Click += new System.EventHandler(this.btnGraphTraversal_Click);
             // 
@@ -246,7 +248,7 @@
             // 
             // btnSetRoot
             // 
-            this.btnSetRoot.Location = new System.Drawing.Point(172, 102);
+            this.btnSetRoot.Location = new System.Drawing.Point(173, 102);
             this.btnSetRoot.Name = "btnSetRoot";
             this.btnSetRoot.Size = new System.Drawing.Size(108, 23);
             this.btnSetRoot.TabIndex = 5;

@@ -101,6 +101,7 @@
             // 
             this.locationLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.locationLbl.AutoSize = true;
+            this.locationLbl.BackColor = System.Drawing.Color.White;
             this.locationLbl.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.locationLbl.Location = new System.Drawing.Point(36, 77);
             this.locationLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -112,6 +113,7 @@
             // CategoryLbl
             // 
             this.CategoryLbl.AutoSize = true;
+            this.CategoryLbl.BackColor = System.Drawing.Color.WhiteSmoke;
             this.CategoryLbl.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
             this.CategoryLbl.Location = new System.Drawing.Point(36, 149);
             this.CategoryLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -123,6 +125,7 @@
             // descriptionLbl
             // 
             this.descriptionLbl.AutoSize = true;
+            this.descriptionLbl.BackColor = System.Drawing.Color.White;
             this.descriptionLbl.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
             this.descriptionLbl.Location = new System.Drawing.Point(36, 203);
             this.descriptionLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);

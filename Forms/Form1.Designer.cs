@@ -109,6 +109,8 @@
             // 
             this.ServiceRequestStatusLbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ServiceRequestStatusLbl.AutoSize = true;
+            this.ServiceRequestStatusLbl.BackColor = System.Drawing.Color.White;
+            this.ServiceRequestStatusLbl.ForeColor = System.Drawing.Color.Black;
             this.ServiceRequestStatusLbl.Location = new System.Drawing.Point(698, 368);
             this.ServiceRequestStatusLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ServiceRequestStatusLbl.Name = "ServiceRequestStatusLbl";
@@ -134,6 +136,8 @@
             // 
             this.LocalEventsAndAnnouncementsLbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LocalEventsAndAnnouncementsLbl.AutoSize = true;
+            this.LocalEventsAndAnnouncementsLbl.BackColor = System.Drawing.Color.White;
+            this.LocalEventsAndAnnouncementsLbl.ForeColor = System.Drawing.Color.Black;
             this.LocalEventsAndAnnouncementsLbl.Location = new System.Drawing.Point(353, 368);
             this.LocalEventsAndAnnouncementsLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LocalEventsAndAnnouncementsLbl.Name = "LocalEventsAndAnnouncementsLbl";
@@ -146,6 +150,8 @@
             // 
             this.ReportIssuesLbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ReportIssuesLbl.AutoSize = true;
+            this.ReportIssuesLbl.BackColor = System.Drawing.Color.White;
+            this.ReportIssuesLbl.ForeColor = System.Drawing.Color.Black;
             this.ReportIssuesLbl.Location = new System.Drawing.Point(107, 368);
             this.ReportIssuesLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ReportIssuesLbl.Name = "ReportIssuesLbl";
