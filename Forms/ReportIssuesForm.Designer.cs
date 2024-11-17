@@ -85,6 +85,7 @@
             // 
             // SubmitBtn
             // 
+            this.SubmitBtn.BackColor = System.Drawing.Color.Transparent;
             this.SubmitBtn.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
             this.SubmitBtn.Location = new System.Drawing.Point(159, 314);
             this.SubmitBtn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -92,7 +93,7 @@
             this.SubmitBtn.Size = new System.Drawing.Size(88, 48);
             this.SubmitBtn.TabIndex = 3;
             this.SubmitBtn.Text = "Submit";
-            this.SubmitBtn.UseVisualStyleBackColor = true;
+            this.SubmitBtn.UseVisualStyleBackColor = false;
             this.SubmitBtn.Click += new System.EventHandler(this.SubmitBtn_Click);
             // 
             // locationLbl
@@ -306,6 +307,7 @@
             // 
             // tableLayoutPanel3
             // 
+            this.tableLayoutPanel3.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -343,7 +345,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.OliveDrab;
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::PROG7312ST10202241.Properties.Resources.capetownreportissues;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(934, 485);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.progressBar);
