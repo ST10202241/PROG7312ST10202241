@@ -24,7 +24,7 @@ namespace PROG7312ST10202241.Forms
             this.issueReports = issueReports ?? new List<IssueReport>();
             resourceManager = new ResourceManager("PROG7312ST10202241.Properties.Strings", typeof(Form1).Assembly);
             ApplyLocalization();
-            PopulateDataGrid(this.issueReports);
+           PopulateDataGrid(this.issueReports);
             PopulateDataGrid(ReportDataStorage.ReportedIssues);
         }
 

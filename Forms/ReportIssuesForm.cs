@@ -214,7 +214,9 @@ namespace PROG7312ST10202241
 
             // Create and add the new issue
             IssueReport newIssue = new IssueReport(location, category, description, new List<string>(attachedMediaPaths), requestId);
+            reportedIssues.Add(newIssue);
             ReportDataStorage.ReportedIssues.Add(newIssue);
+
 
             System.Windows.MessageBox.Show("Issue reported successfully.");
             ClearForm();
