@@ -26,6 +26,7 @@ namespace PROG7312ST10202241.Forms
             ApplyLocalization();
            PopulateDataGrid(this.issueReports);
             PopulateDataGrid(ReportDataStorage.ReportedIssues);
+            //dataGridView1.CellClick += dataGridView1_CellContentClick;
         }
 
         private void ApplyLocalization()
@@ -70,7 +71,7 @@ namespace PROG7312ST10202241.Forms
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             // Attach event for button clicks
-            dataGridView1.CellClick += dataGridView1_CellContentClick;
+           // dataGridView1.CellClick += dataGridView1_CellContentClick;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
