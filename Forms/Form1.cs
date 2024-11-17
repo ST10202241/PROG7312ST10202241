@@ -85,7 +85,8 @@ namespace PROG7312ST10202241.Forms
 
         private void ServiceRequestStatusBtn_Click(object sender, EventArgs e)
         {
-            ServiceRequestStatementForm form = new ServiceRequestStatementForm();
+            ServiceRequestBST tree = new ServiceRequestBST();
+            ServiceRequestGraphForm form = new ServiceRequestGraphForm(tree);
             form.Show();
             this.Hide();
         }
@@ -111,9 +112,11 @@ namespace PROG7312ST10202241.Forms
 
         private void ServiceRequestStatusPBox_Click_1(object sender, EventArgs e)
         {
-            ServiceRequestStatementForm form = new ServiceRequestStatementForm();
+            ServiceRequestBST tree = new ServiceRequestBST();
+            ServiceRequestGraphForm form = new ServiceRequestGraphForm(tree);
             form.Show();
             this.Hide();
+
         }
 
         private void ReportIssuesLbl_Click_1(object sender, EventArgs e)

@@ -28,123 +28,149 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.treeViewGraph = new System.Windows.Forms.TreeView();
-            this.DataGridView = new System.Windows.Forms.DataGridView();
-            this.btnDisplayGraph = new System.Windows.Forms.Button();
-            this.btnAddDependency = new System.Windows.Forms.Button();
-            this.btnBFS = new System.Windows.Forms.Button();
-            this.txtFromRequestId = new System.Windows.Forms.TextBox();
-            this.txtToRequestId = new System.Windows.Forms.TextBox();
-            this.txtStartRequestId = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).BeginInit();
+            this.dataGridViewRequests = new System.Windows.Forms.DataGridView();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtSearchId = new System.Windows.Forms.TextBox();
+            this.btnUpdateStatus = new System.Windows.Forms.Button();
+            this.txtNewStatus = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblSearchID = new System.Windows.Forms.Label();
+            this.lblNewStatus = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRequests)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // treeViewGraph
+            // dataGridViewRequests
             // 
-            this.treeViewGraph.Location = new System.Drawing.Point(207, 68);
-            this.treeViewGraph.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.treeViewGraph.Name = "treeViewGraph";
-            this.treeViewGraph.Size = new System.Drawing.Size(140, 104);
-            this.treeViewGraph.TabIndex = 0;
+            this.dataGridViewRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewRequests.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewRequests.Location = new System.Drawing.Point(326, 3);
+            this.dataGridViewRequests.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dataGridViewRequests.Name = "dataGridViewRequests";
+            this.dataGridViewRequests.Size = new System.Drawing.Size(604, 479);
+            this.dataGridViewRequests.TabIndex = 1;
             // 
-            // DataGridView
+            // btnSearch
             // 
-            this.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridView.Location = new System.Drawing.Point(484, 173);
-            this.DataGridView.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.DataGridView.Name = "DataGridView";
-            this.DataGridView.Size = new System.Drawing.Size(280, 162);
-            this.DataGridView.TabIndex = 1;
+            this.btnSearch.Location = new System.Drawing.Point(162, 201);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(92, 25);
+            this.btnSearch.TabIndex = 4;
+            this.btnSearch.Text = "search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // btnDisplayGraph
+            // txtSearchId
             // 
-            this.btnDisplayGraph.Location = new System.Drawing.Point(78, 341);
-            this.btnDisplayGraph.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnDisplayGraph.Name = "btnDisplayGraph";
-            this.btnDisplayGraph.Size = new System.Drawing.Size(150, 25);
-            this.btnDisplayGraph.TabIndex = 2;
-            this.btnDisplayGraph.Text = "Display the graph";
-            this.btnDisplayGraph.UseVisualStyleBackColor = true;
-            this.btnDisplayGraph.Click += new System.EventHandler(this.btnDisplayGraph_Click);
+            this.txtSearchId.Location = new System.Drawing.Point(162, 102);
+            this.txtSearchId.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtSearchId.Name = "txtSearchId";
+            this.txtSearchId.Size = new System.Drawing.Size(92, 22);
+            this.txtSearchId.TabIndex = 5;
             // 
-            // btnAddDependency
+            // btnUpdateStatus
             // 
-            this.btnAddDependency.Location = new System.Drawing.Point(260, 341);
-            this.btnAddDependency.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnAddDependency.Name = "btnAddDependency";
-            this.btnAddDependency.Size = new System.Drawing.Size(130, 25);
-            this.btnAddDependency.TabIndex = 3;
-            this.btnAddDependency.Text = "Add Dependency";
-            this.btnAddDependency.UseVisualStyleBackColor = true;
-            this.btnAddDependency.Click += new System.EventHandler(this.btnAddDependency_Click);
+            this.btnUpdateStatus.Location = new System.Drawing.Point(3, 201);
+            this.btnUpdateStatus.Name = "btnUpdateStatus";
+            this.btnUpdateStatus.Size = new System.Drawing.Size(94, 23);
+            this.btnUpdateStatus.TabIndex = 6;
+            this.btnUpdateStatus.Text = "refresh";
+            this.btnUpdateStatus.UseVisualStyleBackColor = true;
+            this.btnUpdateStatus.Click += new System.EventHandler(this.btnUpdateStatus_Click);
             // 
-            // btnBFS
+            // txtNewStatus
             // 
-            this.btnBFS.Location = new System.Drawing.Point(398, 341);
-            this.btnBFS.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnBFS.Name = "btnBFS";
-            this.btnBFS.Size = new System.Drawing.Size(277, 25);
-            this.btnBFS.TabIndex = 4;
-            this.btnBFS.Text = "Search for service request relationships";
-            this.btnBFS.UseVisualStyleBackColor = true;
-            this.btnBFS.Click += new System.EventHandler(this.btnBFS_Click);
+            this.txtNewStatus.Location = new System.Drawing.Point(161, 3);
+            this.txtNewStatus.Name = "txtNewStatus";
+            this.txtNewStatus.Size = new System.Drawing.Size(94, 22);
+            this.txtNewStatus.TabIndex = 7;
             // 
-            // txtFromRequestId
+            // tableLayoutPanel1
             // 
-            this.txtFromRequestId.Location = new System.Drawing.Point(293, 240);
-            this.txtFromRequestId.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtFromRequestId.Name = "txtFromRequestId";
-            this.txtFromRequestId.Size = new System.Drawing.Size(116, 22);
-            this.txtFromRequestId.TabIndex = 5;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.btnUpdateStatus, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btnSearch, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lblNewStatus, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.txtNewStatus, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblSearchID, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txtSearchId, 1, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 145F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 136F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(316, 479);
+            this.tableLayoutPanel1.TabIndex = 8;
             // 
-            // txtToRequestId
+            // lblSearchID
             // 
-            this.txtToRequestId.Location = new System.Drawing.Point(116, 244);
-            this.txtToRequestId.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtToRequestId.Name = "txtToRequestId";
-            this.txtToRequestId.Size = new System.Drawing.Size(116, 22);
-            this.txtToRequestId.TabIndex = 6;
+            this.lblSearchID.AutoSize = true;
+            this.lblSearchID.Location = new System.Drawing.Point(3, 99);
+            this.lblSearchID.Name = "lblSearchID";
+            this.lblSearchID.Size = new System.Drawing.Size(75, 14);
+            this.lblSearchID.TabIndex = 8;
+            this.lblSearchID.Text = "Search By ID";
             // 
-            // txtStartRequestId
+            // lblNewStatus
             // 
-            this.txtStartRequestId.Location = new System.Drawing.Point(225, 299);
-            this.txtStartRequestId.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtStartRequestId.Name = "txtStartRequestId";
-            this.txtStartRequestId.Size = new System.Drawing.Size(116, 22);
-            this.txtStartRequestId.TabIndex = 7;
+            this.lblNewStatus.AutoSize = true;
+            this.lblNewStatus.Location = new System.Drawing.Point(3, 0);
+            this.lblNewStatus.Name = "lblNewStatus";
+            this.lblNewStatus.Size = new System.Drawing.Size(66, 14);
+            this.lblNewStatus.TabIndex = 9;
+            this.lblNewStatus.Text = "New status";
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.47538F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.52463F));
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.dataGridViewRequests, 1, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(934, 485);
+            this.tableLayoutPanel2.TabIndex = 9;
             // 
             // ServiceRequestGraphForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 485);
-            this.Controls.Add(this.txtStartRequestId);
-            this.Controls.Add(this.txtToRequestId);
-            this.Controls.Add(this.txtFromRequestId);
-            this.Controls.Add(this.btnBFS);
-            this.Controls.Add(this.btnAddDependency);
-            this.Controls.Add(this.btnDisplayGraph);
-            this.Controls.Add(this.DataGridView);
-            this.Controls.Add(this.treeViewGraph);
+            this.Controls.Add(this.tableLayoutPanel2);
             this.Font = new System.Drawing.Font("Bahnschrift", 9F);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "ServiceRequestGraphForm";
             this.Text = "ServiceRequestGraphForm";
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).EndInit();
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ServiceRequestGraphForm_FormClosed);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRequests)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TreeView treeViewGraph;
-        private System.Windows.Forms.DataGridView DataGridView;
-        private System.Windows.Forms.Button btnDisplayGraph;
-        private System.Windows.Forms.Button btnAddDependency;
-        private System.Windows.Forms.Button btnBFS;
-        private System.Windows.Forms.TextBox txtFromRequestId;
-        private System.Windows.Forms.TextBox txtToRequestId;
-        private System.Windows.Forms.TextBox txtStartRequestId;
+        private System.Windows.Forms.DataGridView dataGridViewRequests;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox txtSearchId;
+        private System.Windows.Forms.Button btnUpdateStatus;
+        private System.Windows.Forms.TextBox txtNewStatus;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label lblSearchID;
+        private System.Windows.Forms.Label lblNewStatus;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
     }
 }

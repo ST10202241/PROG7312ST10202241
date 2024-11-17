@@ -1,92 +1,84 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace PROG7312ST10202241
 {
+    // Form to manage and display service requests
     public partial class ServiceRequestGraphForm : Form
     {
-        private ServiceRequestGraph requestGraph;
+        private ServiceRequestBST serviceRequestTree;
 
-        public ServiceRequestGraphForm(ServiceRequestGraph graph)
+        public ServiceRequestGraphForm(ServiceRequestBST tree)
         {
             InitializeComponent();
-            requestGraph = graph;
-
+            this.serviceRequestTree = tree;
+            LoadServiceRequests();
         }
 
-        private void btnDisplayGraph_Click(object sender, EventArgs e)
+        // Load and display service requests in a DataGridView
+        private void LoadServiceRequests()
         {
-            try
+            var requests = serviceRequestTree.InOrderTraversal();
+            dataGridViewRequests.DataSource = requests.Select(r => new
             {
-                treeViewGraph.Nodes.Clear();
+                r.RequestId,
+                r.Location,
+                r.Category,
+                r.Description,
+                r.Status,
+                r.SubmittedDate
+            }).ToList();
+        }
 
-                // Visualize the graph as a TreeView
-                foreach (var requestId in requestGraph.GetRequestIds())
+        // Search for a service request by ID
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(txtSearchId.Text, out int id))
+            {
+                var request = serviceRequestTree.Search(id);
+                if (request != null)
                 {
-                    TreeNode node = new TreeNode($"Request ID: {requestId}");
-                    AddDependenciesToNode(node, requestId);
-                    treeViewGraph.Nodes.Add(node);
-                }
-
-                MessageBox.Show("Graph displayed successfully.");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error displaying graph: {ex.Message}");
-            }
-        }
-
-        private void AddDependenciesToNode(TreeNode node, int requestId)
-        {
-            var dependencies = requestGraph.GetDependencies(requestId);
-            if (dependencies != null)
-            {
-                foreach (var dependency in dependencies)
-                {
-                    TreeNode childNode = new TreeNode($"Dependency: {dependency}");
-                    AddDependenciesToNode(childNode, dependency);
-                    node.Nodes.Add(childNode);
-                }
-            }
-        }
-
-        private void btnAddDependency_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                int fromRequestId = int.Parse(txtFromRequestId.Text.Trim());
-                int toRequestId = int.Parse(txtToRequestId.Text.Trim());
-
-                requestGraph.AddDependency(fromRequestId, toRequestId);
-                MessageBox.Show("Dependency added successfully!");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error adding dependency: {ex.Message}");
-            }
-        }
-
-        private void btnBFS_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                int startRequestId = int.Parse(txtStartRequestId.Text.Trim());
-                var bfsResult = requestGraph.BFS(startRequestId);
-
-                if (bfsResult != null)
-                {
-                    MessageBox.Show($"BFS Traversal: {string.Join(", ", bfsResult)}");
+                    MessageBox.Show($"Request ID: {request.RequestId}\nLocation: {request.Location}\nCategory: {request.Category}\nStatus: {request.Status}",
+                        "Service Request Found");
                 }
                 else
                 {
-                    MessageBox.Show("No traversal found.");
+                    MessageBox.Show("Service Request not found.", "Error");
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show($"Error performing BFS: {ex.Message}");
+                MessageBox.Show("Please enter a valid ID.", "Input Error");
             }
+        }
+
+        // Update the status of a service request
+        private void btnUpdateStatus_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(txtSearchId.Text, out int id))
+            {
+                var request = serviceRequestTree.Search(id);
+                if (request != null)
+                {
+                    request.Status = txtNewStatus.Text;
+                    LoadServiceRequests(); // Refresh the DataGridView
+                    MessageBox.Show("Status updated successfully.", "Success");
+                }
+                else
+                {
+                    MessageBox.Show("Service Request not found.", "Error");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter a valid ID.", "Input Error");
+            }
+        }
+
+        private void ServiceRequestGraphForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

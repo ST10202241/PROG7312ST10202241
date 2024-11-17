@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace PROG7312ST10202241
 {
+    // Binary Search Tree for Service Requests
     public class ServiceRequestBST
     {
         private class Node
@@ -20,6 +22,7 @@ namespace PROG7312ST10202241
 
         private Node root;
 
+        // Insert a new ServiceRequest into the BST
         public void Insert(ServiceRequest request)
         {
             root = InsertRecursive(root, request);
@@ -38,6 +41,7 @@ namespace PROG7312ST10202241
             return node;
         }
 
+        // Search for a ServiceRequest by ID
         public ServiceRequest Search(int requestId)
         {
             return SearchRecursive(root, requestId);
@@ -54,6 +58,23 @@ namespace PROG7312ST10202241
                 return SearchRecursive(node.Left, requestId);
             else
                 return SearchRecursive(node.Right, requestId);
+        }
+
+        // In-order traversal to retrieve all requests in sorted order
+        public List<ServiceRequest> InOrderTraversal()
+        {
+            var result = new List<ServiceRequest>();
+            InOrderTraversalRecursive(root, result);
+            return result;
+        }
+
+        private void InOrderTraversalRecursive(Node node, List<ServiceRequest> result)
+        {
+            if (node == null) return;
+
+            InOrderTraversalRecursive(node.Left, result);
+            result.Add(node.Request);
+            InOrderTraversalRecursive(node.Right, result);
         }
     }
 }

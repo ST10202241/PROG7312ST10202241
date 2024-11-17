@@ -73,7 +73,7 @@ namespace PROG7312ST10202241
                     var request = requestTree.Search(requestId);
                     if (request != null)
                     {
-                        lblStatus.Text = $"Request ID: {request.RequestId}, Status: {request.Status}, Priority: {request.Priority}";
+                      //  lblStatus.Text = $"Request ID: {request.RequestId}, Status: {request.Status}, Priority: {request.Priority}";
                     }
                     else
                     {
@@ -102,11 +102,11 @@ namespace PROG7312ST10202241
                         RequestId = newRequestId,
                         Status = txtNewStatus.Text.Trim(),
                         Description = txtNewDescription.Text.Trim(),
-                        Priority = newPriority
+                        //Priority = newPriority
                     };
 
                     requestTree.Insert(newRequest);
-                    priorityQueue.Enqueue(newRequest, newRequest.Priority);
+                    //priorityQueue.Enqueue(newRequest, newRequest.Priority);
 
                     MessageBox.Show("Service request added successfully!");
                     ClearNewRequestInputs();
@@ -160,8 +160,8 @@ namespace PROG7312ST10202241
 
         private void btnOpenGraphForm_Click(object sender, EventArgs e)
         {
-            var graphForm = new ServiceRequestGraphForm(requestGraph); // Pass the graph instance
-            graphForm.Show();
+           // var graphForm = new ServiceRequestGraphForm(requestGraph); // Pass the graph instance
+           // graphForm.Show();
         }
     }
 }
