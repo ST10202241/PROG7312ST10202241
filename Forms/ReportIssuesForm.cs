@@ -166,6 +166,7 @@ namespace PROG7312ST10202241
 
                 System.Windows.Forms.MessageBox.Show("Attachments Added: " + string.Join(", ", openFileDialog.FileNames));
             }
+
             else
             {
                 string noFileSelectedMessage = resourceManager.GetString("Nofileselected");
