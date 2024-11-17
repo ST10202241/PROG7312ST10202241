@@ -179,7 +179,7 @@ namespace PROG7312ST10202241
         {
             MST mstCalculator = new MST();
 
-            // Example edges - replace with real data as needed
+            // Hardcoded edges
             mstCalculator.AddEdge(1, 2, 3);
             mstCalculator.AddEdge(1, 3, 1);
             mstCalculator.AddEdge(2, 4, 5);
@@ -193,45 +193,25 @@ namespace PROG7312ST10202241
             }
         }
 
-
         private void btnGraphTraversal_Click(object sender, EventArgs e)
         {
-            if (graph.Count == 0)
-            {
-                MessageBox.Show("The graph is empty. Please add nodes and edges first.", "Error");
-                return;
-            }
-
-            // Ensure graphRootNode exists
-            if (!graph.ContainsKey(graphRootNode))
-            {
-                MessageBox.Show($"Root node {graphRootNode} does not exist in the graph.", "Error");
-                return;
-            }
+            // Hardcoded root node
+            int graphRootNode = 1;
 
             var traversalResult = PerformDFS(graphRootNode, graph);
-
             lstTraversalDisplay.Items.Clear();
             foreach (var node in traversalResult)
             {
                 lstTraversalDisplay.Items.Add($"Visited Node: {node}");
             }
-
-            MessageBox.Show("Depth-First Search traversal completed!", "Success");
         }
 
         private void btnSetRoot_Click(object sender, EventArgs e)
         {
-            if (int.TryParse(txtRootNode.Text, out int rootNode) && graph.ContainsKey(rootNode))
-            {
-                graphRootNode = rootNode;
-                MessageBox.Show($"Root node set to {rootNode}");
-            }
-            else
-            {
-                MessageBox.Show("Invalid root node or node does not exist in the graph.", "Error");
-            }
+            // Hardcoded root node
+            int graphRootNode = 1;
+         
+            MessageBox.Show($"Root node set to {graphRootNode}");
         }
-
     }
 }

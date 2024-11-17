@@ -188,8 +188,8 @@
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.00671F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.99329F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.37584F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.62416F));
             this.tableLayoutPanel4.Controls.Add(this.lstMSTDisplay, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.lstTraversalDisplay, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnShowMST, 0, 2);
@@ -218,9 +218,9 @@
             // 
             // btnGraphTraversal
             // 
-            this.btnGraphTraversal.Location = new System.Drawing.Point(155, 201);
+            this.btnGraphTraversal.Location = new System.Drawing.Point(171, 201);
             this.btnGraphTraversal.Name = "btnGraphTraversal";
-            this.btnGraphTraversal.Size = new System.Drawing.Size(140, 23);
+            this.btnGraphTraversal.Size = new System.Drawing.Size(124, 23);
             this.btnGraphTraversal.TabIndex = 1;
             this.btnGraphTraversal.Text = "btnGraphTraversal";
             this.btnGraphTraversal.UseVisualStyleBackColor = true;
@@ -228,20 +228,22 @@
             // 
             // lstMSTDisplay
             // 
+            this.lstMSTDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lstMSTDisplay.FormattingEnabled = true;
             this.lstMSTDisplay.ItemHeight = 14;
             this.lstMSTDisplay.Location = new System.Drawing.Point(3, 3);
             this.lstMSTDisplay.Name = "lstMSTDisplay";
-            this.lstMSTDisplay.Size = new System.Drawing.Size(120, 88);
+            this.lstMSTDisplay.Size = new System.Drawing.Size(162, 93);
             this.lstMSTDisplay.TabIndex = 2;
             // 
             // lstTraversalDisplay
             // 
+            this.lstTraversalDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lstTraversalDisplay.FormattingEnabled = true;
             this.lstTraversalDisplay.ItemHeight = 14;
-            this.lstTraversalDisplay.Location = new System.Drawing.Point(155, 3);
+            this.lstTraversalDisplay.Location = new System.Drawing.Point(171, 3);
             this.lstTraversalDisplay.Name = "lstTraversalDisplay";
-            this.lstTraversalDisplay.Size = new System.Drawing.Size(120, 88);
+            this.lstTraversalDisplay.Size = new System.Drawing.Size(124, 93);
             this.lstTraversalDisplay.TabIndex = 3;
             // 
             // txtRootNode
@@ -253,7 +255,7 @@
             // 
             // btnSetRoot
             // 
-            this.btnSetRoot.Location = new System.Drawing.Point(155, 102);
+            this.btnSetRoot.Location = new System.Drawing.Point(171, 102);
             this.btnSetRoot.Name = "btnSetRoot";
             this.btnSetRoot.Size = new System.Drawing.Size(108, 23);
             this.btnSetRoot.TabIndex = 5;
