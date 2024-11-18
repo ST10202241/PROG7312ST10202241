@@ -117,44 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="eventsimage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\eventsimage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="govlogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\govlogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="saflag" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\saflag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ReportImages" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ReportImages.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="capetownreportissues" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\capetownreportissues.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="construccy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\construccy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="capetown" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\capetown.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ServiceRequestImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ServiceRequestImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AnnouncementImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AnnouncementImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="employeeLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\employeeLogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="capetownimage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\capetownimage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="servicerequestimg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\servicerequestimg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="employeeLogin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\employeeLogin1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>

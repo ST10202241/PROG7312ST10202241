@@ -1,9 +1,13 @@
-﻿using System.Collections.Generic;
-using System;
+﻿using System;
+using System.Collections.Generic;
 
 public class ServiceRequestGraph
 {
     private readonly Dictionary<int, List<int>> adjacencyList = new Dictionary<int, List<int>>();
+    public Dictionary<int, List<int>> GetGraph()
+    {
+        return adjacencyList;
+    }
 
     public void AddEdge(int fromRequestId, int toRequestId)
     {
@@ -13,16 +17,16 @@ public class ServiceRequestGraph
         adjacencyList[fromRequestId].Add(toRequestId);
     }
 
-    public List<int> GetDependencies(int requestId)
+    public List<(int From, int To)> GetEdges()
     {
-        return adjacencyList.ContainsKey(requestId) ? adjacencyList[requestId] : new List<int>();
-    }
-
-    public void DisplayGraph()
-    {
-        foreach (var node in adjacencyList)
+        var edges = new List<(int From, int To)>();
+        foreach (var key in adjacencyList.Keys)
         {
-            Console.WriteLine($"{node.Key}: {string.Join(", ", node.Value)}");
+            foreach (var value in adjacencyList[key])
+            {
+                edges.Add((key, value));
+            }
         }
+        return edges;
     }
 }

@@ -6,6 +6,7 @@ public class ServiceRequest
     public string Location { get; set; }
     public string Category { get; set; }
     public string Description { get; set; }
+   // public string Title { get; set; }
     public string Status { get; set; }
     public DateTime SubmittedDate { get; set; }
 
@@ -16,6 +17,7 @@ public class ServiceRequest
         Category = category;
         Description = description;
         Status = status;
+       // Title = title;
         SubmittedDate = submittedDate ?? DateTime.Now; ;
     }
 }

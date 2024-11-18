@@ -89,6 +89,7 @@ namespace PROG7312ST10202241
                     issue.Category,
                     issue.Description,
                     "Pending", // Default status
+                    //issue.ToString(),
                     issue.ReportDate
                 );
                 serviceRequestTree.Insert(serviceRequest);
@@ -146,9 +147,9 @@ namespace PROG7312ST10202241
                 var request = serviceRequestTree.Search(id);
                 if (request != null)
                 {
-                    request.Status = txtNewStatus.Text; // Update the status
+                    //request.Status = txtNewStatus.Text; // Update the status
                     LoadServiceRequests(); // Refresh the DataGridView to reflect the change
-                    MessageBox.Show($"Status for Request ID {id} updated to '{txtNewStatus.Text}'.", "Success");
+                   // MessageBox.Show($"Status for Request ID {id} updated to '{txtNewStatus.Text}'.", "Success");
                 }
                 else
                 {
@@ -170,11 +171,11 @@ namespace PROG7312ST10202241
         private void closeBtn_Click(object sender, EventArgs e)
         {
             ServiceRequestBST tree = new ServiceRequestBST();
-            ServiceRequestGraphForm formy = new ServiceRequestGraphForm(tree);
+            //ServiceRequestGraphForm formy = new ServiceRequestGraphForm(tree);
             Form1 Form = new Form1();
             Form.Show();
             this.Hide();
-            formy.Close();
+            //formy.Close();
         }
         private void btnShowMST_Click(object sender, EventArgs e)
         {
@@ -187,10 +188,10 @@ namespace PROG7312ST10202241
             mstCalculator.AddEdge(3, 4, 4);
 
             var mstEdges = mstCalculator.GetMinimumSpanningTree();
-            lstMSTDisplay.Items.Clear();
+            //lstMSTDisplay.Items.Clear();
             foreach (var edge in mstEdges)
             {
-                lstMSTDisplay.Items.Add($"From {edge.From} to {edge.To}, Weight: {edge.Weight}");
+               // lstMSTDisplay.Items.Add($"From {edge.From} to {edge.To}, Weight: {edge.Weight}");
             }
         }
 
@@ -200,10 +201,10 @@ namespace PROG7312ST10202241
             int graphRootNode = 1;
 
             var traversalResult = PerformDFS(graphRootNode, graph);
-            lstTraversalDisplay.Items.Clear();
+           // lstTraversalDisplay.Items.Clear();
             foreach (var node in traversalResult)
             {
-                lstTraversalDisplay.Items.Add($"Visited Node: {node}");
+                //lstTraversalDisplay.Items.Add($"Visited Node: {node}");
             }
         }
 
@@ -213,6 +214,13 @@ namespace PROG7312ST10202241
             int graphRootNode = 1;
          
             MessageBox.Show($"Root node set to {graphRootNode}");
+        }
+
+        private void btnToGraph_Click(object sender, EventArgs e)
+        {
+            ServiceRequestGraphForm form = new ServiceRequestGraphForm();
+            form.Show();
+            this.Hide();
         }
     }
 }

@@ -86,7 +86,7 @@ namespace PROG7312ST10202241.Forms
         private void ServiceRequestStatusBtn_Click(object sender, EventArgs e)
         {
             ServiceRequestBST tree = new ServiceRequestBST();
-            ServiceRequestGraphForm form = new ServiceRequestGraphForm(tree);
+            ServiceRequestStatementForm form = new ServiceRequestStatementForm(tree);
             form.Show();
             this.Hide();
         }
@@ -148,6 +148,13 @@ namespace PROG7312ST10202241.Forms
             {
                 ChangeLanguage(selectedItem.Tag.ToString());
             }
+        }
+
+        private void btnEmployeeLogin_Click(object sender, EventArgs e)
+        {
+            EmployeeLoginForm form = new EmployeeLoginForm();
+            form.Show();
+            this.Hide();
         }
     }
 

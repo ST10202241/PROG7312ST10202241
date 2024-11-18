@@ -113,6 +113,26 @@ namespace PROG7312ST10202241.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap employeeLogin {
+            get {
+                object obj = ResourceManager.GetObject("employeeLogin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap employeeLogin1 {
+            get {
+                object obj = ResourceManager.GetObject("employeeLogin1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap eventsimage {
             get {
                 object obj = ResourceManager.GetObject("eventsimage", resourceCulture);
