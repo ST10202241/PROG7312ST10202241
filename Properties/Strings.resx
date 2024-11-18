@@ -186,4 +186,100 @@
   <data name="ViewReportsFormBtn" xml:space="preserve">
     <value>View Reports</value>
   </data>
+  <data name="btnEmployeeLogin" xml:space="preserve">
+    <value>Admin Login</value>
+  </data>
+  <data name="btnLogin" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="btnCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="LoginSuccessTitle" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="LoginFailureMessage" xml:space="preserve">
+    <value>Invalid username or password.</value>
+  </data>
+  <data name="LoginFailureTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="lblUsername" xml:space="preserve">
+    <value>Username:</value>
+  </data>
+  <data name="lblPassword" xml:space="preserve">
+    <value>Password:</value>
+  </data>
+  <data name="lblWelcome" xml:space="preserve">
+    <value>Welcome to the South African Municipality Service App</value>
+  </data>
+  <data name="lblEmployeeLogin" xml:space="preserve">
+    <value>Employee Login</value>
+  </data>
+  <data name="nameOfEventLbl" xml:space="preserve">
+    <value>Name of Event:</value>
+  </data>
+  <data name="searchBtn" xml:space="preserve">
+    <value>Search By Name</value>
+  </data>
+  <data name="btnSearchByCategory" xml:space="preserve">
+    <value>Search By Category</value>
+  </data>
+  <data name="dateLbl" xml:space="preserve">
+    <value>Date:</value>
+  </data>
+  <data name="btnSearchByDate" xml:space="preserve">
+    <value>Search by Date</value>
+  </data>
+  <data name="btnSearchWithAll" xml:space="preserve">
+    <value>Search With All Criteria</value>
+  </data>
+  <data name="RemoveFileBtn" xml:space="preserve">
+    <value>Remove Media</value>
+  </data>
+  <data name="ErrorEnterLocation" xml:space="preserve">
+    <value>Please enter a location.</value>
+  </data>
+  <data name="ErrorEnterCategory" xml:space="preserve">
+    <value>Please enter a category.</value>
+  </data>
+  <data name="ErrorEnterDescription" xml:space="preserve">
+    <value>Please enter a description.</value>
+  </data>
+  <data name="ErrorAttachMedia" xml:space="preserve">
+    <value>Please attach media. </value>
+  </data>
+  <data name="AttachmentsAdded" xml:space="preserve">
+    <value>Attachments Added:</value>
+  </data>
+  <data name="Removed" xml:space="preserve">
+    <value>Removed: </value>
+  </data>
+  <data name="NoFileSelectedForRemoval" xml:space="preserve">
+    <value>No file selected for removal. </value>
+  </data>
+  <data name="lblNewStatus" xml:space="preserve">
+    <value>New Status: </value>
+  </data>
+  <data name="lblSearchId" xml:space="preserve">
+    <value>Search ID: </value>
+  </data>
+  <data name="btnUpdateStatus" xml:space="preserve">
+    <value>Update Status </value>
+  </data>
+  <data name="LoginSuccessMessage" xml:space="preserve">
+    <value>Welcome</value>
+  </data>
+  <data name="btnSearch" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="InputError" xml:space="preserve">
+    <value>Please enter a valid numeric ID. </value>
+  </data>
+  <data name="ServiceRequestFound" xml:space="preserve">
+    <value>Service Request Found </value>
+  </data>
+  <data name="ServiceRequestNotFound" xml:space="preserve">
+    <value>Service Request with ID {id} not found. </value>
+  </data>
 </root>

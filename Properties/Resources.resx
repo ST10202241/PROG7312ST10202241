@@ -136,11 +136,11 @@
   <data name="construccy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\construccy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="servicerequestimg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\servicerequestimg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="capetown" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\capetown.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ServiceRequestImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ServiceRequestImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AnnouncementImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AnnouncementImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,10 +151,10 @@
   <data name="capetownimage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\capetownimage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="servicerequestimg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\servicerequestimg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ServiceRequestImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ServiceRequestImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="employeeLogin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\employeeLogin1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\employeeLogin2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

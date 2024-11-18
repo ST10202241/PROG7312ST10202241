@@ -37,15 +37,15 @@ namespace PROG7312ST10202241
         /// Applies localization to form controls.
         /// </summary>
         private void ApplyLocalization()
-        {
+        { 
             this.Text = resourceManager.GetString("LocalEventsAndAnnouncementsTitle");
-            backToMainMenuBtn.Text = resourceManager.GetString("BackToMainMenuBtn");
-            //searchBtn.Text = resourceManager.GetString("SearchBtn");
-           // clearBtn.Text = resourceManager.GetString("ClearBtn");
-           // nameOfEventLbl.Text = resourceManager.GetString("NameOfEventLbl");
+            nameOfEventLbl.Text = resourceManager.GetString("nameOfEventLbl");
+            searchBtn.Text = resourceManager.GetString("searchBtn"); 
             categoryLbl.Text = resourceManager.GetString("CategoryLbl");
-           // dateLbl.Text = resourceManager.GetString("DateLbl");
-            
+            btnSearchByCategory.Text = resourceManager.GetString("btnSearchByCategory");
+            dateLbl.Text = resourceManager.GetString("dateLbl");
+            btnSearchByDate.Text = resourceManager.GetString("btnSearchByDate");
+            btnSearchWithAll.Text = resourceManager.GetString("btnSearchWithAll");
         }
 
         /// <summary>

@@ -2,7 +2,9 @@
 using PROG7312ST10202241.Forms;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using System.Resources;
 using System.Windows.Forms;
 
 namespace PROG7312ST10202241
@@ -12,6 +14,7 @@ namespace PROG7312ST10202241
         private ServiceRequestRedBlackTree redBlackTree;
         private MinHeap minHeap;
         private ServiceRequestGraph serviceRequestGraph;
+        private ResourceManager resourceManager;
 
         public ServiceRequestGraphForm()
         {
@@ -41,6 +44,20 @@ namespace PROG7312ST10202241
 
             // Display data
             LoadServiceRequests();
+
+            resourceManager = new ResourceManager("PROG7312ST10202241.Properties.Strings", typeof(ServiceRequestGraphForm).Assembly);
+            ApplyLocalization();
+        }
+
+        private void ApplyLocalization()
+        {
+            lblSearchId.Text = resourceManager.GetString("lblSearchId");
+            lblNewStatus.Text = resourceManager.GetString("lblNewStatus");
+            btnSearch.Text = resourceManager.GetString("btnSearch");
+            btnUpdateStatus.Text = resourceManager.GetString("btnUpdateStatus");
+            btnSearch.Text = resourceManager.GetString("btnSearch");
+            closeBtn.Text = resourceManager.GetString("closeBtn");
+            this.Text = resourceManager.GetString("ServiceRequestGraphFormTitle");
         }
 
         private void LoadServiceRequests()
@@ -64,7 +81,7 @@ namespace PROG7312ST10202241
             }
             else
             {
-                MessageBox.Show("No service requests found.");
+                MessageBox.Show(resourceManager.GetString("NoServiceRequestsFound"));
             }
         }
 
@@ -76,9 +93,6 @@ namespace PROG7312ST10202241
             return results;
         }
 
-
-
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
             try
@@ -88,17 +102,18 @@ namespace PROG7312ST10202241
 
                 if (rbRequest != null)
                 {
-                    string message = $"Service Request Found in Red-Black Tree:\nRequestId: {rbRequest.RequestId}\nLocation: {rbRequest.Location}\nCategory: {rbRequest.Category}\nDescription: {rbRequest.Description}\nStatus: {rbRequest.Status}\nSubmittedDate: {rbRequest.SubmittedDate}";
+                    string message = string.Format(resourceManager.GetString("ServiceRequestFoundMessage"),
+                        rbRequest.RequestId, rbRequest.Location, rbRequest.Category, rbRequest.Description, rbRequest.Status, rbRequest.SubmittedDate);
                     MessageBox.Show(message);
                 }
                 else
                 {
-                    MessageBox.Show("Service Request Not Found in Red-Black Tree");
+                    MessageBox.Show(resourceManager.GetString("ServiceRequestNotFoundMessage"));
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}");
+                MessageBox.Show(string.Format(resourceManager.GetString("ErrorMessage"), ex.Message));
             }
         }
 
@@ -112,7 +127,7 @@ namespace PROG7312ST10202241
                 if (rbRequest != null)
                 {
                     rbRequest.Status = txtNewStatus.Text; // Update the status
-                    MessageBox.Show($"Status for Request ID {requestId} updated to '{txtNewStatus.Text}'.");
+                    MessageBox.Show(string.Format(resourceManager.GetString("StatusUpdatedMessage"), requestId, txtNewStatus.Text));
 
                     // Persist changes
                     ServiceRequestManager.SaveData();
@@ -122,12 +137,12 @@ namespace PROG7312ST10202241
                 }
                 else
                 {
-                    MessageBox.Show("Service Request Not Found in Red-Black Tree");
+                    MessageBox.Show(resourceManager.GetString("ServiceRequestNotFoundMessage"));
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}");
+                MessageBox.Show(string.Format(resourceManager.GetString("ErrorMessage"), ex.Message));
             }
         }
 
@@ -136,26 +151,26 @@ namespace PROG7312ST10202241
             try
             {
                 var heapRequests = minHeap.GetAll();
-                var message = "Heap Elements:\n";
+                var message = resourceManager.GetString("HeapElementsMessage");
                 foreach (var request in heapRequests)
                 {
-                    message += $"RequestId: {request.RequestId}, SubmittedDate: {request.SubmittedDate}\n";
+                    message += string.Format(resourceManager.GetString("HeapElementFormat"), request.RequestId, request.SubmittedDate);
                 }
                 MessageBox.Show(message);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}");
+                MessageBox.Show(string.Format(resourceManager.GetString("ErrorMessage"), ex.Message));
             }
         }
 
         private void btnShowGraph_Click(object sender, EventArgs e)
         {
             var graphEdges = serviceRequestGraph.GetEdges();
-            var message = "Graph Edges:\n";
+            var message = resourceManager.GetString("GraphEdgesMessage");
             foreach (var edge in graphEdges)
             {
-                message += $"{edge.From} -> {edge.To}\n";
+                message += string.Format(resourceManager.GetString("GraphEdgeFormat"), edge.From, edge.To);
             }
             MessageBox.Show(message);
         }
@@ -182,17 +197,11 @@ namespace PROG7312ST10202241
         {
             try
             {
-                int rootNode = int.Parse(txtRootNode.Text);
-                var traversalResult = PerformDFS(rootNode, serviceRequestGraph.GetGraph());
-                // lstTraversalDisplay.Items.Clear();
-                foreach (var node in traversalResult)
-                {
-                    // lstTraversalDisplay.Items.Add($"Visited Node: {node}");
-                }
+                // Example graph traversal code
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}");
+                MessageBox.Show(string.Format(resourceManager.GetString("ErrorMessage"), ex.Message));
             }
         }
 
@@ -230,12 +239,11 @@ namespace PROG7312ST10202241
         {
             try
             {
-                int rootNode = int.Parse(txtRootNode.Text);
-                MessageBox.Show($"Root node set to {rootNode}");
+                // Example set root node code
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}");
+                MessageBox.Show(string.Format(resourceManager.GetString("ErrorMessage"), ex.Message));
             }
         }
 

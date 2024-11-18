@@ -2,17 +2,21 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Resources;
 using System.Windows.Forms;
 
 namespace PROG7312ST10202241.Forms
 {
     public partial class ServiceRequestStatementForm : Form
     {
+        private ResourceManager resourceManager;
         private ServiceRequestBST serviceRequestTree;
 
         public ServiceRequestStatementForm()
         {
             InitializeComponent();
+            resourceManager = new ResourceManager("PROG7312ST10202241.Properties.Strings", typeof(ServiceRequestStatementForm).Assembly);
+            ApplyLocalization();
             LoadServiceRequests();
         }
 
@@ -20,6 +24,14 @@ namespace PROG7312ST10202241.Forms
         {
             base.OnActivated(e);
             LoadServiceRequests(); // Refresh the data whenever the form is activated
+        }
+
+        private void ApplyLocalization()
+        {
+            lblSearchByID.Text = resourceManager.GetString("lblSearchId");
+            //lblNewStatus.Text = resourceManager.GetString("lblNewStatus");
+            btnSearch.Text = resourceManager.GetString("btnSearch");
+            closeBtn.Text = resourceManager.GetString("BackToMainMenuBtn");
         }
 
         private void LoadServiceRequests()
@@ -67,6 +79,8 @@ namespace PROG7312ST10202241.Forms
                 MessageBox.Show("Please enter a valid numeric ID.", "Input Error");
             }
         }
+
+
 
         private void ServiceRequestStatementForm_FormClosed(object sender, FormClosedEventArgs e)
         {

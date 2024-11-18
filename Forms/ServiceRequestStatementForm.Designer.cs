@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ServiceRequestStatementForm));
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.closeBtn = new System.Windows.Forms.Button();
             this.dataGridViewRequests = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearchId = new System.Windows.Forms.TextBox();
-            this.lblSearchID = new System.Windows.Forms.Label();
+            this.lblSearchByID = new System.Windows.Forms.Label();
+            this.closeBtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRequests)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -61,20 +61,6 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(934, 485);
             this.tableLayoutPanel3.TabIndex = 12;
             // 
-            // closeBtn
-            // 
-            this.closeBtn.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.closeBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.closeBtn.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
-            this.closeBtn.Location = new System.Drawing.Point(190, 443);
-            this.closeBtn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.closeBtn.Name = "closeBtn";
-            this.closeBtn.Size = new System.Drawing.Size(552, 39);
-            this.closeBtn.TabIndex = 10;
-            this.closeBtn.Text = "Back To Main Menu";
-            this.closeBtn.UseVisualStyleBackColor = false;
-            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
-            // 
             // dataGridViewRequests
             // 
             this.dataGridViewRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -94,7 +80,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.Controls.Add(this.btnSearch, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.txtSearchId, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.lblSearchID, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lblSearchByID, 0, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(189, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
@@ -123,17 +109,31 @@
             this.txtSearchId.Size = new System.Drawing.Size(176, 22);
             this.txtSearchId.TabIndex = 5;
             // 
-            // lblSearchID
+            // lblSearchByID
             // 
-            this.lblSearchID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblSearchID.AutoSize = true;
-            this.lblSearchID.BackColor = System.Drawing.Color.Transparent;
-            this.lblSearchID.Font = new System.Drawing.Font("Bahnschrift", 10F);
-            this.lblSearchID.Location = new System.Drawing.Point(91, 76);
-            this.lblSearchID.Name = "lblSearchID";
-            this.lblSearchID.Size = new System.Drawing.Size(90, 17);
-            this.lblSearchID.TabIndex = 8;
-            this.lblSearchID.Text = "Search By ID";
+            this.lblSearchByID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSearchByID.AutoSize = true;
+            this.lblSearchByID.BackColor = System.Drawing.Color.Transparent;
+            this.lblSearchByID.Font = new System.Drawing.Font("Bahnschrift", 10F);
+            this.lblSearchByID.Location = new System.Drawing.Point(91, 76);
+            this.lblSearchByID.Name = "lblSearchByID";
+            this.lblSearchByID.Size = new System.Drawing.Size(90, 17);
+            this.lblSearchByID.TabIndex = 8;
+            this.lblSearchByID.Text = "Search By ID";
+            // 
+            // closeBtn
+            // 
+            this.closeBtn.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.closeBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.closeBtn.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
+            this.closeBtn.Location = new System.Drawing.Point(190, 443);
+            this.closeBtn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.closeBtn.Name = "closeBtn";
+            this.closeBtn.Size = new System.Drawing.Size(552, 39);
+            this.closeBtn.TabIndex = 10;
+            this.closeBtn.Text = "Back To Main Menu";
+            this.closeBtn.UseVisualStyleBackColor = false;
+            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
             // 
             // ServiceRequestStatementForm
             // 
@@ -163,7 +163,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Label lblSearchID;
+        private System.Windows.Forms.Label lblSearchByID;
         private System.Windows.Forms.TextBox txtSearchId;
         private System.Windows.Forms.DataGridView dataGridViewRequests;
         private System.Windows.Forms.Button closeBtn;

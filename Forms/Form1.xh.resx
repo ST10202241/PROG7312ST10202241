@@ -120,4 +120,7 @@
   <data name="SearchBtn" xml:space="preserve">
     <value>Phanda</value>
   </data>
+  <data name="btnEmployeeLogin" xml:space="preserve">
+    <value>ngena admin</value>
+  </data>
 </root>

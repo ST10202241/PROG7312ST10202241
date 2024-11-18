@@ -79,11 +79,92 @@ namespace PROG7312ST10202241.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Attachments Added:.
+        /// </summary>
+        internal static string AttachmentsAdded {
+            get {
+                return ResourceManager.GetString("AttachmentsAdded", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Back To Main Menu.
         /// </summary>
         internal static string BackToMainMenuBtn {
             get {
                 return ResourceManager.GetString("BackToMainMenuBtn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        internal static string btnCancel {
+            get {
+                return ResourceManager.GetString("btnCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Admin Login.
+        /// </summary>
+        internal static string btnEmployeeLogin {
+            get {
+                return ResourceManager.GetString("btnEmployeeLogin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Login.
+        /// </summary>
+        internal static string btnLogin {
+            get {
+                return ResourceManager.GetString("btnLogin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search.
+        /// </summary>
+        internal static string btnSearch {
+            get {
+                return ResourceManager.GetString("btnSearch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search By Category.
+        /// </summary>
+        internal static string btnSearchByCategory {
+            get {
+                return ResourceManager.GetString("btnSearchByCategory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search by Date.
+        /// </summary>
+        internal static string btnSearchByDate {
+            get {
+                return ResourceManager.GetString("btnSearchByDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search With All Criteria.
+        /// </summary>
+        internal static string btnSearchWithAll {
+            get {
+                return ResourceManager.GetString("btnSearchWithAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update Status .
+        /// </summary>
+        internal static string btnUpdateStatus {
+            get {
+                return ResourceManager.GetString("btnUpdateStatus", resourceCulture);
             }
         }
         
@@ -133,11 +214,56 @@ namespace PROG7312ST10202241.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Date:.
+        /// </summary>
+        internal static string dateLbl {
+            get {
+                return ResourceManager.GetString("dateLbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to description.
         /// </summary>
         internal static string descriptionLbl {
             get {
                 return ResourceManager.GetString("descriptionLbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please attach media. .
+        /// </summary>
+        internal static string ErrorAttachMedia {
+            get {
+                return ResourceManager.GetString("ErrorAttachMedia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please enter a category..
+        /// </summary>
+        internal static string ErrorEnterCategory {
+            get {
+                return ResourceManager.GetString("ErrorEnterCategory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please enter a description..
+        /// </summary>
+        internal static string ErrorEnterDescription {
+            get {
+                return ResourceManager.GetString("ErrorEnterDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please enter a location..
+        /// </summary>
+        internal static string ErrorEnterLocation {
+            get {
+                return ResourceManager.GetString("ErrorEnterLocation", resourceCulture);
             }
         }
         
@@ -151,11 +277,74 @@ namespace PROG7312ST10202241.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Please enter a valid numeric ID. .
+        /// </summary>
+        internal static string InputError {
+            get {
+                return ResourceManager.GetString("InputError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Issue Reported Successfully!.
         /// </summary>
         internal static string IssueReportedSuccessfully {
             get {
                 return ResourceManager.GetString("IssueReportedSuccessfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Employee Login.
+        /// </summary>
+        internal static string lblEmployeeLogin {
+            get {
+                return ResourceManager.GetString("lblEmployeeLogin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Status: .
+        /// </summary>
+        internal static string lblNewStatus {
+            get {
+                return ResourceManager.GetString("lblNewStatus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password:.
+        /// </summary>
+        internal static string lblPassword {
+            get {
+                return ResourceManager.GetString("lblPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search ID: .
+        /// </summary>
+        internal static string lblSearchId {
+            get {
+                return ResourceManager.GetString("lblSearchId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Username:.
+        /// </summary>
+        internal static string lblUsername {
+            get {
+                return ResourceManager.GetString("lblUsername", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Welcome to the South African Municipality Service App.
+        /// </summary>
+        internal static string lblWelcome {
+            get {
+                return ResourceManager.GetString("lblWelcome", resourceCulture);
             }
         }
         
@@ -187,11 +376,65 @@ namespace PROG7312ST10202241.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Invalid username or password..
+        /// </summary>
+        internal static string LoginFailureMessage {
+            get {
+                return ResourceManager.GetString("LoginFailureMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error.
+        /// </summary>
+        internal static string LoginFailureTitle {
+            get {
+                return ResourceManager.GetString("LoginFailureTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Welcome.
+        /// </summary>
+        internal static string LoginSuccessMessage {
+            get {
+                return ResourceManager.GetString("LoginSuccessMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Success.
+        /// </summary>
+        internal static string LoginSuccessTitle {
+            get {
+                return ResourceManager.GetString("LoginSuccessTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name of Event:.
+        /// </summary>
+        internal static string nameOfEventLbl {
+            get {
+                return ResourceManager.GetString("nameOfEventLbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No file selected.
         /// </summary>
         internal static string Nofileselected {
             get {
                 return ResourceManager.GetString("Nofileselected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No file selected for removal. .
+        /// </summary>
+        internal static string NoFileSelectedForRemoval {
+            get {
+                return ResourceManager.GetString("NoFileSelectedForRemoval", resourceCulture);
             }
         }
         
@@ -223,6 +466,24 @@ namespace PROG7312ST10202241.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Removed: .
+        /// </summary>
+        internal static string Removed {
+            get {
+                return ResourceManager.GetString("Removed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove Media.
+        /// </summary>
+        internal static string RemoveFileBtn {
+            get {
+                return ResourceManager.GetString("RemoveFileBtn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Report Issues.
         /// </summary>
         internal static string ReportIssuesBtn {
@@ -237,6 +498,33 @@ namespace PROG7312ST10202241.Properties {
         internal static string ReportIssuesTitle {
             get {
                 return ResourceManager.GetString("ReportIssuesTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search By Name.
+        /// </summary>
+        internal static string searchBtn {
+            get {
+                return ResourceManager.GetString("searchBtn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Service Request Found .
+        /// </summary>
+        internal static string ServiceRequestFound {
+            get {
+                return ResourceManager.GetString("ServiceRequestFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Service Request with ID {id} not found. .
+        /// </summary>
+        internal static string ServiceRequestNotFound {
+            get {
+                return ResourceManager.GetString("ServiceRequestNotFound", resourceCulture);
             }
         }
         

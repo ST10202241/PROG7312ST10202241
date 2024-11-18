@@ -62,7 +62,7 @@ namespace PROG7312ST10202241
             descriptionLbl.Text = resourceManager.GetString("descriptionLbl");
             ViewReportsFormBtn.Text = resourceManager.GetString("ViewReportsFormBtn");
             closeBtn.Text = resourceManager.GetString("BackToMainMenuBtn");
-            // Other controls
+            RemoveFileBtn.Text = resourceManager.GetString("RemoveFileBtn");
         }
 
         public void ChangeLanguage(string cultureName)
@@ -165,8 +165,8 @@ namespace PROG7312ST10202241
                     }
                 }
 
-                System.Windows.Forms.MessageBox.Show("Attachments Added: " + string.Join(", ", openFileDialog.FileNames));
-            }
+                System.Windows.Forms.MessageBox.Show(resourceManager.GetString("AttachmentsAdded") + string.Join(", ", openFileDialog.FileNames));
+                    }
 
             else
             {
@@ -190,23 +190,19 @@ namespace PROG7312ST10202241
 
             if (string.IsNullOrEmpty(location))
             {
-                System.Windows.MessageBox.Show("Please enter a location.");
-                return;
+                System.Windows.MessageBox.Show(resourceManager.GetString("PleaseEnterALocation")); return;
             }
             if (string.IsNullOrEmpty(category))
             {
-                System.Windows.MessageBox.Show("Please enter a category.");
-                return;
+                System.Windows.MessageBox.Show(resourceManager.GetString("PleaseEnterACategory")); return;
             }
             if (string.IsNullOrEmpty(description))
             {
-                System.Windows.MessageBox.Show("Please enter a description.");
-                return;
+                System.Windows.MessageBox.Show(resourceManager.GetString("PleaseEnterADescription")); return;
             }
             if (attachedFilesListBox.Items.Count == 0)
             {
-                System.Windows.MessageBox.Show("Please attach media.");
-                return;
+                System.Windows.MessageBox.Show(resourceManager.GetString("PleaseAttachMedia")); return;
             }
 
             // Generate a unique Request ID
@@ -234,7 +230,7 @@ namespace PROG7312ST10202241
             );
             ServiceRequestManager.AddServiceRequest(newServiceRequest);
 
-            System.Windows.Forms.MessageBox.Show("Issue reported successfully.");
+            System.Windows.Forms.MessageBox.Show(resourceManager.GetString("IssueReportedSuccessfully"));
             ClearForm();
         }
 
@@ -338,11 +334,11 @@ namespace PROG7312ST10202241
                     attachedFilesListBox.Items.Remove(selectedFile); // Remove from the ListBox as well
                 }
 
-                System.Windows.Forms.MessageBox.Show($"Removed: {selectedFile}");
+                System.Windows.Forms.MessageBox.Show(resourceManager.GetString("Removed") + " " + selectedFile);
             }
             else
             {
-                System.Windows.Forms.MessageBox.Show("No file selected for removal.");
+                System.Windows.Forms.MessageBox.Show(resourceManager.GetString("NoFileSelectedForRemoval"));
             }
 
             // Update progress if no files are attached

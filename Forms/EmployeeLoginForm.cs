@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,10 +16,23 @@ namespace PROG7312ST10202241.Forms
     {
         private const string EmployeeUsername = "admin"; // Example username
         private const string EmployeePassword = "password123"; // Example password
+        private ResourceManager resourceManager;
 
         public EmployeeLoginForm()
         {
             InitializeComponent();
+            resourceManager = new ResourceManager("PROG7312ST10202241.Properties.Strings", typeof(EmployeeLoginForm).Assembly);
+            ApplyLocalization();
+        }
+
+        private void ApplyLocalization()
+        {
+            lblUsername.Text = resourceManager.GetString("lblUsername");
+            lblPassword.Text = resourceManager.GetString("lblPassword");
+            lblWelcome.Text = resourceManager.GetString("lblWelcome");
+            lblEmployeeLogin.Text = resourceManager.GetString("lblEmployeeLogin");
+            btnLogin.Text = resourceManager.GetString("btnLogin");
+            btnCancel.Text = resourceManager.GetString("btnCancel");
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -25,7 +40,7 @@ namespace PROG7312ST10202241.Forms
             // Validate employee credentials
             if (txtUsername.Text == EmployeeUsername && txtPassword.Text == EmployeePassword)
             {
-                MessageBox.Show("Login successful!", "Success");
+                MessageBox.Show(resourceManager.GetString("LoginSuccessMessage"), resourceManager.GetString("LoginSuccessTitle"));
 
                 // Navigate to ServiceRequestGraphForm
                 ServiceRequestGraphForm graphForm = new ServiceRequestGraphForm();
@@ -34,7 +49,7 @@ namespace PROG7312ST10202241.Forms
             }
             else
             {
-                MessageBox.Show("Invalid username or password.", "Error");
+                MessageBox.Show(resourceManager.GetString("LoginFailureMessage"), resourceManager.GetString("LoginFailureTitle"));
             }
         }
 

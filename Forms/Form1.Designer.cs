@@ -60,7 +60,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33332F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 22F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.Controls.Add(this.ServiceRequestStatusPBox, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.LocalEventsAndAnnouncementsPBox, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.ServiceRequestStatusLbl, 2, 2);
@@ -85,10 +85,10 @@
             // 
             this.ServiceRequestStatusPBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ServiceRequestStatusPBox.Image = global::PROG7312ST10202241.Properties.Resources.ServiceRequestImage;
-            this.ServiceRequestStatusPBox.Location = new System.Drawing.Point(611, 187);
+            this.ServiceRequestStatusPBox.Location = new System.Drawing.Point(609, 187);
             this.ServiceRequestStatusPBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.ServiceRequestStatusPBox.Name = "ServiceRequestStatusPBox";
-            this.ServiceRequestStatusPBox.Size = new System.Drawing.Size(296, 178);
+            this.ServiceRequestStatusPBox.Size = new System.Drawing.Size(295, 178);
             this.ServiceRequestStatusPBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ServiceRequestStatusPBox.TabIndex = 2;
             this.ServiceRequestStatusPBox.TabStop = false;
@@ -100,10 +100,10 @@
             this.LocalEventsAndAnnouncementsPBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LocalEventsAndAnnouncementsPBox.Image = global::PROG7312ST10202241.Properties.Resources.AnnouncementImage;
             this.LocalEventsAndAnnouncementsPBox.InitialImage = global::PROG7312ST10202241.Properties.Resources.AnnouncementImage;
-            this.LocalEventsAndAnnouncementsPBox.Location = new System.Drawing.Point(307, 187);
+            this.LocalEventsAndAnnouncementsPBox.Location = new System.Drawing.Point(306, 187);
             this.LocalEventsAndAnnouncementsPBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.LocalEventsAndAnnouncementsPBox.Name = "LocalEventsAndAnnouncementsPBox";
-            this.LocalEventsAndAnnouncementsPBox.Size = new System.Drawing.Size(296, 178);
+            this.LocalEventsAndAnnouncementsPBox.Size = new System.Drawing.Size(295, 178);
             this.LocalEventsAndAnnouncementsPBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.LocalEventsAndAnnouncementsPBox.TabIndex = 0;
             this.LocalEventsAndAnnouncementsPBox.TabStop = false;
@@ -115,7 +115,7 @@
             this.ServiceRequestStatusLbl.AutoSize = true;
             this.ServiceRequestStatusLbl.BackColor = System.Drawing.Color.White;
             this.ServiceRequestStatusLbl.ForeColor = System.Drawing.Color.Black;
-            this.ServiceRequestStatusLbl.Location = new System.Drawing.Point(679, 368);
+            this.ServiceRequestStatusLbl.Location = new System.Drawing.Point(677, 368);
             this.ServiceRequestStatusLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ServiceRequestStatusLbl.Name = "ServiceRequestStatusLbl";
             this.ServiceRequestStatusLbl.Size = new System.Drawing.Size(159, 17);
@@ -131,7 +131,7 @@
             this.ReportIssuesPBox.Location = new System.Drawing.Point(4, 187);
             this.ReportIssuesPBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.ReportIssuesPBox.Name = "ReportIssuesPBox";
-            this.ReportIssuesPBox.Size = new System.Drawing.Size(295, 178);
+            this.ReportIssuesPBox.Size = new System.Drawing.Size(294, 178);
             this.ReportIssuesPBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ReportIssuesPBox.TabIndex = 1;
             this.ReportIssuesPBox.TabStop = false;
@@ -143,7 +143,7 @@
             this.LocalEventsAndAnnouncementsLbl.AutoSize = true;
             this.LocalEventsAndAnnouncementsLbl.BackColor = System.Drawing.Color.White;
             this.LocalEventsAndAnnouncementsLbl.ForeColor = System.Drawing.Color.Black;
-            this.LocalEventsAndAnnouncementsLbl.Location = new System.Drawing.Point(342, 368);
+            this.LocalEventsAndAnnouncementsLbl.Location = new System.Drawing.Point(340, 368);
             this.LocalEventsAndAnnouncementsLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LocalEventsAndAnnouncementsLbl.Name = "LocalEventsAndAnnouncementsLbl";
             this.LocalEventsAndAnnouncementsLbl.Size = new System.Drawing.Size(226, 17);
@@ -157,7 +157,7 @@
             this.ReportIssuesLbl.AutoSize = true;
             this.ReportIssuesLbl.BackColor = System.Drawing.Color.White;
             this.ReportIssuesLbl.ForeColor = System.Drawing.Color.Black;
-            this.ReportIssuesLbl.Location = new System.Drawing.Point(103, 368);
+            this.ReportIssuesLbl.Location = new System.Drawing.Point(102, 368);
             this.ReportIssuesLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ReportIssuesLbl.Name = "ReportIssuesLbl";
             this.ReportIssuesLbl.Size = new System.Drawing.Size(97, 17);
@@ -169,10 +169,10 @@
             // 
             this.languageCBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.languageCBox.FormattingEnabled = true;
-            this.languageCBox.Location = new System.Drawing.Point(307, 3);
+            this.languageCBox.Location = new System.Drawing.Point(306, 3);
             this.languageCBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.languageCBox.Name = "languageCBox";
-            this.languageCBox.Size = new System.Drawing.Size(296, 24);
+            this.languageCBox.Size = new System.Drawing.Size(295, 24);
             this.languageCBox.TabIndex = 6;
             this.languageCBox.SelectedIndexChanged += new System.EventHandler(this.languageCBox_SelectedIndexChanged);
             // 
@@ -195,18 +195,18 @@
             this.tableLayoutPanel2.Controls.Add(this.pictureBox2, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnEmployeeLogin, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(610, 3);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(608, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(298, 178);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(297, 178);
             this.tableLayoutPanel2.TabIndex = 9;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox2.Image = global::PROG7312ST10202241.Properties.Resources.saflag;
-            this.pictureBox2.Location = new System.Drawing.Point(152, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(151, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(143, 172);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -218,7 +218,7 @@
             this.btnEmployeeLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEmployeeLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEmployeeLogin.ForeColor = System.Drawing.Color.Black;
-            this.btnEmployeeLogin.Location = new System.Drawing.Point(72, 3);
+            this.btnEmployeeLogin.Location = new System.Drawing.Point(71, 3);
             this.btnEmployeeLogin.Name = "btnEmployeeLogin";
             this.btnEmployeeLogin.Size = new System.Drawing.Size(74, 43);
             this.btnEmployeeLogin.TabIndex = 9;
