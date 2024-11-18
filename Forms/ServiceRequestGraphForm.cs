@@ -79,22 +79,45 @@ namespace PROG7312ST10202241
             }
         }
 
-        private void btnShowHeap_Click(object sender, EventArgs e)
+        private void btnUpdateStatus_Click(object sender, EventArgs e)
         {
             try
             {
-                var heapRequests = minHeap.GetAll();
-                var message = "Heap Elements:\n";
-                foreach (var request in heapRequests)
+                int requestId = int.Parse(txtSearchId.Text);
+                var rbRequest = redBlackTree.Search(requestId);
+
+                if (rbRequest != null)
                 {
-                    message += $"RequestId: {request.RequestId}, SubmittedDate: {request.SubmittedDate}\n";
+                    rbRequest.Status = txtNewStatus.Text; // Update the status
+                    MessageBox.Show($"Status for Request ID {requestId} updated to '{txtNewStatus.Text}'.");
+
+                    // Refresh the DataGridView to reflect the change
+                    LoadServiceRequests();
                 }
-                MessageBox.Show(message);
+                else
+                {
+                    MessageBox.Show("Service Request Not Found in Red-Black Tree");
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error: {ex.Message}");
             }
+        }
+
+        private void btnShowHeap_Click(object sender, EventArgs e)
+        { 
+            try 
+            { 
+                var heapRequests = minHeap.GetAll(); 
+                var message = "Heap Elements:\n"; foreach (var request in heapRequests)
+                {
+                    message += $"RequestId: {request.RequestId}, SubmittedDate: {request.SubmittedDate}\n"; 
+                }
+                MessageBox.Show(message);
+            } 
+            catch (Exception ex) { MessageBox.Show($"Error: {ex.Message}");
+            } 
         }
 
         private void btnShowGraph_Click(object sender, EventArgs e)
@@ -198,5 +221,7 @@ namespace PROG7312ST10202241
             form.Show();
             this.Hide();
         }
+
+       
     }
 }

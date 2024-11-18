@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ServiceRequestStatementForm));
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.closeBtn = new System.Windows.Forms.Button();
+            this.dataGridViewRequests = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.lblSearchID = new System.Windows.Forms.Label();
             this.txtSearchId = new System.Windows.Forms.TextBox();
-            this.dataGridViewRequests = new System.Windows.Forms.DataGridView();
-            this.closeBtn = new System.Windows.Forms.Button();
+            this.lblSearchID = new System.Windows.Forms.Label();
             this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRequests)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel3
@@ -48,9 +48,9 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.Controls.Add(this.closeBtn, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.dataGridViewRequests, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel2, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.closeBtn, 1, 2);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -60,6 +60,30 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.107982F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(934, 485);
             this.tableLayoutPanel3.TabIndex = 12;
+            // 
+            // closeBtn
+            // 
+            this.closeBtn.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.closeBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.closeBtn.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
+            this.closeBtn.Location = new System.Drawing.Point(190, 443);
+            this.closeBtn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.closeBtn.Name = "closeBtn";
+            this.closeBtn.Size = new System.Drawing.Size(552, 39);
+            this.closeBtn.TabIndex = 10;
+            this.closeBtn.Text = "Back To Main Menu";
+            this.closeBtn.UseVisualStyleBackColor = false;
+            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
+            // 
+            // dataGridViewRequests
+            // 
+            this.dataGridViewRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewRequests.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewRequests.Location = new System.Drawing.Point(190, 102);
+            this.dataGridViewRequests.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dataGridViewRequests.Name = "dataGridViewRequests";
+            this.dataGridViewRequests.Size = new System.Drawing.Size(552, 335);
+            this.dataGridViewRequests.TabIndex = 1;
             // 
             // tableLayoutPanel2
             // 
@@ -90,6 +114,15 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // txtSearchId
+            // 
+            this.txtSearchId.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txtSearchId.Location = new System.Drawing.Point(188, 68);
+            this.txtSearchId.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtSearchId.Name = "txtSearchId";
+            this.txtSearchId.Size = new System.Drawing.Size(176, 22);
+            this.txtSearchId.TabIndex = 5;
+            // 
             // lblSearchID
             // 
             this.lblSearchID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -101,38 +134,6 @@
             this.lblSearchID.Size = new System.Drawing.Size(90, 17);
             this.lblSearchID.TabIndex = 8;
             this.lblSearchID.Text = "Search By ID";
-            // 
-            // txtSearchId
-            // 
-            this.txtSearchId.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtSearchId.Location = new System.Drawing.Point(188, 68);
-            this.txtSearchId.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtSearchId.Name = "txtSearchId";
-            this.txtSearchId.Size = new System.Drawing.Size(176, 22);
-            this.txtSearchId.TabIndex = 5;
-            // 
-            // dataGridViewRequests
-            // 
-            this.dataGridViewRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewRequests.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewRequests.Location = new System.Drawing.Point(190, 102);
-            this.dataGridViewRequests.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.dataGridViewRequests.Name = "dataGridViewRequests";
-            this.dataGridViewRequests.Size = new System.Drawing.Size(552, 335);
-            this.dataGridViewRequests.TabIndex = 1;
-            // 
-            // closeBtn
-            // 
-            this.closeBtn.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.closeBtn.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
-            this.closeBtn.Location = new System.Drawing.Point(4, 443);
-            this.closeBtn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.closeBtn.Name = "closeBtn";
-            this.closeBtn.Size = new System.Drawing.Size(178, 39);
-            this.closeBtn.TabIndex = 10;
-            this.closeBtn.Text = "Back To Main Menu";
-            this.closeBtn.UseVisualStyleBackColor = false;
-            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
             // 
             // ServiceRequestStatementForm
             // 
@@ -150,9 +151,9 @@
             this.Text = "Service Request Statement";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ServiceRequestStatementForm_FormClosed);
             this.tableLayoutPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRequests)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRequests)).EndInit();
             this.ResumeLayout(false);
 
         }
