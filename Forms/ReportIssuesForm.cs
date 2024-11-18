@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Forms;
+using PROG7312ST10202241.Data_Storage;
 
 
 namespace PROG7312ST10202241
@@ -208,20 +209,35 @@ namespace PROG7312ST10202241
                 return;
             }
 
-            // Generate a random unique RequestID
+            // Generate a unique Request ID
             Random random = new Random();
-            int requestId = random.Next(1, 100000); // Larger range to reduce collisions
+            int requestId;
+            do
+            {
+                requestId = random.Next(1, 100000);
+            }
+            while (ServiceRequestManager.ServiceRequests.Any(sr => sr.RequestId == requestId) ||
+                   ServiceRequestManager.ReportedIssues.Any(ri => ri.RequestID == requestId));
 
             // Create and add the new issue
             IssueReport newIssue = new IssueReport(location, category, description, new List<string>(attachedMediaPaths), requestId);
-            reportedIssues.Add(newIssue);
-            ReportDataStorage.ReportedIssues.Add(newIssue);
+            ServiceRequestManager.AddIssueReport(newIssue);
 
+            // Create and add the corresponding service request
+            ServiceRequest newServiceRequest = new ServiceRequest(
+                newIssue.RequestID,
+                newIssue.Location,
+                newIssue.Category,
+                newIssue.Description,
+                "Pending", // Default status
+                newIssue.ReportDate
+            );
+            ServiceRequestManager.AddServiceRequest(newServiceRequest);
 
-            System.Windows.MessageBox.Show("Issue reported successfully.");
+            System.Windows.Forms.MessageBox.Show("Issue reported successfully.");
             ClearForm();
-            ResetProgress();
         }
+
 
 
         private void ResetProgress()
@@ -258,9 +274,10 @@ namespace PROG7312ST10202241
 
         private void ViewReportsFormBtn_Click(object sender, EventArgs e)
         {
-            ViewReportsForm viewReportsForm = new ViewReportsForm(reportedIssues);
+            ViewReportsForm viewReportsForm = new ViewReportsForm(ServiceRequestManager.ReportedIssues);
             viewReportsForm.Show();
         }
+
 
         private async void locationTxt_TextChanged(object sender, EventArgs e)
         {

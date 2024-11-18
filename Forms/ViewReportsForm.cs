@@ -10,6 +10,7 @@ using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PROG7312ST10202241.Data_Storage; 
 
 namespace PROG7312ST10202241.Forms
 {
@@ -24,10 +25,10 @@ namespace PROG7312ST10202241.Forms
             this.issueReports = issueReports ?? new List<IssueReport>();
             resourceManager = new ResourceManager("PROG7312ST10202241.Properties.Strings", typeof(Form1).Assembly);
             ApplyLocalization();
-           PopulateDataGrid(this.issueReports);
-            PopulateDataGrid(ReportDataStorage.ReportedIssues);
+            PopulateDataGrid(ServiceRequestManager.ReportedIssues);
             //dataGridView1.CellClick += dataGridView1_CellContentClick;
         }
+
 
         private void ApplyLocalization()
         {
@@ -67,12 +68,13 @@ namespace PROG7312ST10202241.Forms
                 dataGridView1.Rows.Add(report.RequestID, report.Location, report.Category, report.Description, report.ReportDate.ToString("yyyy-MM-dd HH:mm"));
             }
 
-            // Optionally, auto-resize the columns for better display
+            //auto-resize the columns for better display
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             // Attach event for button clicks
-           // dataGridView1.CellClick += dataGridView1_CellContentClick;
+            //dataGridView1.CellClick += dataGridView1_CellContentClick;
         }
+
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -81,7 +83,7 @@ namespace PROG7312ST10202241.Forms
                 // Get RequestID from the selected row
                 if (int.TryParse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString(), out int requestId))
                 {
-                    var selectedReport = issueReports.FirstOrDefault(report => report.RequestID == requestId);
+                    var selectedReport = ServiceRequestManager.ReportedIssues.FirstOrDefault(report => report.RequestID == requestId);
 
                     if (selectedReport != null && selectedReport.AttachedFiles.Any())
                     {

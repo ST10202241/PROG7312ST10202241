@@ -1,4 +1,4 @@
-﻿namespace PROG7312ST10202241
+﻿namespace PROG7312ST10202241.Forms
 {
     partial class ServiceRequestStatementForm
     {

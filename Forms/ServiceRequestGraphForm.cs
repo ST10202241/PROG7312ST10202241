@@ -1,4 +1,5 @@
-﻿using PROG7312ST10202241.Forms;
+﻿using PROG7312ST10202241.Data_Storage;
+using PROG7312ST10202241.Forms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,46 +16,68 @@ namespace PROG7312ST10202241
         public ServiceRequestGraphForm()
         {
             InitializeComponent();
+            ServiceRequestManager.LoadData();
 
             // Initialize data structures
-            redBlackTree = new ServiceRequestRedBlackTree();
-            minHeap = new MinHeap();
-            serviceRequestGraph = new ServiceRequestGraph();
+            redBlackTree = ServiceRequestManager.RedBlackTree;
+            minHeap = ServiceRequestManager.MinHeap;
+            serviceRequestGraph = ServiceRequestManager.Graph;
 
-            // Load data from ReportDataStorage
+            Console.WriteLine($"ServiceRequestManager.ServiceRequests count: {ServiceRequestManager.ServiceRequests.Count}");
+
+            // Populate tree structures
+            foreach (var request in ServiceRequestManager.ServiceRequests)
+            {
+                try
+                {
+                    redBlackTree.Insert(request);
+                    minHeap.Insert(request);
+                }
+                catch (ArgumentException ex)
+                {
+                    Console.WriteLine($"Insert error: {ex.Message}");
+                }
+            }
+
+            // Display data
             LoadServiceRequests();
         }
 
         private void LoadServiceRequests()
         {
-            // Load reported issues from ReportDataStorage
-            foreach (var issue in ReportDataStorage.ReportedIssues)
-            {
-                var serviceRequest = new ServiceRequest(issue.RequestID, issue.Location, issue.Category, issue.Description, "Pending", issue.ReportDate);
-                redBlackTree.Insert(serviceRequest);
-                minHeap.Insert(serviceRequest);
-                serviceRequestGraph.AddEdge(issue.RequestID, issue.RequestID + 1); // Example dependency
-            }
+            // Clear and reload requests
+            dataGridViewRequests.DataSource = null;
 
-            // Display data in DataGridView
             var requests = GetInOrderRequests();
-            dataGridViewRequests.DataSource = requests.Select(r => new
+            Console.WriteLine($"Requests to display: {requests.Count}");
+            if (requests.Count > 0)
             {
-                r.RequestId,
-                r.Location,
-                r.Category,
-                r.Description,
-                r.Status,
-                r.SubmittedDate
-            }).ToList();
+                dataGridViewRequests.DataSource = requests.Select(r => new
+                {
+                    r.RequestId,
+                    r.Location,
+                    r.Category,
+                    r.Description,
+                    r.Status,
+                    r.SubmittedDate
+                }).ToList();
+            }
+            else
+            {
+                MessageBox.Show("No service requests found.");
+            }
         }
 
         private List<ServiceRequest> GetInOrderRequests()
         {
             var results = new List<ServiceRequest>();
             redBlackTree.InOrderTraversal(results);
+            Console.WriteLine($"InOrderTraversal results count: {results.Count}"); // Debug message
             return results;
         }
+
+
+
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
@@ -91,7 +114,10 @@ namespace PROG7312ST10202241
                     rbRequest.Status = txtNewStatus.Text; // Update the status
                     MessageBox.Show($"Status for Request ID {requestId} updated to '{txtNewStatus.Text}'.");
 
-                    // Refresh the DataGridView to reflect the change
+                    // Persist changes
+                    ServiceRequestManager.SaveData();
+
+                    // Refresh the DataGridView
                     LoadServiceRequests();
                 }
                 else
@@ -106,18 +132,21 @@ namespace PROG7312ST10202241
         }
 
         private void btnShowHeap_Click(object sender, EventArgs e)
-        { 
-            try 
-            { 
-                var heapRequests = minHeap.GetAll(); 
-                var message = "Heap Elements:\n"; foreach (var request in heapRequests)
+        {
+            try
+            {
+                var heapRequests = minHeap.GetAll();
+                var message = "Heap Elements:\n";
+                foreach (var request in heapRequests)
                 {
-                    message += $"RequestId: {request.RequestId}, SubmittedDate: {request.SubmittedDate}\n"; 
+                    message += $"RequestId: {request.RequestId}, SubmittedDate: {request.SubmittedDate}\n";
                 }
                 MessageBox.Show(message);
-            } 
-            catch (Exception ex) { MessageBox.Show($"Error: {ex.Message}");
-            } 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
         }
 
         private void btnShowGraph_Click(object sender, EventArgs e)
@@ -221,7 +250,5 @@ namespace PROG7312ST10202241
             form.Show();
             this.Hide();
         }
-
-       
     }
 }
