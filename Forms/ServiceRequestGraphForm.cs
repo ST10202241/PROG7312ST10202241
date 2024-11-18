@@ -102,20 +102,20 @@ namespace PROG7312ST10202241
 
                 if (rbRequest != null)
                 {
-                    string message = string.Format(resourceManager.GetString("ServiceRequestFoundMessage"),
-                        rbRequest.RequestId, rbRequest.Location, rbRequest.Category, rbRequest.Description, rbRequest.Status, rbRequest.SubmittedDate);
+                    string message = $"Service Request Found in Red-Black Tree:\nRequestId: {rbRequest.RequestId}\nLocation: {rbRequest.Location}\nCategory: {rbRequest.Category}\nDescription: {rbRequest.Description}\nStatus: {rbRequest.Status}\nSubmittedDate: {rbRequest.SubmittedDate}";
                     MessageBox.Show(message);
                 }
                 else
                 {
-                    MessageBox.Show(resourceManager.GetString("ServiceRequestNotFoundMessage"));
+                    MessageBox.Show("Service Request Not Found in Red-Black Tree");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(string.Format(resourceManager.GetString("ErrorMessage"), ex.Message));
+                MessageBox.Show($"Error: {ex.Message}");
             }
         }
+
 
         private void btnUpdateStatus_Click(object sender, EventArgs e)
         {
@@ -127,7 +127,7 @@ namespace PROG7312ST10202241
                 if (rbRequest != null)
                 {
                     rbRequest.Status = txtNewStatus.Text; // Update the status
-                    MessageBox.Show(string.Format(resourceManager.GetString("StatusUpdatedMessage"), requestId, txtNewStatus.Text));
+                    MessageBox.Show($"Status for Request ID {requestId} updated to '{txtNewStatus.Text}'.");
 
                     // Persist changes
                     ServiceRequestManager.SaveData();
@@ -137,14 +137,15 @@ namespace PROG7312ST10202241
                 }
                 else
                 {
-                    MessageBox.Show(resourceManager.GetString("ServiceRequestNotFoundMessage"));
+                    MessageBox.Show("Service Request Not Found in Red-Black Tree");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(string.Format(resourceManager.GetString("ErrorMessage"), ex.Message));
+                MessageBox.Show($"Error: {ex.Message}");
             }
         }
+
 
         private void btnShowHeap_Click(object sender, EventArgs e)
         {

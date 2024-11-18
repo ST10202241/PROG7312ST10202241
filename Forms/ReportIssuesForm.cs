@@ -50,7 +50,8 @@ namespace PROG7312ST10202241
                 Top = locationTxt.Bottom + 5 // Position it right below the TextBox
                 }; this.Controls.Add(locationSuggestionsListBox); 
             locationSuggestionsListBox.SelectedIndexChanged += locationSuggestionsBox_SelectedIndexChanged; 
-            locationTxt.TextChanged += locationTxt_TextChanged; }
+            //locationTxt.TextChanged += locationTxt_TextChanged;
+            }
 
         private void ApplyLocalization()
         {
@@ -275,32 +276,10 @@ namespace PROG7312ST10202241
         }
 
 
-        private async void locationTxt_TextChanged(object sender, EventArgs e)
-        {
-            string query = locationTxt.Text; if (query.Length < 3) // Avoid API calls for very short inputs
-            {
-                locationSuggestionsListBox.Visible = false; return;
-            } 
-            var suggestions = await LocationSuggestionHelper.GetLocationSuggestionsAsync(query);
-            if (suggestions.Count > 0) 
-            { 
-                locationSuggestionsListBox.Items.Clear(); 
-                foreach (var suggestion in suggestions)
-                { 
-                    locationSuggestionsListBox.Items.Add(suggestion.DisplayName); 
-                }
-                locationSuggestionsListBox.Visible = true;
-                locationSuggestionsListBox.BringToFront();
-            } 
-            else
-            { 
-                locationSuggestionsListBox.Visible = false;
-            } 
-        }
+        
 
 
-
-                private void CategoryLBox_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void CategoryLBox_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             if (!categorySelected)
             {
@@ -310,15 +289,7 @@ namespace PROG7312ST10202241
             }
         }
 
-        private void DescriptionRTxt_TextChanged_1(object sender, EventArgs e)
-        {
-            if (!descriptionEntered)
-            {
-                descriptionEntered = true;
-                currentStep += 1;
-                UpdateProgress();
-            }
-        }
+        
 
         private void RemoveFileBtn_Click(object sender, EventArgs e)
         {
@@ -420,7 +391,32 @@ namespace PROG7312ST10202241
         {
             DescriptionRTxt.Clear();
         }
-    }
+
+       
+            private async void locationTxt_TextChanged(object sender, EventArgs e)
+            {
+                string query = locationTxt.Text; if (query.Length < 3) // Avoid API calls for very short inputs
+                {
+                    locationSuggestionsListBox.Visible = false; return;
+                }
+                var suggestions = await LocationSuggestionHelper.GetLocationSuggestionsAsync(query);
+                if (suggestions.Count > 0)
+                {
+                    locationSuggestionsListBox.Items.Clear();
+                    foreach (var suggestion in suggestions)
+                    {
+                        locationSuggestionsListBox.Items.Add(suggestion.DisplayName);
+                    }
+                    locationSuggestionsListBox.Visible = true;
+                    locationSuggestionsListBox.BringToFront();
+                }
+                else
+                {
+                    locationSuggestionsListBox.Visible = false;
+                }
+            }
+        }
+    
 }
 public static class ReportDataStorage
 {

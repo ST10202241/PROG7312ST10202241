@@ -142,7 +142,6 @@
             this.locationTxt.Name = "locationTxt";
             this.locationTxt.Size = new System.Drawing.Size(296, 22);
             this.locationTxt.TabIndex = 7;
-            this.locationTxt.Text = "enter location";
             this.locationTxt.Click += new System.EventHandler(this.locationTxt_Click);
             this.locationTxt.TextChanged += new System.EventHandler(this.locationTxt_TextChanged);
             // 
@@ -154,9 +153,8 @@
             this.DescriptionRTxt.Name = "DescriptionRTxt";
             this.DescriptionRTxt.Size = new System.Drawing.Size(296, 48);
             this.DescriptionRTxt.TabIndex = 8;
-            this.DescriptionRTxt.Text = "enter description";
+            this.DescriptionRTxt.Text = "";
             this.DescriptionRTxt.Click += new System.EventHandler(this.DescriptionRTxt_Click);
-            this.DescriptionRTxt.TextChanged += new System.EventHandler(this.DescriptionRTxt_TextChanged_1);
             // 
             // CategoryLBox
             // 
