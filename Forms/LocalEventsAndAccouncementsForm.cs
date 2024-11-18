@@ -37,15 +37,15 @@ namespace PROG7312ST10202241
         /// Applies localization to form controls.
         /// </summary>
         private void ApplyLocalization()
-        {
+        { 
             this.Text = resourceManager.GetString("LocalEventsAndAnnouncementsTitle");
-            backToMainMenuBtn.Text = resourceManager.GetString("BackToMainMenuBtn");
-            searchBtn.Text = resourceManager.GetString("SearchBtn");
-           // clearBtn.Text = resourceManager.GetString("ClearBtn");
-            nameOfEventLbl.Text = resourceManager.GetString("NameOfEventLbl");
+            nameOfEventLbl.Text = resourceManager.GetString("nameOfEventLbl");
+            searchBtn.Text = resourceManager.GetString("searchBtn"); 
             categoryLbl.Text = resourceManager.GetString("CategoryLbl");
-            dateLbl.Text = resourceManager.GetString("DateLbl");
-            
+            btnSearchByCategory.Text = resourceManager.GetString("btnSearchByCategory");
+            dateLbl.Text = resourceManager.GetString("dateLbl");
+            btnSearchByDate.Text = resourceManager.GetString("btnSearchByDate");
+            btnSearchWithAll.Text = resourceManager.GetString("btnSearchWithAll");
         }
 
         /// <summary>
@@ -66,56 +66,56 @@ namespace PROG7312ST10202241
         private void LoadSampleData()
         {
             // Sample events with compact categories in Cape Town
-            Event event1 = new Event("Music Festival", "Entertainment", new DateTime(2024, 10, 15), "Cape Town Stadium");
-            Event event2 = new Event("Gourmet Food Festival", "Food", new DateTime(2024, 11, 5), "Company's Garden");
-            Event event3 = new Event("Tech Innovation Conference", "Technology", new DateTime(2024, 12, 1), "Cape Town International Convention Centre");
-            Event event4 = new Event("Contemporary Art Exhibition", "Art", new DateTime(2024, 10, 20), "Zeitz MOCAA");
-            Event event5 = new Event("Book Fair", "Literature", new DateTime(2024, 10, 18), "The Book Lounge");
-            Event event6 = new Event("Film Screening", "Entertainment", new DateTime(2024, 11, 10), "The Labia Theatre");
-            Event event7 = new Event("Wine Tasting", "Food", new DateTime(2024, 11, 7), "Constantia Wine Estate");
-            Event event8 = new Event("Startup Pitch Event", "Technology", new DateTime(2024, 12, 3), "Workshop17");
-            Event event9 = new Event("Sculpture Workshop", "Art", new DateTime(2024, 10, 25), "Art + Design Cape Town");
-            Event event10 = new Event("Science Expo", "Education", new DateTime(2024, 11, 15), "Cape Town Science Centre");
-            Event event11 = new Event("Jazz Night", "Entertainment", new DateTime(2024, 10, 22), "The Crypt Jazz Restaurant");
-            Event event12 = new Event("Cooking Class", "Food", new DateTime(2024, 11, 12), "The Kitchen at 36");
-            Event event13 = new Event("AI Symposium", "Technology", new DateTime(2024, 12, 6), "UCT Graduate School of Business");
-            Event event14 = new Event("Fashion Show", "Art", new DateTime(2024, 10, 28), "Cape Town Fashion Week Venue");
-            Event event15 = new Event("Poetry Reading", "Literature", new DateTime(2024, 11, 2), "The Poetry Cafe");
-            Event event16 = new Event("Charity Run", "Health", new DateTime(2024, 10, 30), "Green Point Park");
-            Event event17 = new Event("Photography Workshop", "Art", new DateTime(2024, 11, 1), "South African Museum");
-            Event event18 = new Event("Theater Performance", "Entertainment", new DateTime(2024, 11, 8), "Artscape Theatre Centre");
-            Event event19 = new Event("Tech Meet-up", "Technology", new DateTime(2024, 11, 15), "V&A Waterfront");
-            Event event20 = new Event("Culinary Challenge", "Food", new DateTime(2024, 11, 20), "Gourmet Food Market");
-            Event event21 = new Event("Holiday Craft Market", "Art", new DateTime(2024, 12, 1), "Greenmarket Square");
-            Event event22 = new Event("Dance Workshop", "Art", new DateTime(2024, 12, 5), "The Dance Factory");
-            Event event23 = new Event("Blockchain Seminar", "Technology", new DateTime(2024, 12, 10), "The Business Centre");
-            Event event24 = new Event("Christmas Concert", "Entertainment", new DateTime(2024, 12, 15), "St. George's Cathedral");
-            Event event25 = new Event("DIY Crafts Fair", "Art", new DateTime(2024, 12, 20), "Community House");
-            Event event26 = new Event("Book Signing", "Literature", new DateTime(2024, 12, 22), "Exclusive Books");
-            Event event27 = new Event("Health and Fitness Expo", "Health", new DateTime(2024, 11, 25), "Cape Town Convention Centre");
-            Event event28 = new Event("Educational Workshop", "Education", new DateTime(2024, 11, 30), "International Convention Centre");
-            Event event29 = new Event("Local History Tour", "Education", new DateTime(2024, 10, 29), "Robben Island Museum");
-            Event event30 = new Event("Environmental Awareness Campaign", "Awareness", new DateTime(2024, 12, 18), "Cape Town City Hall");
-            Event event31 = new Event("Outdoor Movie Night", "Entertainment", new DateTime(2024, 10, 16), "The Promenade, Sea Point");
-            Event event32 = new Event("Farmers Market", "Food", new DateTime(2024, 10, 21), "The Old Biscuit Mill");
-            Event event33 = new Event("Coding Bootcamp", "Technology", new DateTime(2024, 11, 5), "WeWork, Cape Town");
-            Event event34 = new Event("Craft Beer Festival", "Food", new DateTime(2024, 11, 15), "Cape Town Waterfront");
-            Event event35 = new Event("Art in the Park", "Art", new DateTime(2024, 10, 24), "Green Point Park");
-            Event event36 = new Event("Public Speaking Workshop", "Education", new DateTime(2024, 10, 31), "Cape Town Business School");
-            Event event37 = new Event("Yoga Retreat", "Health", new DateTime(2024, 11, 20), "Ceres Valley");
-            Event event38 = new Event("Graphic Novel Workshop", "Art", new DateTime(2024, 11, 11), "Comic Book Store");
-            Event event39 = new Event("Stand-up Comedy Night", "Entertainment", new DateTime(2024, 11, 13), "The Cape Town Comedy Club");
-            Event event40 = new Event("Cheese and Wine Pairing", "Food", new DateTime(2024, 11, 9), "La Motte Wine Estate");
-            Event event41 = new Event("Web Development Conference", "Technology", new DateTime(2024, 12, 8), "CTICC");
-            Event event42 = new Event("Local Music Showcase", "Entertainment", new DateTime(2024, 11, 4), "The Waiting Room");
-            Event event43 = new Event("Art Therapy Session", "Art", new DateTime(2024, 11, 14), "Healing Centre");
-            Event event44 = new Event("Smart Cities Forum", "Technology", new DateTime(2024, 12, 2), "City Hall");
-            Event event45 = new Event("Nutrition Workshop", "Health", new DateTime(2024, 11, 19), "Nutrition Centre");
-            Event event46 = new Event("Historical Walking Tour", "Education", new DateTime(2024, 11, 17), "Cape Town City Centre");
-            Event event47 = new Event("Christmas Craft Fair", "Art", new DateTime(2024, 12, 12), "The Castle of Good Hope");
-            Event event48 = new Event("Volunteer Day", "Awareness", new DateTime(2024, 12, 9), "Various Locations");
-            Event event49 = new Event("Cultural Dance Performance", "Entertainment", new DateTime(2024, 12, 13), "Artscape Theatre");
-            Event event50 = new Event("Mental Health Awareness Seminar", "Awareness", new DateTime(2024, 12, 15), "Cape Town Convention Centre");
+            Event event1 = new Event("Music Festival", "Entertainment", new DateTime(2025, 12, 15), "Cape Town Stadium");
+            Event event2 = new Event("Gourmet Food Festival", "Food", new DateTime(2025, 12, 5), "Company's Garden");
+            Event event3 = new Event("Tech Innovation Conference", "Technology", new DateTime(2025, 12, 1), "Cape Town International Convention Centre");
+            Event event4 = new Event("Contemporary Art Exhibition", "Art", new DateTime(2025, 10, 20), "Zeitz MOCAA");
+            Event event5 = new Event("Book Fair", "Literature", new DateTime(2025, 10, 18), "The Book Lounge");
+            Event event6 = new Event("Film Screening", "Entertainment", new DateTime(2025, 11, 10), "The Labia Theatre");
+            Event event7 = new Event("Wine Tasting", "Food", new DateTime(2025, 11, 7), "Constantia Wine Estate");
+            Event event8 = new Event("Startup Pitch Event", "Technology", new DateTime(2025, 12, 3), "Workshop17");
+            Event event9 = new Event("Sculpture Workshop", "Art", new DateTime(2025, 10, 25), "Art + Design Cape Town");
+            Event event10 = new Event("Science Expo", "Education", new DateTime(2025, 11, 15), "Cape Town Science Centre");
+            Event event11 = new Event("Jazz Night", "Entertainment", new DateTime(2025, 10, 22), "The Crypt Jazz Restaurant");
+            Event event12 = new Event("Cooking Class", "Food", new DateTime(2025, 11, 12), "The Kitchen at 36");
+            Event event13 = new Event("AI Symposium", "Technology", new DateTime(2025, 12, 6), "UCT Graduate School of Business");
+            Event event14 = new Event("Fashion Show", "Art", new DateTime(2025, 10, 28), "Cape Town Fashion Week Venue");
+            Event event15 = new Event("Poetry Reading", "Literature", new DateTime(2025, 11, 2), "The Poetry Cafe");
+            Event event16 = new Event("Charity Run", "Health", new DateTime(2025, 10, 30), "Green Point Park");
+            Event event17 = new Event("Photography Workshop", "Art", new DateTime(2025, 11, 1), "South African Museum");
+            Event event18 = new Event("Theater Performance", "Entertainment", new DateTime(2025, 11, 8), "Artscape Theatre Centre");
+            Event event19 = new Event("Tech Meet-up", "Technology", new DateTime(2025, 11, 15), "V&A Waterfront");
+            Event event20 = new Event("Culinary Challenge", "Food", new DateTime(2025, 11, 20), "Gourmet Food Market");
+            Event event21 = new Event("Holiday Craft Market", "Art", new DateTime(2025, 12, 1), "Greenmarket Square");
+            Event event22 = new Event("Dance Workshop", "Art", new DateTime(2025, 12, 5), "The Dance Factory");
+            Event event23 = new Event("Blockchain Seminar", "Technology", new DateTime(2025, 12, 10), "The Business Centre");
+            Event event24 = new Event("Christmas Concert", "Entertainment", new DateTime(2025, 12, 15), "St. George's Cathedral");
+            Event event25 = new Event("DIY Crafts Fair", "Art", new DateTime(2025, 12, 20), "Community House");
+            Event event26 = new Event("Book Signing", "Literature", new DateTime(2025, 12, 22), "Exclusive Books");
+            Event event27 = new Event("Health and Fitness Expo", "Health", new DateTime(2025, 11, 25), "Cape Town Convention Centre");
+            Event event28 = new Event("Educational Workshop", "Education", new DateTime(2025, 11, 30), "International Convention Centre");
+            Event event29 = new Event("Local History Tour", "Education", new DateTime(2025, 10, 29), "Robben Island Museum");
+            Event event30 = new Event("Environmental Awareness Campaign", "Awareness", new DateTime(2025, 12, 18), "Cape Town City Hall");
+            Event event31 = new Event("Outdoor Movie Night", "Entertainment", new DateTime(2025, 10, 16), "The Promenade, Sea Point");
+            Event event32 = new Event("Farmers Market", "Food", new DateTime(2025, 10, 21), "The Old Biscuit Mill");
+            Event event33 = new Event("Coding Bootcamp", "Technology", new DateTime(2025, 11, 5), "WeWork, Cape Town");
+            Event event34 = new Event("Craft Beer Festival", "Food", new DateTime(2025, 11, 15), "Cape Town Waterfront");
+            Event event35 = new Event("Art in the Park", "Art", new DateTime(2025, 10, 24), "Green Point Park");
+            Event event36 = new Event("Public Speaking Workshop", "Education", new DateTime(2025, 10, 31), "Cape Town Business School");
+            Event event37 = new Event("Yoga Retreat", "Health", new DateTime(2025, 11, 20), "Ceres Valley");
+            Event event38 = new Event("Graphic Novel Workshop", "Art", new DateTime(2025, 11, 11), "Comic Book Store");
+            Event event39 = new Event("Stand-up Comedy Night", "Entertainment", new DateTime(2025, 11, 13), "The Cape Town Comedy Club");
+            Event event40 = new Event("Cheese and Wine Pairing", "Food", new DateTime(2025, 11, 9), "La Motte Wine Estate");
+            Event event41 = new Event("Web Development Conference", "Technology", new DateTime(2025, 12, 8), "CTICC");
+            Event event42 = new Event("Local Music Showcase", "Entertainment", new DateTime(2025, 11, 4), "The Waiting Room");
+            Event event43 = new Event("Art Therapy Session", "Art", new DateTime(2025, 11, 14), "Healing Centre");
+            Event event44 = new Event("Smart Cities Forum", "Technology", new DateTime(2025, 12, 2), "City Hall");
+            Event event45 = new Event("Nutrition Workshop", "Health", new DateTime(2025, 11, 19), "Nutrition Centre");
+            Event event46 = new Event("Historical Walking Tour", "Education", new DateTime(2025, 11, 17), "Cape Town City Centre");
+            Event event47 = new Event("Christmas Craft Fair", "Art", new DateTime(2025, 12, 12), "The Castle of Good Hope");
+            Event event48 = new Event("Volunteer Day", "Awareness", new DateTime(2025, 12, 9), "Various Locations");
+            Event event49 = new Event("Cultural Dance Performance", "Entertainment", new DateTime(2025, 12, 13), "Artscape Theatre");
+            Event event50 = new Event("Mental Health Awareness Seminar", "Awareness", new DateTime(2025, 12, 15), "Cape Town Convention Centre");
 
             // Adding events to the data structures
             AddEvent(event1);
@@ -486,5 +486,3 @@ namespace PROG7312ST10202241
 
     }
 }
-
-

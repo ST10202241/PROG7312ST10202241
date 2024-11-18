@@ -186,4 +186,100 @@
   <data name="ViewReportsFormBtn" xml:space="preserve">
     <value>Jonga iiNgxelo</value>
   </data>
+  <data name="btnEmployeeLogin" xml:space="preserve">
+    <value>ngena admin</value>
+  </data>
+  <data name="btnLogin" xml:space="preserve">
+    <value>Ngena</value>
+  </data>
+  <data name="btnCancel" xml:space="preserve">
+    <value>Rhoxisa</value>
+  </data>
+  <data name="LoginSuccessTitle" xml:space="preserve">
+    <value>Impumelelo</value>
+  </data>
+  <data name="LoginFailureMessage" xml:space="preserve">
+    <value>Igama lomsebenzisi okanye igama lokugqitha alikho semthethweni.</value>
+  </data>
+  <data name="LoginFailureTitle" xml:space="preserve">
+    <value>Impazamo</value>
+  </data>
+  <data name="lblUsername" xml:space="preserve">
+    <value>Igama lomsebenzisi:</value>
+  </data>
+  <data name="lblPassword" xml:space="preserve">
+    <value>Igama lokugqitha:</value>
+  </data>
+  <data name="lblWelcome" xml:space="preserve">
+    <value>Wamkelekile kwi-app yeNkonzo yaseMzantsi Afrika</value>
+  </data>
+  <data name="lblEmployeeLogin" xml:space="preserve">
+    <value>Ukungena kweSebe leNkonzo</value>
+  </data>
+  <data name="nameOfEventLbl" xml:space="preserve">
+    <value>Igama lomnyhadala:</value>
+  </data>
+  <data name="searchBtn" xml:space="preserve">
+    <value>Phanda Ngegama</value>
+  </data>
+  <data name="btnSearchByCategory" xml:space="preserve">
+    <value>Phanda NgoDidi</value>
+  </data>
+  <data name="dateLbl" xml:space="preserve">
+    <value>Umhla:</value>
+  </data>
+  <data name="btnSearchByDate" xml:space="preserve">
+    <value>Phanda Ngomhla</value>
+  </data>
+  <data name="btnSearchWithAll" xml:space="preserve">
+    <value>Phanda Nazo Zonke Iindlela</value>
+  </data>
+  <data name="RemoveFileBtn" xml:space="preserve">
+    <value>Susa iMedia</value>
+  </data>
+  <data name="ErrorEnterLocation" xml:space="preserve">
+    <value>Nceda ngenisa indawo</value>
+  </data>
+  <data name="ErrorEnterCategory" xml:space="preserve">
+    <value>Nceda ngenisa udidi</value>
+  </data>
+  <data name="ErrorEnterDescription" xml:space="preserve">
+    <value>Nceda ngenisa inkcazo</value>
+  </data>
+  <data name="ErrorAttachMedia" xml:space="preserve">
+    <value>Nceda qhoboshela iMedia</value>
+  </data>
+  <data name="AttachmentsAdded" xml:space="preserve">
+    <value>Imidiya edityanisiweyo:</value>
+  </data>
+  <data name="Removed" xml:space="preserve">
+    <value>Kususiwe:</value>
+  </data>
+  <data name="NoFileSelectedForRemoval" xml:space="preserve">
+    <value>Akukho fayile ikhethiweyo yokususwa.</value>
+  </data>
+  <data name="lblNewStatus" xml:space="preserve">
+    <value>Isimo Esitsha:</value>
+  </data>
+  <data name="lblSearchId" xml:space="preserve">
+    <value>Isazisi Sokukhangela:</value>
+  </data>
+  <data name="btnUpdateStatus" xml:space="preserve">
+    <value>Hlaziya iMeko</value>
+  </data>
+  <data name="LoginSuccessMessage" xml:space="preserve">
+    <value>Wamkelekile</value>
+  </data>
+  <data name="btnSearch" xml:space="preserve">
+    <value>Phanda</value>
+  </data>
+  <data name="InputError" xml:space="preserve">
+    <value>Nceda ngenisa i-ID yesibini esebenzayo.</value>
+  </data>
+  <data name="ServiceRequestFound" xml:space="preserve">
+    <value>Isicelo senkonzo sifunyenwe</value>
+  </data>
+  <data name="ServiceRequestNotFound" xml:space="preserve">
+    <value>Isicelo senkonzo esine-ID {id} asifumanekanga.</value>
+  </data>
 </root>

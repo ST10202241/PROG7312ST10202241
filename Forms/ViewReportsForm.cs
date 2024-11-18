@@ -10,6 +10,7 @@ using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PROG7312ST10202241.Data_Storage; 
 
 namespace PROG7312ST10202241.Forms
 {
@@ -24,8 +25,10 @@ namespace PROG7312ST10202241.Forms
             this.issueReports = issueReports ?? new List<IssueReport>();
             resourceManager = new ResourceManager("PROG7312ST10202241.Properties.Strings", typeof(Form1).Assembly);
             ApplyLocalization();
-            PopulateDataGrid(this.issueReports);
+            PopulateDataGrid(ServiceRequestManager.ReportedIssues);
+            //dataGridView1.CellClick += dataGridView1_CellContentClick;
         }
+
 
         private void ApplyLocalization()
         {
@@ -42,47 +45,59 @@ namespace PROG7312ST10202241.Forms
         private void PopulateDataGrid(List<IssueReport> issueReports)
         {
             // Set up DataGridView columns
-            dataGridView1.ColumnCount = 4;
-            dataGridView1.Columns[0].Name = "Location";
-            dataGridView1.Columns[1].Name = "Category";
-            dataGridView1.Columns[2].Name = "Description";
-            dataGridView1.Columns[3].Name = "Media";
+            dataGridView1.Columns.Clear(); // Clear existing columns if any
+            dataGridView1.ColumnCount = 5;
+            dataGridView1.Columns[0].Name = "Request ID";
+            dataGridView1.Columns[1].Name = "Location";
+            dataGridView1.Columns[2].Name = "Category";
+            dataGridView1.Columns[3].Name = "Description";
+            dataGridView1.Columns[4].Name = "Submission Date";
 
-            // Loop through the list and add rows to the DataGridView
+            // Add a button column to view files
+            DataGridViewButtonColumn viewFilesButton = new DataGridViewButtonColumn
+            {
+                Text = "View Files",
+                UseColumnTextForButtonValue = true,
+                Name = "ViewFiles"
+            };
+            dataGridView1.Columns.Add(viewFilesButton);
+
+            // Populate rows with issue report data
             foreach (var report in issueReports)
             {
-                string fileName = string.IsNullOrEmpty(report.MediaAttachmentPath) ? "No Attachment" : Path.GetFileName(report.MediaAttachmentPath);
-                dataGridView1.Rows.Add(report.Location, report.Category, report.Description, fileName);
+                dataGridView1.Rows.Add(report.RequestID, report.Location, report.Category, report.Description, report.ReportDate.ToString("yyyy-MM-dd HH:mm"));
             }
 
-            // Optionally, auto-resize the columns for better display
+            //auto-resize the columns for better display
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            // Enable user interaction for opening files
-            dataGridView1.CellClick += DataGridView1_CellClick;  // Add event handler for cell click
+
+            // Attach event for button clicks
+            //dataGridView1.CellClick += dataGridView1_CellContentClick;
         }
 
-        // Event handler for DataGridView cell click
-        private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Check if the Media column was clicked (index 3)
-            if (e.ColumnIndex == 3 && e.RowIndex >= 0)
+            if (e.ColumnIndex == dataGridView1.Columns["ViewFiles"].Index && e.RowIndex >= 0)
             {
-                // Get the associated IssueReport from the list
-                var selectedReport = issueReports[e.RowIndex];
-                if (!string.IsNullOrEmpty(selectedReport.MediaAttachmentPath))
+                // Get RequestID from the selected row
+                if (int.TryParse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString(), out int requestId))
                 {
-                    try
+                    var selectedReport = ServiceRequestManager.ReportedIssues.FirstOrDefault(report => report.RequestID == requestId);
+
+                    if (selectedReport != null && selectedReport.AttachedFiles.Any())
                     {
-                        System.Diagnostics.Process.Start(selectedReport.MediaAttachmentPath);
+                        ViewFilesForm viewFilesForm = new ViewFilesForm(selectedReport.AttachedFiles);
+                        viewFilesForm.ShowDialog();
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        MessageBox.Show("Could not open the file: " + ex.Message);
+                        MessageBox.Show("No files are attached to this report.");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("No media attached for this report.");
+                    MessageBox.Show("Invalid Request ID.");
                 }
             }
         }

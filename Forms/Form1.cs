@@ -24,6 +24,7 @@ namespace PROG7312ST10202241.Forms
             ApplyLocalization();
             InitializeLanguageComboBox();
         }
+
         private void InitializeLanguageComboBox()
         {
             // Create ComboBox items
@@ -48,8 +49,8 @@ namespace PROG7312ST10202241.Forms
             languageCBox.Items.Add(afrikaansItem);
             languageCBox.Items.Add(xhosaItem);
 
-            
-           // languageCBox.SelectedItem = englishItem; // or afrikaansItem
+            // Set default selected item
+            languageCBox.SelectedItem = englishItem; // or afrikaansItem or xhosaItem
         }
 
         public void ChangeLanguage(string cultureName)
@@ -67,6 +68,7 @@ namespace PROG7312ST10202241.Forms
             ReportIssuesLbl.Text = resourceManager.GetString("ReportIssuesBtn");
             LocalEventsAndAnnouncementsLbl.Text = resourceManager.GetString("LocalEventsAndAnnouncements");
             ServiceRequestStatusLbl.Text = resourceManager.GetString("ServiceRequestStatusBtn");
+            btnEmployeeLogin.Text = resourceManager.GetString("btnEmployeeLogin");
         }
 
         private void ReportIssuesBtn_Click(object sender, EventArgs e)
@@ -85,6 +87,7 @@ namespace PROG7312ST10202241.Forms
 
         private void ServiceRequestStatusBtn_Click(object sender, EventArgs e)
         {
+            ServiceRequestBST tree = new ServiceRequestBST();
             ServiceRequestStatementForm form = new ServiceRequestStatementForm();
             form.Show();
             this.Hide();
@@ -111,6 +114,7 @@ namespace PROG7312ST10202241.Forms
 
         private void ServiceRequestStatusPBox_Click_1(object sender, EventArgs e)
         {
+            ServiceRequestBST tree = new ServiceRequestBST();
             ServiceRequestStatementForm form = new ServiceRequestStatementForm();
             form.Show();
             this.Hide();
@@ -132,6 +136,7 @@ namespace PROG7312ST10202241.Forms
 
         private void ServiceRequestStatusLbl_Click_1(object sender, EventArgs e)
         {
+            ServiceRequestBST tree = new ServiceRequestBST();
             ServiceRequestStatementForm form = new ServiceRequestStatementForm();
             form.Show();
             this.Hide();
@@ -145,8 +150,14 @@ namespace PROG7312ST10202241.Forms
                 ChangeLanguage(selectedItem.Tag.ToString());
             }
         }
-    }
 
+        private void btnEmployeeLogin_Click(object sender, EventArgs e)
+        {
+            EmployeeLoginForm form = new EmployeeLoginForm();
+            form.Show();
+            this.Hide();
+        }
+    }
 
     public class ComboBoxItem
     {

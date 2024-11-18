@@ -186,4 +186,100 @@
   <data name="ViewReportsFormBtn" xml:space="preserve">
     <value>Hoofkieslys te sien </value>
   </data>
+  <data name="btnEmployeeLogin" xml:space="preserve">
+    <value>admin aanmeld</value>
+  </data>
+  <data name="btnLogin" xml:space="preserve">
+    <value>Teken in</value>
+  </data>
+  <data name="btnCancel" xml:space="preserve">
+    <value>Kanselleer</value>
+  </data>
+  <data name="LoginSuccessTitle" xml:space="preserve">
+    <value>Sukses</value>
+  </data>
+  <data name="LoginFailureMessage" xml:space="preserve">
+    <value>Ongeldige gebruikersnaam of wagwoord.</value>
+  </data>
+  <data name="LoginFailureTitle" xml:space="preserve">
+    <value>Fout</value>
+  </data>
+  <data name="lblUsername" xml:space="preserve">
+    <value>Gebruikersnaam:</value>
+  </data>
+  <data name="lblPassword" xml:space="preserve">
+    <value>Wagwoord:</value>
+  </data>
+  <data name="lblWelcome" xml:space="preserve">
+    <value>Welkom by die Suid-Afrikaanse Munisipale Diens App</value>
+  </data>
+  <data name="lblEmployeeLogin" xml:space="preserve">
+    <value>Werknemer Teken in</value>
+  </data>
+  <data name="nameOfEventLbl" xml:space="preserve">
+    <value>Naam van Gebeurtenis:</value>
+  </data>
+  <data name="searchBtn" xml:space="preserve">
+    <value>Soek op Naam</value>
+  </data>
+  <data name="btnSearchByCategory" xml:space="preserve">
+    <value>Soek op Kategorie</value>
+  </data>
+  <data name="dateLbl" xml:space="preserve">
+    <value>Datum:</value>
+  </data>
+  <data name="btnSearchByDate" xml:space="preserve">
+    <value>Soek op Datum</value>
+  </data>
+  <data name="btnSearchWithAll" xml:space="preserve">
+    <value>Soek met Alle Kriteria</value>
+  </data>
+  <data name="RemoveFileBtn" xml:space="preserve">
+    <value>Verwyder Media</value>
+  </data>
+  <data name="ErrorEnterLocation" xml:space="preserve">
+    <value>Voer asseblief 'n ligging in</value>
+  </data>
+  <data name="ErrorEnterCategory" xml:space="preserve">
+    <value>Voer asseblief 'n kategorie in</value>
+  </data>
+  <data name="ErrorEnterDescription" xml:space="preserve">
+    <value>Voer asseblief 'n beskrywing in</value>
+  </data>
+  <data name="ErrorAttachMedia" xml:space="preserve">
+    <value>Heg media aan, asseblief. </value>
+  </data>
+  <data name="AttachmentsAdded" xml:space="preserve">
+    <value>Aangehegde media: </value>
+  </data>
+  <data name="Removed" xml:space="preserve">
+    <value>Verwyder:</value>
+  </data>
+  <data name="NoFileSelectedForRemoval" xml:space="preserve">
+    <value>Geen lêer vir verwydering gekies nie. </value>
+  </data>
+  <data name="lblNewStatus" xml:space="preserve">
+    <value>Nuwe Status:</value>
+  </data>
+  <data name="lblSearchId" xml:space="preserve">
+    <value>Soek ID: </value>
+  </data>
+  <data name="btnUpdateStatus" xml:space="preserve">
+    <value>Opdateer Status </value>
+  </data>
+  <data name="LoginSuccessMessage" xml:space="preserve">
+    <value>Welkom</value>
+  </data>
+  <data name="btnSearch" xml:space="preserve">
+    <value>Soek</value>
+  </data>
+  <data name="InputError" xml:space="preserve">
+    <value>Voer asseblief 'n geldige numeriese ID in. </value>
+  </data>
+  <data name="ServiceRequestFound" xml:space="preserve">
+    <value>Diensversoek Gevind </value>
+  </data>
+  <data name="ServiceRequestNotFound" xml:space="preserve">
+    <value>Diensversoek met ID {id} nie gevind nie. </value>
+  </data>
 </root>
